@@ -1,0 +1,9 @@
+.usage-container.has-background-primary
+  .container
+    .title
+      | ちいこまの編集
+
+.navjustify-content-end
+  = link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'
+
+= render partial: 'form', locals: { chiikoma: @chiikoma }

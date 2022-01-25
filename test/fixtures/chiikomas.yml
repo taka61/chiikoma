@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: メガネの汚れが気になる
+  level_of_problem: 3
+  frequency_of_experience: 2
+  cost_of_solution: 0
+
+two:
+  title: 棚の蝶番を直す
+  level_of_problem: 2
+  frequency_of_experience: 1
+  cost_of_solution: 1
