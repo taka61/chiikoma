@@ -8,4 +8,7 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
+  namespace :api do
+    resources :chiikomas, only: %i[index]
+  end
 end

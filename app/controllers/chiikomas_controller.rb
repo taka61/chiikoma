@@ -3,10 +3,6 @@
 class ChiikomasController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @chiikomas = current_user.chiikomas.where(done: false).order(total_points: :desc)
-  end
-
   def done
     @chiikomas = current_user.chiikomas.where(done: true)
   end
@@ -48,6 +44,6 @@ class ChiikomasController < ApplicationController
   private
 
   def chiikoma_params
-    params.require(:chiikoma).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution)
+    params.require(:chiikoma).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution, :total_points)
   end
 end

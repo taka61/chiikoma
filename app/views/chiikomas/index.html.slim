@@ -1,4 +1,7 @@
-h1 セルフケアしてほしいこと一覧
+.usage-container.has-background-primary
+  .container
+    .title
+      | セルフケアしてほしいこと一覧
 
 - if user_signed_in?
   = link_to "ログアウト", destroy_user_session_path, method: :delete
@@ -10,22 +13,6 @@ h1 セルフケアしてほしいこと一覧
   = link_to 'ログイン', new_user_session_path, class: 'post'
   = link_to "新規登録", new_user_registration_path, class: 'post'
 
-.mb-3
-table.table.table-hover
-  thead.thread-default
-    tr
-      th= Chiikoma.human_attribute_name(:title)
-      th= Chiikoma.human_attribute_name(:level_of_problem)
-      th= Chiikoma.human_attribute_name(:frequency_of_experience)
-      th= Chiikoma.human_attribute_name(:cost_of_solution)
-      th トータルポイント
-  tbody
-    - @chiikomas.each do |chiikoma|
-      tr
-        td = link_to chiikoma.title, chiikoma_path(chiikoma)
-        td = chiikoma.level_of_problem
-        td = chiikoma.frequency_of_experience
-        td = chiikoma.cost_of_solution
-        td = chiikoma.total_points
+= javascript_pack_tag 'hello_vue'
 
 = link_to '追加', new_chiikoma_path, class: 'button is-small is-fullwidth button is-danger is-outlined'
