@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-  before_action :configure_permitted_parameters, if: :devise_controller?
-
-  protected
-
   def after_sign_in_path_for(_resource)
     chiikomas_path
   end
@@ -15,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(_resource)
-    new_user_session_path
+    root_path
   end
 
   def configure_permitted_parameters
