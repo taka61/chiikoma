@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      chiikomas: ちいこま
+    attributes:
+      chiikoma:
+        title: 困りごと
+        level_of_problem: 困り度
+        frequency_of_experience: 経験する頻度
+        cost_of_solution: 対策コスト
+        created_at: 作成日

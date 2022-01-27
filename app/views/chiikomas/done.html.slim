@@ -1,0 +1,34 @@
+.usage-container.has-background-primary
+  .container
+    .title
+      | セルフケアしたこと一覧
+
+- if user_signed_in?
+  = link_to "ログアウト", destroy_user_session_path, method: :delete
+  = link_to "登録情報変更", edit_user_registration_path
+  h2 = current_user.name
+- else
+  h2 現在ログインしてません
+  = link_to 'ログイン', new_user_session_path, class: 'post'
+  = link_to "新規登録", new_user_registration_path, class: 'post'
+
+.mb-3
+table.table.table-hover
+  thead.thread-default
+    tr
+      th= Chiikoma.human_attribute_name(:title)
+      th= Chiikoma.human_attribute_name(:level_of_problem)
+      th= Chiikoma.human_attribute_name(:frequency_of_experience)
+      th= Chiikoma.human_attribute_name(:cost_of_solution)
+      th トータルポイント
+  tbody
+    - @chiikomas.each do |chiikoma|
+      tr
+        td = link_to chiikoma.title, chiikoma_path(chiikoma)
+        td = chiikoma.level_of_problem
+        td = chiikoma.frequency_of_experience
+        td = chiikoma.cost_of_solution
+        td = chiikoma.level_of_problem_before_type_cast + chiikoma.frequency_of_experience_before_type_cast + chiikoma.cost_of_solution_before_type_cast
+
+.nav.hustify-content-end
+  = link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'

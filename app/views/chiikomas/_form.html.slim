@@ -1,0 +1,69 @@
+.main-item
+  .container
+    = form_with model: @chiikoma, local: true do |f|
+      .form-items
+        .form-items-inner
+          .form-item
+            = f.label :title, class: 'title'
+            = f.text_area :title, class: 'textarea is-primary', id: 'chiikoma_title', placeholder: 'メガネレンズの汚れが気になる'
+          .form-item
+            .title
+              | 困り度
+            .ul
+              .li
+                label.form-radio-button__label
+                  | 少し
+                  = f.radio_button :level_of_problem, '少し'
+              .li
+                label.form-radio-button__label
+                  | まあまあ
+                  = f.radio_button :level_of_problem, 'まあまあ'
+              .li
+                label.form-radio-button__label
+                  | かなり
+                  = f.radio_button :level_of_problem, 'かなり'
+              .li
+                label.form-radio-button__label
+                  | もうムリ
+                  = f.radio_button :level_of_problem, 'もうムリ'
+          .form-item
+            .title
+              | 経験する頻度
+            .ul
+              .li
+                label.form-radio-button__label
+                  | 時々
+                  = f.radio_button :frequency_of_experience, '時々'
+              .li
+                label.form-radio-button__label
+                  | しばしば
+                  = f.radio_button :frequency_of_experience, 'しばしば'
+              .li
+                label.form-radio-button__label
+                  | 頻繁
+                  = f.radio_button :frequency_of_experience, '頻繁'
+              .li
+                label.form-radio-button__label
+                  | 常に
+                  = f.radio_button :frequency_of_experience, '常に'
+          .form-item
+            .title
+              | 対策コスト
+            .ul
+              .li
+                label.form-radio-button__label
+                  | すぐ
+                  = f.radio_button :cost_of_solution, 'すぐ'
+              .li
+                label.form-radio-button__label
+                  | 少し時間がかかる
+                  = f.radio_button :cost_of_solution, '少し時間がかかる'
+              .li
+                label.form-radio-button__label
+                  | 時間がかかる
+                  = f.radio_button :cost_of_solution, '時間がかかる'
+
+      = f.submit nil, class: 'button is-link'
+
+  .nav.justify-content-end
+  = link_to '戻る', chiikomas_path, class: 'button is-ghost'
