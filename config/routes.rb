@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     end
   end
   namespace :api do
-    resources :chiikomas, only: %i[index]
+    resources :chiikomas, only: %i[index create]
   end
 end

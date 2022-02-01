@@ -15,16 +15,6 @@ class ChiikomasController < ApplicationController
     @chiikoma = Chiikoma.new
   end
 
-  def create
-    @chiikoma = current_user.chiikomas.create(chiikoma_params)
-    @chiikoma.total_points = @chiikoma.calculate_total_points
-    if @chiikoma.save!
-      redirect_to chiikomas_path, notice: "ちいこま「#{@chiikoma.title}」を登録しました。"
-    else
-      render :new
-    end
-  end
-
   def edit
     @chiikoma = current_user.chiikomas.find(params[:id])
   end

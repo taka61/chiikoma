@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <div class="flex">
       <div v-for="chiikoma in chiikomas" :key="chiikoma.id" class="card">
         <div class="card-body">
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-  import axios from 'axios';
+import axios from 'axios'
 
 export default {
-  data: function () {
+  data() {
     return {
       chiikomas: []
     }
@@ -26,7 +26,7 @@ export default {
     this.setChiikoma();
   },
   methods: {
-    setChiikoma: function() {
+    setChiikoma () {
       axios.get('/api/chiikomas')
       .then(response => (
         this.chiikomas = response.data
@@ -37,13 +37,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
   .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
   }
-
   .card {
     width: 238px;
     border: 1px solid rgba(0,0,0,.125);
@@ -57,5 +56,4 @@ export default {
       font-weight: 600;
     }
   }
-
 </style>
