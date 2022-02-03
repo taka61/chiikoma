@@ -11,6 +11,15 @@ class Api::ChiikomasController < ApplicationController
     render json: @chiikomas
   end
 
+  def done
+    @chiikomas = current_user.chiikomas.where(done: true)
+  end
+
+  def show
+    @chiikoma = current_user.chiikomas.find(params[:id])
+    render json: @chiikoma
+  end
+
   def new
     @chiikoma = Chiikoma.new
   end
@@ -23,6 +32,20 @@ class Api::ChiikomasController < ApplicationController
       render json: @chiikoma, status: :created
     else
       render json: @chiikoma.errors, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @chiikoma = current_user.chiikomas.find(params[:id])
+  end
+
+  def update
+    @chiikoma = current_user.chiikomas.find(params[:id])
+    @chiikoma.total_points = @chiikoma.calculate_total_points
+    if @chiikoma.update(chiikoma_params)
+      render json: { status: 'SUCCESS', data: @chiikoma }
+    else
+      render json: { status: 'ERROR', data: @chiikoma.errors }
     end
   end
 

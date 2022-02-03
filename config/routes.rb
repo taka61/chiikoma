@@ -10,7 +10,8 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
-  namespace :api do
-    resources :chiikomas, only: %i[index create]
+
+  namespace :api, format: 'json' do
+    resources :chiikomas
   end
 end

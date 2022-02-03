@@ -6,28 +6,9 @@
 .nav.hustify-content-end
   = link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'
 
-.chiikoma-show
-  table.table.table-hover
-    tbody
-      tr
-        th= Chiikoma.human_attribute_name(:title)
-        td= @chiikoma.title
-      tr
-        th= Chiikoma.human_attribute_name(:level_of_problem)
-        td= @chiikoma.level_of_problem_before_type_cast
-      tr
-        th= Chiikoma.human_attribute_name(:frequency_of_experience)
-        td= @chiikoma.frequency_of_experience_before_type_cast
-      tr
-        th= Chiikoma.human_attribute_name(:cost_of_solution)
-        td= @chiikoma.cost_of_solution_before_type_cast
-      tr
-        th= Chiikoma.human_attribute_name(:created_at)
-        td= @chiikoma.created_at
-      tr
-        th トータルポイント
-        td= @chiikoma.total_points
+= javascript_pack_tag 'chiikoma-show'
+#js-chiikoma-show
 
-    td = link_to '削除', chiikoma_path(@chiikoma), method: :delete, class: 'button is-link'
-    td = link_to '編集', edit_chiikoma_path(@chiikoma), class: 'button is-primary'
-    td = link_to 'ケアした', chiikoma_status_index_path(@chiikoma), method: :post, class: 'button is-link'
+td = link_to '削除', chiikoma_path(@chiikoma), method: :delete, class: 'button is-link'
+td = link_to '編集', edit_chiikoma_path(@chiikoma), class: 'button is-primary'
+td = link_to 'ケアした', chiikoma_status_index_path(@chiikoma), method: :post, class: 'button is-link'

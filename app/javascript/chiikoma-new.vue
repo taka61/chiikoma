@@ -20,6 +20,10 @@
         <label>
         <input type="radio" v-bind:value="7" v-model="level_of_problem">
         かなり</label>
+
+        <label>
+        <input type="radio" v-bind:value="10" v-model="level_of_problem">
+        もうムリ</label>
       </div>
 
       <div class="chiikoma-frequency">
@@ -36,6 +40,10 @@
         <label>
         <input type="radio" v-bind:value="7" v-model="frequency_of_experience">
         頻繁</label>
+
+        <label>
+        <input type="radio" v-bind:value="10" v-model="frequency_of_experience">
+        常に</label>
       </div>
 
        <div class="chiikoma-cost">
@@ -50,7 +58,7 @@
         少し時間がかかる</label>
 
         <label>
-        <input type="radio" v-bind:value="7" v-model="cost_of_solution">
+        <input type="radio" v-bind:value="8" v-model="cost_of_solution">
         時間がかかる</label>
       </div>
 

@@ -11,19 +11,6 @@ class ChiikomasController < ApplicationController
     @chiikoma = current_user.chiikomas.find(params[:id])
   end
 
-  def new
-    @chiikoma = Chiikoma.new
-  end
-
-  def edit
-    @chiikoma = current_user.chiikomas.find(params[:id])
-  end
-
-  def update
-    @chiikoma = current_user.chiikomas.find(params[:id])
-    @chiikoma.update!(chiikoma_params)
-    redirect_to chiikomas_path
-  end
 
   def destroy
     @chiikoma = current_user.chiikomas.find(params[:id])
