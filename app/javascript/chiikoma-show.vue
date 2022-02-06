@@ -1,5 +1,5 @@
 <template>
-  <div class="chiikoma-show">
+  <div class="chiikoma-container">
     <table class="table table-hover">
       <tbody>
         <tr>
@@ -54,7 +54,7 @@ export default {
     getChiikoma () {
       const url = location.pathname.split('/')
       const path = url[url.length - 1]
-      axios.get(`http://localhost:3000/api/chiikomas/${path}.json`)
+      axios.get(`http://127.0.0.1:3000/api/chiikomas/${path}.json`)
       .then((response) => {
         this.chiikomaTitle = response.data.title
         this.chiikomaLevel = response.data.level_of_problem

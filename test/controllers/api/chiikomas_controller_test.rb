@@ -1,7 +1,11 @@
-require "test_helper"
+# frozen_string_literal: true
 
-class Api::ChiikomasControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+require 'test_helper'
+
+module Api
+  class ChiikomasControllerTest < ActionDispatch::IntegrationTest
+    # test "the truth" do
+    #   assert true
+    # end
+  end
 end

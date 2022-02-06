@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   end
 
   namespace :api, format: 'json' do
-    resources :chiikomas
+    resources :chiikomas do
+      collection do
+        get :done
+      end
+    end
   end
 end

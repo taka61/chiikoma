@@ -1,9 +1,37 @@
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.chiikoma-container {
+    width: 767x;/*横幅*/
+    margin: 30px auto;
+    padding: 60px 0;
+    background-color: pink;
+  }
+
+form{
+    width: 100%;
+
+    border: 1px solid #9c9c9c;
+    padding: 50px;
+    background-color: aqua;
+    box-sizing: border-box;
+  }
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 400px;
 }
 
-.is-centered {
-    text-align: center;
+.chiikoma-new-add-button {
+    margin: 16px auto 0;
+    width: 160px;
+    margin-bottom: 20px;
+    display: block;
+    border: solid 1px #989898;
+    height: 44px;
+    border-radius: 4px;
+}
+
+.chiikoma-title {
+    display: block;
 }

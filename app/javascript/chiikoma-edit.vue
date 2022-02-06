@@ -3,7 +3,7 @@
     <form>
       <div class="chiikoma-title">
         <lable>困りごと</lable>
-        <input type="text" v-model="chiikomaTitle">
+        <input type="text" v-model="chiikomaTitle" id="title">
       </div>
 
       <div class="chiikoma-level">
@@ -55,7 +55,7 @@
 
         <label>
         <input type="radio" v-bind:value="5" v-model="chiikomaCost">
-        少し時間がかかる</label>
+        まあまあ時間がかかる</label>
 
         <label>
         <input type="radio" v-bind:value="8" v-model="chiikomaCost">
@@ -67,7 +67,7 @@
           type="button"
           @click="updateChiikoma"
       >
-        登録する
+        更新する
       </button>
     </form>
   </div>
@@ -84,6 +84,7 @@ export default {
       chiikomaLevel: '',
       chiikomaFrequency: '',
       chiikomaCost: '',
+      level_of_problem: ''
     }
   },
   computed: {},
@@ -94,7 +95,7 @@ export default {
     getChiikoma () {
       const url = location.pathname.split('/')
       const path = url[url.length - 2]
-      axios.get(`http://localhost:3000/api/chiikomas/${path}.json`)
+      axios.get(`http://127.0.0.1:3000/api/chiikomas/${path}.json`)
       .then((response) => {
         this.chiikomaTitle = response.data.title
         this.chiikomaLevel = response.data.level_of_problem
@@ -112,7 +113,8 @@ export default {
         title: this.chiikomaTitle,
         level_of_problem: this.chiikomaLevel,
         frequency_of_experience: this.chiikomaFrequency,
-        cost_of_solution: this.chiikomaCost
+        cost_of_solution: this.chiikomaCost,
+        total_points: this.chiikomaLevel + this.chiikomaFrequency + this.chiikomaCost
       }).then(response => (
         window.location.href ='/chiikomas'
       ))

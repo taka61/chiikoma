@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chiikoma-done">
     <div class="flex">
       <div v-for="chiikoma in chiikomas" :key="chiikoma.id" class="card">
         <div class="card-body">
@@ -7,7 +7,7 @@
              <a :href='`/chiikomas/${chiikoma.id}`'> {{ chiikoma.title }}</a>
            </div>
              {{ chiikoma.total_points }}
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     setChiikoma () {
-      axios.get('/api/chiikomas')
+      axios.get('/api/chiikomas/done')
       .then(response => (
         this.chiikomas = response.data
       ))
