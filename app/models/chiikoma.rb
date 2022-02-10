@@ -12,7 +12,17 @@ class Chiikoma < ApplicationRecord
   validates :frequency_of_experience, presence: true
   validates :cost_of_solution, presence: true
 
+  scope :this_week, -> { where(created_at: Time.current.all_week) }
+
+  scope :solved_on_this_week, -> { where(solved_on: Time.current.all_week) }
+
   def calculate_total_points
     level_of_problem_before_type_cast + frequency_of_experience_before_type_cast + cost_of_solution_before_type_cast
+  end
+
+  def daytime
+    today = Date.today
+    @this_sunday = today - (today.wday - 0)
+    @this_monday = today - (today.wday - 7)
   end
 end

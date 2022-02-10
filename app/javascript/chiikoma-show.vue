@@ -1,33 +1,35 @@
 <template>
-  <div class="chiikoma-container">
-    <table class="table table-hover">
-      <tbody>
-        <tr>
-            <th>困りごと</th>
-            <td> {{ chiikomaTitle }}</td>
-        </tr>
-         <tr>
-            <th>困り度</th>
-            <td> {{ chiikomaLevel }}</td>
-        </tr>
-        <tr>
-            <th>経験する頻度</th>
-            <td> {{ chiikomaFrequency }}</td>
-        </tr>
-        <tr>
-            <th>対策コスト</th>
-            <td> {{ chiikomaCost }}</td>
-        </tr>
-        <tr>
-            <th>作成日</th>
-            <td> {{ chiikomaCreatedDate }}</td>
-        </tr>
-        <tr>
-            <th>トータルポイント</th>
-            <td> {{ chiikomaTotalPoints }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="page">
+    <div class="chiikoma-container">
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+              <th>困りごと</th>
+              <td> {{ chiikomaTitle }}</td>
+          </tr>
+           <tr>
+              <th>困り度</th>
+              <td> {{ chiikomaLevel }}</td>
+          </tr>
+          <tr>
+              <th>経験する頻度</th>
+              <td> {{ chiikomaFrequency }}</td>
+          </tr>
+          <tr>
+              <th>対策コスト</th>
+              <td> {{ chiikomaCost }}</td>
+          </tr>
+          <tr>
+              <th>作成日</th>
+              <td> {{ chiikomaCreatedDate }}</td>
+          </tr>
+          <tr>
+              <th>トータルポイント</th>
+              <td> {{ chiikomaTotalPoints }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 

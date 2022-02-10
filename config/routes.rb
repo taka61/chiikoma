@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :chiikomas do
     resources :status, only: %i[create], controller: 'chiikomas/status'
     collection do
-      get 'done'
+      get 'achievement', 'done'
     end
   end
 

@@ -1,4 +1,4 @@
-header.header.has-background-link-light.is-fixed-top[role="navigation" aria-label="main navigation"]
+header.header.is-fixed-top[role="navigation" aria-label="main navigation"]
   .container
     .navbar-brand
       = link_to "ちいこま", root_path, id: "logo", class: "navbar-item"
@@ -8,6 +8,7 @@ header.header.has-background-link-light.is-fixed-top[role="navigation" aria-labe
         = link_to "Done", done_chiikomas_path, class: "navbar-item"
         - if user_signed_in?
           = link_to "Chiikoma", chiikomas_path, class: "navbar-item"
+          = link_to "Achievement", achievement_chiikomas_path, class: "navbar-item"
           .navbar-item.has-dropdown.is-hoverable
             a.navbar-link
               |  Account

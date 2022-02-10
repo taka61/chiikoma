@@ -1,14 +1,14 @@
-.usage-container.has-background-primary
+.usage-container
   .container
     .title.is-centered
-      | ちいこまの詳細
+      | ちいこま詳細
 
 .nav.hustify-content-end
-  = link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'
+= link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'
 
 = javascript_pack_tag 'chiikoma-show'
 #js-chiikoma-show
 
-td = link_to '削除', chiikoma_path(@chiikoma), method: :delete, class: 'button is-link'
-td = link_to '編集', edit_chiikoma_path(@chiikoma), class: 'button is-primary'
-td = link_to 'ケアした', chiikoma_status_index_path(@chiikoma), method: :post, class: 'button is-link'
+  td = link_to '削除', chiikoma_path(@chiikoma), method: :delete, class: 'button is-link'
+  td = link_to '編集', edit_chiikoma_path(@chiikoma), class: 'button is-primary'
+  td = link_to 'ケアした', chiikoma_status_index_path(@chiikoma), method: :post, class: 'button is-link'

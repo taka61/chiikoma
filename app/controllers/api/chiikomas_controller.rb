@@ -31,6 +31,7 @@ module Api
     def create
       @chiikoma = current_user.chiikomas.create(chiikoma_params)
       @chiikoma.total_points = @chiikoma.calculate_total_points
+      @chiikoma.registration_points = 5 if @chiikoma.is_made_by_admin == false
 
       if @chiikoma.save
         render json: @chiikoma, status: :created

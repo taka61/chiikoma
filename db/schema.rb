@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_23_055804) do
+ActiveRecord::Schema.define(version: 20_220_208_020_101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2022_01_23_055804) do
     t.datetime 'updated_at', precision: 6, null: false
     t.bigint 'user_id', null: false
     t.integer 'total_points'
+    t.date 'solved_on'
+    t.integer 'registration_points'
     t.index ['user_id'], name: 'index_chiikomas_on_user_id'
   end
 

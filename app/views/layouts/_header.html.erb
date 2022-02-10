@@ -1,0 +1,58 @@
+<% if user_signed_in? %>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-logo" href="/chiikomas">
+          <img src="/assets/logo.png" alt="title_logo" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/chiikomas">
+            登録した!
+          </a>
+
+          <a class="navbar-item" href="/chiikomas/done">
+            解決した!
+          </a>
+
+          <a class="navbar-item" href="/chiikomas/achievement">
+            1週間のがんばり
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              アカウント
+            </a>
+
+            <div class="navbar-dropdown">
+              <div class="navbar-item">
+                <%= link_to edit_user_registration_path, class: 'nav-items__item-link' do %>
+                登録情報変更
+                <% end %>
+              </div>
+
+              <div class="navbar-item">
+                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-items__item-link' do %>
+                Log out
+                <% end %>
+              </div>
+
+               <div class="navbar-item">
+                <%= link_to user_registration_path, method: :delete, class: 'nav-items__item-link' do %>
+                アカウント削除
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+<% end %>

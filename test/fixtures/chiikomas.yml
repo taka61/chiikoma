@@ -1,11 +1,105 @@
 chiikoma1:
   user: otameshi
-  title: 'イヤホンが片方聞こえづらい'
+  title: 'chiikoma1'
+  level_of_problem: 'まあまあ'
+  frequency_of_experience: 'しばしば'
+  cost_of_solution: 'すぐ'
+  total_points: 13
+  done: true
+  is_made_by_admin: true
+  created_at: "2022-01-11 00:00:10"
+  updated_at: "2022-01-11 00:00:01"
+  solved_on: "2022-01-14"
+
+chiikoma2:
+  user: otameshi
+  title: 'chiikoma2'
+  level_of_problem: 'まあまあ'
+  frequency_of_experience: 'しばしば'
+  cost_of_solution: 'すぐ'
+  total_points: 13
+  registration_points: 5
+  done: true
+  is_made_by_admin: false
+  created_at: "2022-01-11 00:00:10"
+  updated_at: "2022-01-11 00:00:01"
+  solved_on: "2022-01-25"
+
+chiikoma3:
+  user: otameshi
+  title: 'chiikoma3'
+  level_of_problem: 'まあまあ'
+  frequency_of_experience: 'しばしば'
+  cost_of_solution: 'すぐ'
+  total_points: 13
+  registration_points: 5
+  done: false
+  is_made_by_admin: false
+  created_at: "2022-01-15 00:00:10"
+  updated_at: "2022-01-15 00:00:01"
+
+chiikoma4:
+  user: otameshi
+  title: 'chiikoma4'
   level_of_problem: '少し'
   frequency_of_experience: '時々'
   cost_of_solution: 'すぐ'
   total_points: 9
+  registration_points: 5
   done: false
   is_made_by_admin: false
-  created_at: "2021-01-01 00:00:10"
-  updated_at: "2021-01-01 00:00:01"
+  created_at: "2022-01-19 00:00:10"
+  updated_at: "2022-01-19 00:00:01"
+
+chiikoma5:
+  user: otameshi
+  title: 'chiikoma5'
+  level_of_problem: 'かなり'
+  frequency_of_experience: '頻繁'
+  cost_of_solution: '少し時間がかかる'
+  total_points: 19
+  registration_points: 5
+  done: false
+  is_made_by_admin: false
+  created_at: "2022-01-26 00:00:10"
+  updated_at: "2022-01-26 00:00:01"
+
+chiikoma6:
+  user: otameshi
+  title: 'chiikoma6'
+  level_of_problem: 'かなり'
+  frequency_of_experience: '頻繁'
+  cost_of_solution: '少し時間がかかる'
+  total_points: 19
+  registration_points: 5
+  done: false
+  is_made_by_admin: false
+  created_at: "2022-02-07 00:00:10"
+  updated_at: "2022-02-07 00:00:01"
+
+chiikoma7:
+  user: otameshi
+  title: 'chiikoma7'
+  level_of_problem: 'もうムリ'
+  frequency_of_experience: '常に'
+  cost_of_solution: '少し時間がかかる'
+  total_points: 25
+  registration_points: 5
+  done: true
+  is_made_by_admin: false
+  created_at: "2022-02-07 00:00:10"
+  updated_at: "2022-02-07 00:00:01"
+  solved_on: "2022-02-07"
+
+chiikoma8:
+  user: otameshi
+  title: 'chiikoma7'
+  level_of_problem: 'もうムリ'
+  frequency_of_experience: '常に'
+  cost_of_solution: '少し時間がかかる'
+  total_points: 25
+  done: true
+  is_made_by_admin: true
+  created_at: "2022-02-08 00:00:10"
+  updated_at: "2022-02-08 00:00:01"
+  solved_on: "2022-02-08"

@@ -29,10 +29,12 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
 gem 'bulma-rails', '~> 0.9.2'
+gem 'chart-js-rails', '~> 0.1.4'
+gem 'chartkick'
 gem 'devise'
 gem 'devise-i18n'
+gem 'groupdate'
 gem 'rails-i18n'
 gem 'slim-rails'
 

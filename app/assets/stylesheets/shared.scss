@@ -2,7 +2,7 @@
     width: 767x;/*横幅*/
     margin: 30px auto;
     padding: 60px 0;
-    background-color: pink;
+
   }
 
 form{
@@ -34,4 +34,117 @@ input[type="text"] {
 
 .chiikoma-title {
     display: block;
+}
+
+.page {
+  width: 767x;/*横幅*/
+  margin: 30px auto;
+  padding: 0 30px;
+}
+.usage-container {
+  background-color: #F58376;
+}
+.title {
+  color: #fff;
+  font-weight: normal;
+}
+
+.date-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #01414B;
+  font-size: 20px;
+
+}
+
+.all-achievement-box {
+  background-color: #A2C5C6;
+  	/* 上下のパディングを20px 左右のパディングを0に設定 */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  border-radius:  5px;
+  height: 200px;
+  padding: 20px 0 20px 0;
+  color: #01414B;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+}
+
+.flex_all-achievement-box {
+  display: flex;
+  justify-content: center;
+}
+
+.all-achievement-header {
+  background-color: #DCF0F9;
+  color: #1939A9;
+  margin-top:  30px;
+  padding-top: 20px;             /* 外側の余白 */
+  text-align: center;
+  font-size: 25px;
+}
+
+.all-achievement-inner {
+  width: 50%;
+  padding: 30px 0 30px 0;
+  margin-bottom: 20px;
+  background-color: #DCF0F9;
+  text-align: center;
+  color: #1939A9;
+  font-size: 18px;
+
+}
+
+.flex_test-item {
+  height: 200px;
+  padding: 20px 0 20px 0;
+  width: 50%;
+  background-color: #FFF2EC;
+  color: #F58376;
+  margin:  5px;              /* 外側の余白 */
+}
+
+.box-header {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.all-achievement-title {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.chiikoma-box {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+
+.all-achievement-subtitle {
+  margin-top: 5px;
+}
+
+.test {
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+.barhart {
+  border-radius:  5px;
+  margin: 20px 0 20px 0;
+  border: 1px solid #01414B;
+  padding: 20px 0 20px 0;
+}
+
+.navbar-logo {
+  margin-left: 100px;
+}
+
+.navbar-start {
+  margin:0 0 0 auto;
 }
