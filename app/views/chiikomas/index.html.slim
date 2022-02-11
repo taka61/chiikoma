@@ -1,12 +1,11 @@
-.usage-container
-  .container
+.page
+  .usage-container
     .title.is-centered
       | 登録した!
+  .main-body
+    .container.is-sm
 
-- if user_signed_in?
-  h2 = current_user.name
+      = javascript_pack_tag 'chiikomas'
+      #js-chiikomas
 
-= javascript_pack_tag 'chiikomas'
-#js-chiikomas
-
-= link_to '追加', new_chiikoma_path, class: 'button is-small is-fullwidth button is-danger is-outlined'
+      = link_to '追加', new_chiikoma_path, class: 'button is-fullwidth button is-danger is-outlined'
