@@ -4,7 +4,7 @@
       <div v-for="chiikoma in chiikomas" :key="chiikoma.id">
         <div class="card-body">
           <span class="icon">
-            <i class="fas fa-duotone fa-heart"></i>
+            <i class="fa-solid fa-heart-crack"></i>
           </span>
           <div class="card-title">
             <a :href='`/chiikomas/${chiikoma.id}`'> {{ chiikoma.title }}</a>

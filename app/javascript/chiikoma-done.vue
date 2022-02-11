@@ -1,12 +1,17 @@
 <template>
-  <div class="chiikoma-done">
-    <div class="flex">
-      <div v-for="chiikoma in chiikomas" :key="chiikoma.id" class="card">
+  <div class="page">
+    <div class="card-section">
+      <div v-for="chiikoma in chiikomas" :key="chiikoma.id">
         <div class="card-body">
-           <div class="card-title">
-             <a :href='`/chiikomas/${chiikoma.id}`'> {{ chiikoma.title }}</a>
-           </div>
+          <span class="icon">
+            <i class="fas fa-duotone fa-heart"></i>
+          </span>
+          <div class="card-title">
+            <a :href='`/chiikomas/${chiikoma.id}`'> {{ chiikoma.title }}</a>
+          </div>
+          <div class="card-point">
              {{ chiikoma.total_points }}
+          </div>
         </div>
       </div>
     </div>
@@ -35,25 +40,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .card {
-    width: 238px;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    margin: 16px;
-    &-body {
-      padding: 1.25rem;
-    }
-    &-title {
-      margin-bottom: .75rem;
-      font-weight: 600;
-    }
-  }
-</style>
