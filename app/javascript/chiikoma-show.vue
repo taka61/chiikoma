@@ -1,40 +1,65 @@
 <template>
   <div class="page">
-    <div class="chiikoma-container">
-      <table class="table table-hover">
-        <tbody>
-          <tr>
-              <th>困りごと</th>
-              <td> {{ chiikomaTitle }}</td>
-          </tr>
-           <tr>
-              <th>困り度</th>
-              <td> {{ chiikomaLevel }}</td>
-          </tr>
-          <tr>
-              <th>経験する頻度</th>
-              <td> {{ chiikomaFrequency }}</td>
-          </tr>
-          <tr>
-              <th>対策コスト</th>
-              <td> {{ chiikomaCost }}</td>
-          </tr>
-          <tr>
-              <th>作成日</th>
-              <td> {{ chiikomaCreatedDate }}</td>
-          </tr>
-          <tr>
-              <th>トータルポイント</th>
-              <td> {{ chiikomaTotalPoints }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="primary-section">
+        <div class="primary-item">
+          <div class="primary-text">
+            {{ chiikomaTitle }}
+          </div>
+        </div>
+      </div>
+
+    <div class="list-section">
+      <div class="list-text">
+        困り度
+      </div>
+      <div class="list-item">
+        {{ chiikomaLevel }}
+      </div>
+    </div>
+
+    <div class="list-section">
+      <div class="list-text">
+        経験する頻度
+      </div>
+      <div class="list-item">
+        {{ chiikomaFrequency }}
+      </div>
+    </div>
+
+    <div class="list-section">
+      <div class="list-text">
+        対策コスト
+      </div>
+      <div class="list-item">
+        {{ chiikomaCost }}
+      </div>
+    </div>
+
+    <div class="list-section">
+      <div class="list-text">
+        トータルポイント
+      </div>
+      <div class="list-item">
+        {{ chiikomaTotalPoints }}
+      </div>
+    </div>
+
+    <div class="list-section">
+      <div class="list-text">
+        作成日
+      </div>
+      <div class="list-date-item">
+        {{ chiikomaCreatedDate }}
+      </div>
+    </div>
+
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import {format} from 'date-fns'
 
 export default {
   data() {
@@ -45,7 +70,8 @@ export default {
       chiikomaFrequency: '',
       chiikomaCost: '',
       chiikomaCreatedDate: '',
-      chiikomaTotalPoints: ''
+      chiikomaTotalPoints: '',
+      format,
     }
   },
   computed: {},
@@ -67,6 +93,9 @@ export default {
       }, (error) => {
           console.log(error, response)
         })
+    },
+    moment(date, format) {
+      return moment(date).format(format)
     }
   }
 }

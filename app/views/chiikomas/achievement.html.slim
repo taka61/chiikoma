@@ -1,39 +1,41 @@
-.usage-container
-  .title.is-centered
-    | 1週間のがんばり
-
 .page
-  .date-container
-    h1 今週のがんばり
-    =@this_sunday
-    =@this_monday
+  .usage-container
+    .title.is-centered
+      | 1週間のがんばり
 
-  .achievement-container
-    .all-achievement-header 合計ちいこま
-    .flex_all-achievement-box
-      .all-achievement-inner
-        .all-achievement-title ちいこま数
-        .test =@all_chiikoma_numbers
-      .all-achievement-inner
-        .all-achievement-title ちいこま数
-        .test =@all_chiikoma_points
+  .main-body
+    .container.is-sm
+      .date-container
+        h1 今週のがんばり
+        =@this_sunday
+        =@this_monday
 
-    .flex_all-achievement-box
-      .flex_test-item
-        .box-header 登録した!
-        .chiikoma-box
-          .all-achievement-subtitle ちいこま数
-          .test =@registration_numbers
-        .chiikoma-box
-          .all-achievement-subtitle ポイント
-          .test =@registration_points
-      .flex_test-item
-        .box-header 解決した!
-        .chiikoma-box
-          .all-achievement-subtitle ちいこま数
-          .test =@solution_numbers
-        .chiikoma-box
-          .all-achievement-subtitle ポイント
-          .test =@solution_points
-    .barhart
-      = column_chart @all_chiikomas_data , stacked: true
+      .achievement-container
+        .all-achievement-header 合計ちいこま
+        .flex_all-achievement-box
+          .all-achievement-inner
+            .all-achievement-title ちいこま数
+            .test =@all_chiikoma_numbers
+          .all-achievement-inner
+            .all-achievement-title ちいこま数
+            .test =@all_chiikoma_points
+
+        .flex_all-achievement-box
+          .flex_test-item
+            .box-header 登録した!
+            .chiikoma-box
+              .all-achievement-subtitle ちいこま数
+              .test =@registration_numbers
+            .chiikoma-box
+              .all-achievement-subtitle ポイント
+              .test =@registration_points
+          .flex_test-item
+            .box-header 解決した!
+            .chiikoma-box
+              .all-achievement-subtitle ちいこま数
+              .test =@solution_numbers
+            .chiikoma-box
+              .all-achievement-subtitle ポイント
+              .test =@solution_points
+        .barhart
+          = column_chart @all_chiikomas_data , stacked: true
