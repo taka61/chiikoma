@@ -1,79 +1,90 @@
 <template>
-  <div class="chiikoma-container">
-    <form>
-      <div class="chiikoma-title">
-        <lable>困りごと</lable>
-        <input type="text" class="input" placeholder="メガネが汚い" v-model="title" id="title">
-         <p>{{ chiikomasTitleNullError }}</p>
+  <div class="page">
+    <div class="form-section">
+      <div class="field">
+        <div class="control">
+          <lable class="form-label">あなたのためだけの困りごとは？</lable>
+          <input class="input" type="text"  placeholder="メガネが汚い" v-model="title" id="title">
+          <p class="help is-danger">{{ chiikomasTitleNullError }}</p>
+        </div>
       </div>
 
-      <div class="chiikoma-level">
-        <lable>困り度</lable>
-        <p>{{ chiikomaslProblemLevelNullError }}</p>
-
-        <label>
-        <input type="radio" v-bind:value="3" v-model="level_of_problem">
-        少し</label>
-
-        <label>
-        <input type="radio" v-bind:value="5" v-model="level_of_problem">
-        まあまあ</label>
-
-        <label>
-        <input type="radio" v-bind:value="7" v-model="level_of_problem">
-        かなり</label>
-
-        <label>
-        <input type="radio" v-bind:value="10" v-model="level_of_problem">
-        もうムリ</label>
+      <div class="field">
+        <lable class="form-label">困り度</lable>
+        <p class="help is-danger">{{ chiikomaslProblemLevelNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="少し">
+            <input type="radio" v-bind:value="3" v-model="level_of_problem" id="少し">
+            少し
+          </label>
+          <label class="radio-label" for="まあまあ">
+            <input type="radio" v-bind:value="5" v-model="level_of_problem" id="まあまあ">
+             まあまあ
+          </label>
+          <label class="radio-label" for="かなり">
+            <input type="radio" v-bind:value="7" v-model="level_of_problem" id="かなり">
+            かなり
+          </label>
+          <label class="radio-label" for="もうムリ">
+            <input type="radio" v-bind:value="10" v-model="level_of_problem" id="もうムリ">
+            もうムリ
+          </label>
+        </div>
       </div>
 
-      <div class="chiikoma-frequency">
-        <lable>経験する頻度</lable>
-        <p>{{ chiikomasFrequencyNullError }}</p>
-
-        <label>
-        <input type="radio" v-bind:value="3" v-model="frequency_of_experience">
-        時々</label>
-
-        <label>
-        <input type="radio" v-bind:value="5" v-model="frequency_of_experience">
-        しばしば</label>
-
-        <label>
-        <input type="radio" v-bind:value="7" v-model="frequency_of_experience">
-        頻繁</label>
-
-        <label>
-        <input type="radio" v-bind:value="10" v-model="frequency_of_experience">
-        常に</label>
+      <div class="field">
+        <lable class="form-label">経験する頻度</lable>
+        <p class="help is-danger">{{ chiikomasFrequencyNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="時々">
+            <input type="radio" v-bind:value="3" v-model="frequency_of_experience" id="時々">
+            時々
+          </label>
+          <label class="radio-label" for="しばしば">
+            <input type="radio" v-bind:value="5" v-model="frequency_of_experience" id="しばしば">
+            しばしば
+          </label>
+           <label class="radio-label" for="頻繁">
+            <input type="radio" v-bind:value="7" v-model="frequency_of_experience" id="頻繁">
+            頻繁
+          </label>
+          <label class="radio-label" for="常に">
+            <input type="radio" v-bind:value="10" v-model="frequency_of_experience" id="常に">
+            常に
+          </label>
+        </div>
       </div>
 
-       <div class="chiikoma-cost">
-        <lable>対策コスト</lable>
-        <p>{{ chiikomasCostNullError }}</p>
-
-        <label>
-        <input type="radio" v-bind:value="3" v-model="cost_of_solution">
-        すぐ</label>
-
-        <label>
-        <input type="radio" v-bind:value="5" v-model="cost_of_solution">
-        少し時間がかかる</label>
-
-        <label>
-        <input type="radio" v-bind:value="8" v-model="cost_of_solution">
-        時間がかかる</label>
+      <div class="field">
+        <lable class="form-label">対策コスト</lable>
+        <p class="help is-danger">{{ chiikomasCostNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="すぐ">
+            <input type="radio" v-bind:value="3" v-model="cost_of_solution" id="すぐ">
+            すぐ
+          </label>
+          <label class="radio-label" for="少し時間がかかる">
+            <input type="radio" v-bind:value="5" v-model="cost_of_solution" id="少し時間がかかる">
+            少し時間がかかる
+          </label>
+          <label class="radio-label" for="時間がかかる">
+            <input type="radio" v-bind:value="8" v-model="cost_of_solution" id="時間がかかる">
+            時間がかかる
+          </label>
+        </div>
       </div>
 
-      <button
-          class="chiikoma-new-add-button"
-          type="button"
-          @click="createChiikoma"
-      >
-        登録する
-      </button>
-    </form>
+      <div class="field-button">
+        <div class="control">
+          <button
+            class="'button is-fullwidth button is-danger is-outlined'"
+            type="button"
+            @click="createChiikoma">
+            登録する
+          </button>
+       </div>
+      </div>
+    </div>
   </div>
 </template>
 

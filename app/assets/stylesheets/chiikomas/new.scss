@@ -1,0 +1,50 @@
+.form-section {
+    margin-top: 40px;
+}
+
+.control {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.radio-label {
+    margin: 5px;
+    border: 1px solid #DCF0F9;
+    color: #F58276;
+    padding: 5px;
+    background: #FFF2EB;
+    text-align: center;
+    border-radius: 5px;
+
+    width: 100px;
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'メイリオ', 'MS PGothic'
+}
+
+.radio-label:hover {
+    color: #000;
+    background-color: #c9c9c9;
+    text-decoration: none;
+}
+
+.radio-label:checked {
+    background: linear-gradient(45deg, #bdb9ff, #67b8ff);
+    color: #000;
+}
+
+.field-button {
+    margin-top: 60px;
+}
