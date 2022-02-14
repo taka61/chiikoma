@@ -12,7 +12,14 @@ html
   body
     .wrapper
       .wrapper__start
+        - if flash[:notice]
+          .notification.is-centered.is-danger.is-light
+            = flash[:notice]
+        - if flash[:alert]
+          .notification.is-centered.is-danger.is-light
+            = flash[:alert]
         = render 'layouts/header'
+
         = yield
       .wrapper__end
         = render 'layouts/footer'

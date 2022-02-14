@@ -1,0 +1,32 @@
+nav.navbar[role="navigation" aria-label="main navigation"]
+  .navbar-brand
+    a.navbar-logo[href="/chiikomas"]
+
+  img[src="/assets/logo.png" alt="title_logo" width="112" height="28"]
+  - if user_signed_in?
+    a.navbar-burger[role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"]
+
+    span[aria-hidden="true"]
+    span[aria-hidden="true"]
+    span[aria-hidden="true"]
+    #navbarBasicExample.navbar-menu
+      .navbar-start
+        a.navbar-item[href="/chiikomas"]
+          |  登録した! 
+        a.navbar-item[href="/chiikomas/done"]
+          |  解決した! 
+        a.navbar-item[href="/chiikomas/achievement"]
+          |  1週間のがんばり 
+        .navbar-item.has-dropdown.is-hoverable
+          a.navbar-link
+            |  アカウント 
+          .navbar-dropdown
+            .navbar-item
+              = link_to edit_user_registration_path, class: 'nav-items__item-link' do
+                |  登録情報変更 
+            .navbar-item
+              = link_to destroy_user_session_path, method: :delete, class: 'nav-items__item-link' do
+                |  Log out 
+            .navbar-item
+              = link_to user_registration_path, method: :delete, class: 'nav-items__item-link' do
+                |  アカウント削除 
