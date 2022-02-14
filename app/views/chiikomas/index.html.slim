@@ -8,4 +8,6 @@
       = javascript_pack_tag 'chiikomas'
       #js-chiikomas
 
-      = link_to '追加', new_chiikoma_path, class: 'button is-fullwidth button is-danger is-outlined'
+      .new-chiikoma-button-section
+        = link_to new_chiikoma_path, class: 'button button-add'
+          i.fas.fa-plus

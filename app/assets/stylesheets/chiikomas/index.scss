@@ -30,7 +30,27 @@ a {
   color: #F58276;
 }
 
-.button.is-fullwidth {
+.new-chiikoma-button-section {
+  @media (max-width: 767.98px) {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+  }
+}
+
+.button.button-add {
+  @media (max-width: 767.98px) {
+    font-size: 28px;
+    width: 80px;
+    height: 80px;
+    background-color: #FFF2EB;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   width: 90%;
   margin-bottom: 30px;
   margin-left: 22px;
