@@ -1,5 +1,9 @@
 <template>
   <div class="page">
+    <div v-if="chiikomas.length === 0" class="chiikomas-empty is-centered">
+      <i class="far fa-tired fa-4x"></i>
+      <div class="empty-sentence is-centered"> ちいこまを解決してあげよう！</div>
+    </div>
     <div class="card-section">
       <div v-for="chiikoma in chiikomas" :key="chiikoma.id">
         <div class="card-body">

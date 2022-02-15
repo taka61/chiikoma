@@ -1,5 +1,10 @@
 <template>
   <div class="page">
+    <div v-if="chiikomas.length === 0" class="chiikomas-empty is-centered">
+      <i class="far fa-grin-wink fa-4x"></i>
+      <div class="empty-sentence is-centered"> ちいこまを登録しよう！</div>
+      <p>[＋]ボタンでちいこまを登録できます</p>
+    </div>
     <div class="card-section">
       <div v-for="chiikoma in chiikomas" :key="chiikoma.id">
         <div class="card-body">
