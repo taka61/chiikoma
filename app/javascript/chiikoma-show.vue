@@ -6,7 +6,32 @@
             {{ chiikomaTitle }}
           </div>
         </div>
-      </div>
+    </div>
+
+    <modal name="modal-thanks" :draggable="true" :resizable="true" width="80%" height="60%">
+      <div class="modal-body is-centered">
+        <i class="far fa-kiss-wink-heart fa-6x"></i>
+        <h1 class="is-centered">
+          ケアしてくれてありがとう!!
+        </h1>
+        <div class="center">
+          <div class="message-body is-centered">
+            今日も1日おつかれさま🌈
+          </div>
+        </div>
+        <div class="field-button">
+          <div class="control">
+            <button
+              class="button"
+              type="button"
+              @click="doneChiikoma">
+              次へ
+            </button>
+          </div>
+        </div>
+        </div>
+
+    </modal>
 
     <div class="list-section">
       <div class="list-text">
@@ -53,6 +78,15 @@
       </div>
     </div>
 
+    <div class="field-button">
+      <div class="control">
+        <button
+          class="button"
+          type="button"
+          @click="openModal">
+          ケアした
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -60,7 +94,6 @@
 <script>
 import axios from 'axios'
 import {format} from 'date-fns'
-
 export default {
   data() {
     return {
@@ -82,8 +115,9 @@ export default {
     getChiikoma () {
       const url = location.pathname.split('/')
       const path = url[url.length - 1]
-      axios.get(`http://127.0.0.1:3000/api/chiikomas/${path}.json`)
+      axios.get(`/api/chiikomas/${path}.json`)
       .then((response) => {
+        this.chiikoma = response.data
         this.chiikomaTitle = response.data.title
         this.chiikomaLevel = response.data.level_of_problem
         this.chiikomaFrequency = response.data.frequency_of_experience
@@ -93,6 +127,21 @@ export default {
       }, (error) => {
           console.log(error, response)
         })
+    },
+    openModal() {
+      this.$modal.show('modal-thanks');
+    },
+    doneChiikoma() {
+      const chiikomaUrl = location.pathname.split('/')
+      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
+      const requestPath = '/api/chiikomas/' + chiikomaID
+      const today = new Date();
+      axios.patch(requestPath , {
+        done: true,
+        solved_on: today
+      }).then(response => (
+        window.location.href ='/chiikomas/done'
+      ))
     },
     moment(date, format) {
       return moment(date).format(format)

@@ -58,7 +58,7 @@ module Api
 
     def chiikoma_params
       params.require(:chiikoma).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution,
-                                       :total_points)
+                                       :total_points, :done, :solved_on)
     end
   end
 end
