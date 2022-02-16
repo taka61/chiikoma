@@ -20,6 +20,19 @@
         </div>
       </div>
     </div>
+
+    <div class="new-chiikoma-button-section">
+      <div class="field-button">
+        <div class="control">
+          <button
+            class="button button-add"
+            type="button"
+            @click="newChiikoma">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,14 +46,17 @@ export default {
     }
   },
   mounted () {
-    this.setChiikoma();
+    this.getChiikoma();
   },
   methods: {
-    setChiikoma () {
+    getChiikoma () {
       axios.get('/api/chiikomas')
       .then(response => (
         this.chiikomas = response.data
       ))
+    },
+    newChiikoma() {
+      window.location.href = '/chiikomas/new'
     }
   }
 }
