@@ -74,7 +74,7 @@
         作成日
       </div>
       <div class="list-date-item">
-        {{ chiikomaCreatedDate }}
+        {{ chiikomaCreatedDate | moment }}
       </div>
     </div>
 
@@ -93,8 +93,14 @@
 
 <script>
 import axios from 'axios'
-import {format} from 'date-fns'
+import moment from 'moment'
+
 export default {
+  filters: {
+    moment: function(date) {
+      return moment(date).format("MM月DD日");
+    },
+  },
   data() {
     return {
       chiikoma: [],
@@ -104,7 +110,6 @@ export default {
       chiikomaCost: '',
       chiikomaCreatedDate: '',
       chiikomaTotalPoints: '',
-      format,
     }
   },
   computed: {},
@@ -143,9 +148,6 @@ export default {
         window.location.href ='/chiikomas/done'
       ))
     },
-    moment(date, format) {
-      return moment(date).format(format)
-    }
   }
 }
 </script>
