@@ -4,13 +4,6 @@
       | ちいこま詳細
   .main-body
     .container.is-sm
-      .nav.hustify-content-end
-      = link_to 'ちいこま一覧へ戻る', chiikomas_path, class: 'navbar-link'
 
       = javascript_pack_tag 'chiikoma-show'
       #js-chiikoma-show
-
-      table
-        tr
-          td = link_to '削除', chiikoma_path(@chiikoma), method: :delete, class: 'button'
-          td = link_to '編集', edit_chiikoma_path(@chiikoma), class: 'button'

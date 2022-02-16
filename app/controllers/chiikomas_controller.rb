@@ -35,16 +35,11 @@ class ChiikomasController < ApplicationController
     @chiikoma = current_user.chiikomas.find(params[:id])
   end
 
-  def destroy
-    @chiikoma = current_user.chiikomas.find(params[:id])
-    @chiikoma.destroy
-    redirect_to chiikomas_path
-  end
 
   private
 
   def chiikoma_params
     params.require(:chiikoma).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution,
-                                     :total_points)
+                                     :total_points, :done, :solved_on)
   end
 end

@@ -14,7 +14,7 @@
         <h1 class="is-centered">
           ケアしてくれてありがとう!!
         </h1>
-        <div class="center">
+        <div class="message-section">
           <div class="message-body is-centered">
             今日も1日おつかれさま🌈
           </div>
@@ -86,6 +86,18 @@
           @click="openModal">
           ケアした
         </button>
+        <button
+          class="button"
+          type="button"
+          @click="editChiikoma">
+          編集
+        </button>
+        <button
+          class="button"
+          type="button"
+          @click="deleteChiikoma">
+          削除
+        </button>
       </div>
     </div>
   </div>
@@ -148,6 +160,20 @@ export default {
         window.location.href ='/chiikomas/done'
       ))
     },
+    editChiikoma() {
+      const chiikomaUrl = location.pathname.split('/')
+      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
+      window.location.href =`/chiikomas/${chiikomaID}/edit`
+    },
+    deleteChiikoma() {
+      const chiikomaUrl = location.pathname.split('/')
+      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
+      const requestPath = '/api/chiikomas/' + chiikomaID
+      axios.delete(requestPath, {
+    }).then(response => (
+        window.location.href ='/chiikomas'
+      ))
+    }
   }
 }
 </script>

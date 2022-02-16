@@ -54,6 +54,11 @@ module Api
       end
     end
 
+    def destroy
+      @chiikoma = current_user.chiikomas.find(params[:id])
+      @chiikoma.destroy
+    end
+
     private
 
     def chiikoma_params
