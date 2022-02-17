@@ -11,9 +11,9 @@ class Chiikomas::AchievementController < ApplicationController
   end
 
   def format_date
-    @today = Date.today
-    @this_sunday = @today - (@today.wday - 0)
-    @this_monday = @today - (@today.wday - 7)
+    today = Date.today
+    @this_sunday = today - (today.wday - 0)
+    @this_monday = today - (today.wday - 7)
   end
 
   def fetch_registration_info
@@ -34,11 +34,11 @@ class Chiikomas::AchievementController < ApplicationController
   def show_chart
     @all_chiikomas_data = [
       {
-        name: 'Solved',
+        name: '解決した!',
         data: current_user.chiikomas.group_by_week(:solved_on).sum(:total_points)
       },
       {
-        name: 'Registered',
+        name: '登録した!',
         data: current_user.chiikomas.group_by_week(:created_at).sum(:registration_points)
       }
     ]
