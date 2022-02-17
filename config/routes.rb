@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :chiikomas do
+    resources :achievement, only: %i[index], controller: "chiikomas/achievement"
     collection do
-      get 'achievement', 'done'
+      get 'done'
     end
   end
 

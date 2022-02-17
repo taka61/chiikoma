@@ -1,4 +1,7 @@
 ja:
+  date:
+    formats:
+      default: '%m/%d'
   activerecord:
     models:
       chiikomas: ちいこま

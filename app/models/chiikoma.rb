@@ -15,10 +15,4 @@ class Chiikoma < ApplicationRecord
   def calculate_total_points
     level_of_problem + frequency_of_experience + cost_of_solution
   end
-
-  def daytime
-    today = Date.today
-    @this_sunday = today - (today.wday - 0)
-    @this_monday = today - (today.wday - 7)
-  end
 end

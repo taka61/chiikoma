@@ -1,0 +1,40 @@
+.page
+  .usage-container
+    .title.is-centered
+      | 1週間のがんばり
+  .main-body
+    .container.is-sm
+      .date-container
+        h1.date-list
+          = l @this_sunday
+          | -
+          = l @this_monday
+      .achievement-container
+        .all-achievement-header 合計ちいこま
+        .flex_achievement-box
+          .all-achievement-inner
+            .all-achievement-title ちいこま数
+            .achievement-detail  =@all_chiikoma_numbers
+          .all-achievement-inner
+            .all-achievement-title ポイント
+            .achievement-detail  =@all_chiikoma_points
+
+        .flex_achievement-box
+          .flex_chiikoma-item
+            .achievement-header 登録した!
+            .chiikoma-box
+              .achievement-subtitle ちいこま数
+              .achievement-detail  =@registration_numbers
+            .chiikoma-box
+              .achievement-subtitle ポイント
+              .achievement-detail  =@registration_points
+          .flex_chiikoma-item
+            .achievement-header 解決した!
+            .chiikoma-box
+              .achievement-subtitle ちいこま数
+              .achievement-detail  =@solution_numbers
+            .chiikoma-box
+              .achievement-subtitle ポイント
+              .achievement-detail  =@solution_points
+        .barhart
+          = column_chart @all_chiikomas_data , stacked: true
