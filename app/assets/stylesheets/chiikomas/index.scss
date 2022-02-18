@@ -63,3 +63,56 @@ a {
   margin-bottom: 30px;
   margin-left: 22px;
 }
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  align-items: center;
+  display: none;
+}
+
+.modal.is_active {
+  display: flex;
+}
+
+.modal_wrap {
+  text-align: right;
+  width: 90%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 10000;
+  position: relative;
+}
+
+.modal_inner {
+  background-color: #FFF;
+  text-align: left;
+  padding: 30px 30px 40px;
+  border: solid;
+}
+
+h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  @media (max-width: 767.98px) {
+    font-size: 15px;
+  }
+}
+
+.message-body {
+  background-color: #DCF0F9;
+  margin-top: 20px;
+  width: 80%;
+  font-weight: bold;
+  font-size: 30px;
+
+  @media (max-width: 767.98px) {
+    width: 80%;
+    font-size: 20px;
+  }
+}
