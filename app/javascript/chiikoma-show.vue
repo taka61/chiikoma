@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <modal name="modal-thanks" :draggable="true" :resizable="true" width="80%" height="60%">
+    <modal name="modal-thanks" width="80%" height="60%">
       <div class="modal-body is-centered">
         <i class="far fa-kiss-wink-heart fa-6x"></i>
         <h1 class="is-centered">
@@ -29,8 +29,7 @@
             </button>
           </div>
         </div>
-        </div>
-
+      </div>
     </modal>
 
     <div class="list-section">

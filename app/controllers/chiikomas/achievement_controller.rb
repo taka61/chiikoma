@@ -2,6 +2,7 @@
 
 class Chiikomas::AchievementController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @data = current_user.chiikomas
     format_date
