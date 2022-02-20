@@ -18,12 +18,27 @@ jobs:
 
     runs-on: ubuntu-latest
 
+
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://postgres:postgres@localhost/chiikoma_test"
 
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
-    - uses: actions/checkout@v2
+    - name: Check out repository code
+      uses: actions/checkout@v2
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -31,7 +46,15 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    #   ruby-version: ${{ matrix.ruby-version }}
+        ruby-version: '3.0.1'
+
+    - name: Cache node modules
+      uses: actions/cache@v2.1.4
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: yarn install
       run:  yarn install --check-files
