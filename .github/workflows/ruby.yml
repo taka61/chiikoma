@@ -22,10 +22,6 @@ jobs:
       RAILS_ENV: test
       DATABASE_URL: "postgres://postgres:postgres@localhost/chiikoma_test"
 
-    strategy:
-      matrix:
-        ruby-version: ['3.0.1']
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
