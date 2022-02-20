@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div class="field-button">
+    <div v-if="!chiikoma.done" class="field-button">
       <div class="control">
         <button
           class="button"
