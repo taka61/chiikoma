@@ -58,6 +58,7 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'spring'
+  gem 'slim_lint'
 end
 
 group :test do
