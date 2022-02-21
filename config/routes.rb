@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   authenticated :user do
-    root "chiikomas#index", as: "user_authenticated_root"
+    root 'chiikomas#index', as: 'user_authenticated_root'
   end
   root 'top#index'
   devise_for :users
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :chiikomas do
     collection do
       get 'done'
-      resources :achievement, only: %i[index], controller: "chiikomas/achievement"
+      resources :achievement, only: %i[index], controller: 'chiikomas/achievement'
     end
   end
 

@@ -6,7 +6,7 @@ module Api
     skip_before_action :verify_authenticity_token
 
     rescue_from ActiveRecord::RecordNotFound do |_exception|
-      render json: { error: '404 not found' }, status: 404
+      render json: { error: '404 not found' }, status: :not_found
     end
 
     def index
@@ -31,7 +31,7 @@ module Api
     def create
       @chiikoma = current_user.chiikomas.create(chiikoma_params)
       @chiikoma.total_points = @chiikoma.calculate_total_points
-      @chiikoma.registration_points = 5 if !@chiikoma.is_made_by_admin
+      @chiikoma.registration_points = 5 unless @chiikoma.is_made_by_admin
       if @chiikoma.save
         render json: @chiikoma, status: :created
       else
