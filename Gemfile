@@ -57,8 +57,8 @@ group :development do
   gem 'rubocop-fjord', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
-  gem 'spring'
   gem 'slim_lint'
+  gem 'spring'
 end
 
 group :test do
