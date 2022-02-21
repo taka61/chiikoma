@@ -19,7 +19,7 @@ class ChiikomaNewTest < ApplicationSystemTestCase
     choose '時々'
     choose 'すぐ'
     click_button '登録する'
-    assert_text 'セルフケアしてほしいこと一覧'
+    assert_text '今日のちいこま'
   end
 
   test 'update chiikoma' do
@@ -31,24 +31,32 @@ class ChiikomaNewTest < ApplicationSystemTestCase
     choose 'しばしば'
     choose '少し時間がかかる'
     click_button '更新する'
-    assert_text 'セルフケアしてほしいこと一覧'
+    assert_text '今日のちいこま'
   end
 
   test 'done chiikoma' do
     login_as(@user, scope: :user)
     visit chiikoma_path(id: @chiikoma.id)
-    assert_text 'ちいこまの詳細'
-    click_link 'ケアした'
-    assert_text 'セルフケアしたこと一覧'
+    assert_text 'ちいこま詳細'
+    assert_text '作成日'
+    click_button 'ケアした'
+    click_button '次へ'
+    assert_text '解決した'
   end
 
   test 'visit chiikoma page' do
     login_as(@user, scope: :user)
     visit chiikoma_path(id: @chiikoma.id)
-    assert_text 'イヤホンが片方聞こえづらい'
-    assert_text '少し'
-    assert_text '時々'
-    assert_text 'すぐ'
-    assert_text '9'
+    assert_text 'chiikoma1'
+    assert_text '5'
+    assert_text '5'
+    assert_text '3'
+    assert_text '13'
+  end
+
+  test 'achievement chiikoma' do
+    login_as(@user, scope: :user)
+    visit '/chiikomas/achievement'
+    assert_text '1週間のがんばり'
   end
 end

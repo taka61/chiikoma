@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-window.onload = function() {
+window.onload = function () {
   const cookieArray = new Array();
-  if(document.cookie != ''){
+  if (document.cookie != '') {
     const tmp = document.cookie.split('; ');
-    for(let i=0;i<tmp.length;i++){
+    for (let i = 0; i < tmp.length; i++) {
       const data = tmp[i].split('=');
       cookieArray[data[0]] = decodeURIComponent(data[1]);
     }
@@ -26,11 +26,11 @@ window.onload = function() {
 
   if (!modalBrowse) {
     modal.classList.add("is_active");
-    document.cookie = 'modalBrowse=allready; max-age=60'; // 一時的に60秒後にセット
+    document.cookie = 'modalBrowse=allready; max-age=86400'; // 一時的に60秒後にセット
   }
 
   const modalClose = document.getElementsByClassName('js_modal_close');
-  for( var i = 0; i < modalClose.length; i++ ) {
+  for (var i = 0; i < modalClose.length; i++) {
     modalClose[i].onclick = function () {
       modal.classList.remove("is_active");
     }

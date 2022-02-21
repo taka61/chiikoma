@@ -1,11 +1,11 @@
 chiikoma1:
   user: otameshi
   title: 'chiikoma1'
-  level_of_problem: 'まあまあ'
-  frequency_of_experience: 'しばしば'
-  cost_of_solution: 'すぐ'
+  level_of_problem: '5'
+  frequency_of_experience: '5'
+  cost_of_solution: '3'
   total_points: 13
-  done: true
+  done: false
   is_made_by_admin: true
   created_at: "2022-01-11 00:00:10"
   updated_at: "2022-01-11 00:00:01"
@@ -14,9 +14,9 @@ chiikoma1:
 chiikoma2:
   user: otameshi
   title: 'chiikoma2'
-  level_of_problem: 'まあまあ'
-  frequency_of_experience: 'しばしば'
-  cost_of_solution: 'すぐ'
+  level_of_problem: '5'
+  frequency_of_experience: '5'
+  cost_of_solution: '3'
   total_points: 13
   registration_points: 5
   done: true
@@ -28,9 +28,9 @@ chiikoma2:
 chiikoma3:
   user: otameshi
   title: 'chiikoma3'
-  level_of_problem: 'まあまあ'
-  frequency_of_experience: 'しばしば'
-  cost_of_solution: 'すぐ'
+  level_of_problem: '5'
+  frequency_of_experience: '5'
+  cost_of_solution: '3'
   total_points: 13
   registration_points: 5
   done: false
@@ -41,9 +41,9 @@ chiikoma3:
 chiikoma4:
   user: otameshi
   title: 'chiikoma4'
-  level_of_problem: '少し'
-  frequency_of_experience: '時々'
-  cost_of_solution: 'すぐ'
+  level_of_problem: '3'
+  frequency_of_experience: '3'
+  cost_of_solution: '3'
   total_points: 9
   registration_points: 5
   done: false
@@ -54,10 +54,10 @@ chiikoma4:
 chiikoma5:
   user: otameshi
   title: 'chiikoma5'
-  level_of_problem: 'かなり'
-  frequency_of_experience: '頻繁'
-  cost_of_solution: '少し時間がかかる'
-  total_points: 19
+  level_of_problem: '7'
+  frequency_of_experience: '7'
+  cost_of_solution: '8'
+  total_points: 22
   registration_points: 5
   done: false
   is_made_by_admin: false
@@ -67,10 +67,10 @@ chiikoma5:
 chiikoma6:
   user: otameshi
   title: 'chiikoma6'
-  level_of_problem: 'かなり'
-  frequency_of_experience: '頻繁'
-  cost_of_solution: '少し時間がかかる'
-  total_points: 19
+  level_of_problem: '7'
+  frequency_of_experience: '7'
+  cost_of_solution: '8'
+  total_points: 22
   registration_points: 5
   done: false
   is_made_by_admin: false
@@ -80,10 +80,10 @@ chiikoma6:
 chiikoma7:
   user: otameshi
   title: 'chiikoma7'
-  level_of_problem: 'もうムリ'
-  frequency_of_experience: '常に'
-  cost_of_solution: '少し時間がかかる'
-  total_points: 25
+  level_of_problem: '10'
+  frequency_of_experience: '10'
+  cost_of_solution: '8'
+  total_points: 28
   registration_points: 5
   done: true
   is_made_by_admin: false
@@ -94,10 +94,10 @@ chiikoma7:
 chiikoma8:
   user: otameshi
   title: 'chiikoma7'
-  level_of_problem: 'もうムリ'
-  frequency_of_experience: '常に'
-  cost_of_solution: '少し時間がかかる'
-  total_points: 25
+  level_of_problem: '10'
+  frequency_of_experience: '10'
+  cost_of_solution: '8'
+  total_points: 28
   done: true
   is_made_by_admin: true
   created_at: "2022-02-08 00:00:10"

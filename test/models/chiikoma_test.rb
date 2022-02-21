@@ -26,6 +26,6 @@ class ChiikomaTest < ActiveSupport::TestCase
 
   test 'calculate_total_points' do
     chiikoma = chiikomas(:chiikoma1)
-    assert_equal 9, chiikoma.total_points
+    assert_equal 13, chiikoma.total_points
   end
 end
