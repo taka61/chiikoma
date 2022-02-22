@@ -24,7 +24,4 @@ nav.navbar[role="navigation" aria-label="main navigation"]
                 |  登録情報変更
             .navbar-item
               = link_to destroy_user_session_path, method: :delete, class: 'nav-items__item-link' do
-                |  Log out
-            .navbar-item
-              = link_to user_registration_path, method: :delete, class: 'nav-items__item-link' do
-                |  アカウント削除
+                |  ログアウト

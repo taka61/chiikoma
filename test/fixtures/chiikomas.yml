@@ -93,7 +93,7 @@ chiikoma7:
 
 chiikoma8:
   user: otameshi
-  title: 'chiikoma7'
+  title: 'chiikoma8'
   level_of_problem: '10'
   frequency_of_experience: '10'
   cost_of_solution: '8'
@@ -103,3 +103,30 @@ chiikoma8:
   created_at: "2022-02-08 00:00:10"
   updated_at: "2022-02-08 00:00:01"
   solved_on: "2022-02-08"
+
+chiikoma9:
+  user: otameshi
+  title: 'chiikoma9'
+  level_of_problem: '10'
+  frequency_of_experience: '10'
+  cost_of_solution: '8'
+  total_points: 28
+  done: true
+  is_made_by_admin: true
+  created_at: <%= Date.current %>
+  updated_at: <%= Date.current %>
+  solved_on: <%= Date.current %>
+
+chiikoma10:
+  user: otameshi
+  title: 'chiikoma10'
+  level_of_problem: '3'
+  frequency_of_experience: '5'
+  cost_of_solution: '8'
+  registration_points: 5
+  total_points: 16
+  done: true
+  is_made_by_admin: false
+  created_at: <%= Date.current %>
+  updated_at: <%= Date.current %>
+  solved_on: <%= Date.current %>

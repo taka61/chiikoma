@@ -31,3 +31,7 @@
           .field
             .form-action
               = f.submit '更新する', class: 'button is-fullwidth is-info is-light'
+          .danger-items.is-centered
+            = link_to 'アカウント削除', user_registration_path, data: { confirm: '本当によろしいですか？' }, method: :delete, class: 'danger-items__link'
+            .danger-items__description
+              | アカウントを削除すると、登録データも全て削除されます。
