@@ -37,6 +37,7 @@ gem 'devise-i18n'
 gem 'groupdate'
 gem 'rails-i18n'
 gem 'slim-rails'
+gem 'net-smtp', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
