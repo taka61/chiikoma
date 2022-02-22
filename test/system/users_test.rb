@@ -61,7 +61,7 @@ class UsersTest < ApplicationSystemTestCase
     login_as(@user, scope: :user)
     visit root_path
     click_button '閉じる'
-    find(".navbar-link").click
+    find('.navbar-link').click
     click_on 'ログアウト'
     assert_text 'ログアウトしました'
   end
@@ -89,8 +89,8 @@ class UsersTest < ApplicationSystemTestCase
     login_as(@user, scope: :user)
     visit edit_user_registration_path
     page.accept_confirm do
-        click_on 'アカウント削除'
-      end
+      click_on 'アカウント削除'
+    end
     assert_text 'アカウントを削除しました。またのご利用をお待ちしております。'
   end
 end
