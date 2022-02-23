@@ -1,2 +1,65 @@
-h1 Top#index
-= link_to 'ログイン', new_user_session_path, class: 'post'
+.top-page
+      .main-body
+        .top-container
+          .main-article
+            .main-image.is-centered
+              img[src="/assets/top.png" alt="top" width="350" height="250"]
+            .main-header.is-centered
+              | 「あなたのためだけの問題」
+              br
+              | 管理しませんか？
+            .button-section
+              .main-button
+                = link_to '始める', new_user_registration_path, class: 'button is-danger is-outlined'
+
+            .main-items
+              .main-item
+                .main-title.is-centered
+                  | いつか解決したいと思っている
+                  br
+                  | 自分のためだけの小さな困りごと「ちいこま」
+                .main-description
+                  |「他人からの頼まれごと」や「やらなきゃいけない（Todo）コト」は手をつけやすく、
+                  br
+                  |「自分だけのため」・「小さな困りごと」はついつい後回しにしてしまう癖があります。
+              .main-item
+                .main-title.is-centered
+                  | 小さなイライラ気づいていますか？
+                .main-description
+                  |「小さく・緊急性がない」だけで、「解決できると（自分が）嬉しい」ものを放っておくのは、
+                  br
+                  | 自分の内側からの欲求・SOSを無視しているのと同じことであり、
+                  | その状態を続けておくとストレスが少しずつ溜まっていきます。
+                .main-title.is-centered
+                  | セルフケアの第一歩に
+                .main-description
+                  | ちいこまを使って自分の中の不快・違和感・欲求等を見える化し、
+                  | 自分のことをもっと気にかけてあげる第一歩を始めましょう！
+
+          .service-article
+            .service-header.is-centered
+              | ちいこまにポイントをつけよう
+            .service-description.is-centered
+                |「 困り度」・「経験する頻度」・「対策コスト」の3つの観点で数値化
+            .service-image.is-centered
+              img[src="/assets/chiikoma-new.png" alt="chiikoma_new" width="700" height="600"]
+          .service-article
+            .service-header.is-centered
+              | 1週間のがんばりをグラフで可視化
+            .service-description.is-centered
+                |「どれくらい自分の問題に気づくことができたか」・「問題を解決できたか」
+                |1週間のがんばりが可視化できるからやる気が出るかも
+            .service-image.is-centered
+              img[src="/assets/chiikoma-chart.png" alt="chiikoma_new" width="400" height="250"]
+          .service-article
+            .service-header.is-centered
+              | 日替わりでちいこまの提示
+            .service-description.is-centered
+                | 「自分だけの小さな困りごと」ってそもそも気づきにくい…
+                | そんな方のために日替わりでちいこまを提示します。つい後回しにしていることに取り組むきっかけになるかも…？
+            .service-image.is-centered
+              img[src="/assets/daily-chiikoma.png" alt="chiikoma_new" width="400" height="250"]
+          .top-action
+            .button-section
+              .main-button
+                = link_to '始める', new_user_registration_path, class: 'button is-medium is-fullwidth button is-danger'

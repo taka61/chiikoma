@@ -1,3 +1,103 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.top-page {
+    background-color: #FEF2EC;
+}
+
+.top-container {
+    width: 900px;
+    max-width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+    background-color: #FEF2EC;
+    color: #1939A9;
+}
+
+.main-image {
+    @media (max-width: 767.98px) {
+        width: 80%;
+        height: 80%;
+        margin-left: 40px;
+      }
+
+}
+.main-article {
+    padding-top: 50px;
+
+}
+
+.main-header {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 45px;
+    padding-top: 80px;
+    @media (max-width: 767.98px) {
+        font-size: 25px;
+        padding-top: 40px;
+      }
+
+}
+
+.main-items {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    width: 80%;
+    @media (max-width: 767.98px) {
+        width: 100%;
+      }
+}
+
+.main-item {
+
+}
+
+.main-title {
+    font-weight: bold;
+}
+.button-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px 0 40px 0;
+}
+
+.main-description {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.service-article {
+    margin-top: 40px;
+    border-top: medium solid #F58376;
+    @media (max-width: 767.98px) {
+        margin-top: 20px;
+
+      }
+}
+
+.service-header {
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline;
+    margin-top: 30px;
+    @media (max-width: 767.98px) {
+        font-size: 22px;
+      }
+}
+
+.service-description {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.service-image {
+    padding-top: 30px;
+    @media (max-width: 767.98px) {
+        width: 90%;
+        height:90%;
+        margin-left: 20px;
+    }
+}
+
+.top-action {
+    margin-top: 60px;
+    padding-bottom: 30px;
+}

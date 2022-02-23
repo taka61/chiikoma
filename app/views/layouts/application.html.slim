@@ -18,8 +18,10 @@ html
         - if flash[:alert]
           .notification.is-centered.is-danger.is-light
             = flash[:alert]
-        = render 'layouts/header'
-
-        = yield
+        - if current_page?(root_path)
+          = yield
+        - else
+          = render 'layouts/header'
+          = yield
       .wrapper__end
-        = render 'layouts/footer'
+          = render 'layouts/footer'

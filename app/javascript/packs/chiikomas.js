@@ -26,7 +26,7 @@ window.onload = function () {
 
   if (!modalBrowse) {
     modal.classList.add('is_active')
-    document.cookie = 'modalBrowse=allready; max-age=86400' // 一時的に60秒後にセット
+    document.cookie = 'modalBrowse=allready; max-age=60' // 一時的に60秒後にセット
   }
 
   const modalClose = document.getElementsByClassName('js_modal_close')
