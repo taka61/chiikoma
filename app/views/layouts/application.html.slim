@@ -18,7 +18,7 @@ html
         - if flash[:alert]
           .notification.is-centered.is-danger.is-light
             = flash[:alert]
-        - if current_page?(root_path)
+        - if current_page?(root_path) && !user_signed_in?
           = yield
         - else
           = render 'layouts/header'

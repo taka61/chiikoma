@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'welcome#index'
 
   get 'tos', to: 'welcome#tos', as: 'tos'
   get 'privacy_policy', to: 'welcome#privacy_policy', as: 'privacy_policy'
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root 'chiikomas#index', as: 'user_authenticated_root'
   end
+  root 'welcome#index'
 
   devise_for :users
 
