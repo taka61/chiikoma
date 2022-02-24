@@ -36,6 +36,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'groupdate'
 gem 'net-smtp', require: false
+gem 'net-pop'
 gem 'rails-i18n'
 gem 'slim-rails'
 
