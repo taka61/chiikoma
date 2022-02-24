@@ -35,10 +35,10 @@ gem 'chartkick'
 gem 'devise'
 gem 'devise-i18n'
 gem 'groupdate'
-gem 'net-smtp', require: false
-gem 'net-pop'
-gem 'net-imap'
 gem 'net-ftp'
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp', require: false
 gem 'rails-i18n'
 gem 'slim-rails'
 
