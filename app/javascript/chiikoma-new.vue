@@ -98,6 +98,8 @@ export default {
       level_of_problem:'',
       frequency_of_experience:'',
       cost_of_solution:'',
+      total_points:'',
+      registration_points:'',
       chiikomasTitleNullError: '',
       chiikomaslProblemLevelNullError: '',
       chiikomasFrequencyNullError :'',
@@ -131,15 +133,21 @@ export default {
         this.chiikomasCostNullError = ''
       }
     },
+    cal_total_points() {
+      this.total_points = this.level_of_problem + this.frequency_of_experience + this.cost_of_solution
+    },
     createChiikoma() {
       if(this.checkForm()) {
         return
       }
+      this.cal_total_points()
       axios.post('/api/chiikomas', {
           title: this.title,
           level_of_problem: this.level_of_problem,
           frequency_of_experience: this.frequency_of_experience,
-          cost_of_solution: this.cost_of_solution
+          cost_of_solution: this.cost_of_solution,
+          total_points: this.total_points,
+          registration_points: 5
       }).then(response => (
         window.location.href ='/chiikomas'
       ))
