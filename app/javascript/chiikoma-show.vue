@@ -86,13 +86,13 @@
           ケアした
         </button>
         <button
-          class="button"
+          class="button-edit"
           type="button"
           @click="editChiikoma">
           編集
         </button>
         <button
-          class="button"
+          class="button-delete"
           type="button"
           @click="deleteChiikoma">
           削除

@@ -50,10 +50,10 @@
 
 .button {
   display: inline-block;
-  background: #FFF2EB;
+  background: #1939A9;
   padding: 10px 30px;
   text-align: center;
-  color: #F58276;
+  color: #fff;
   margin: 10px;
   border: 1px solid;
   cursor: pointer;
@@ -63,6 +63,41 @@
   @media (max-width: 767.98px) {
     margin: 5px;
   }
+}
+
+.button-edit {
+  display: inline-block;
+  background: #f54667;
+  padding: 10px 30px;
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  border: 1px solid;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+
+  @media (max-width: 767.98px) {
+    margin: 5px;
+  }
+
+}
+
+.button-delete {
+  display: inline-block;
+  background: #fabd17;
+  padding: 10px 30px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+
+  @media (max-width: 767.98px) {
+    margin: 5px;
+  }
+
 }
 
 .modal-body {
