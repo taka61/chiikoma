@@ -35,13 +35,13 @@ gem 'chartkick'
 gem 'devise'
 gem 'devise-i18n'
 gem 'groupdate'
+gem 'meta-tags'
 gem 'net-ftp'
 gem 'net-imap'
 gem 'net-pop'
 gem 'net-smtp', require: false
 gem 'rails-i18n'
 gem 'slim-rails'
-gem 'meta-tags'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
