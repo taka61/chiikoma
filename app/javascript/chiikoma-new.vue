@@ -4,7 +4,7 @@
       <div class="field">
         <div class="control">
           <lable class="form-label">あなたのためだけの困りごとは？</lable>
-          <input class="input" type="text"  placeholder="メガネが汚い" v-model="title" id="title">
+          <input class="input" type="text"  placeholder="メガネの汚れが気になる" v-model="title" id="title">
           <p class="help is-danger">{{ chiikomasTitleNullError }}</p>
         </div>
       </div>
