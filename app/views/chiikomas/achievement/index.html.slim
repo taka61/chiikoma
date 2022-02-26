@@ -7,7 +7,9 @@
       .date-container
         h1.date-list
           = l @this_sunday
-          |   ~  # rubocop:disable TrailingWhitespace
+          / rubocop:disable Layout/TrailingWhitespace
+          |   ~  
+          / rubocop:enable Layout/TrailingWhitespace
           = l @this_monday
       .achievement-container
         .all-achievement-header 合計ちいこま
