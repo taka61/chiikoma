@@ -9,7 +9,7 @@ module Hassles
       format_date
       fetch_registration_info
       fetch_solution_info
-      fetch_all_hassle_info
+      fetch_all_chiikoma_info
       show_chart
     end
 
@@ -29,13 +29,13 @@ module Hassles
       @solution_points = @data.solved_on_this_week.sum(:total_points)
     end
 
-    def fetch_all_hassle_info
-      @all_hassle_numbers = @registration_numbers + @solution_numbers
-      @all_hassle_points = @registration_points + @solution_points
+    def fetch_all_chiikoma_info
+      @all_chiikoma_numbers = @registration_numbers + @solution_numbers
+      @all_chiikoma_points = @registration_points + @solution_points
     end
 
     def show_chart
-      @all_hassles_data = [
+      @all_chiikomas_data = [
         {
           name: '解決した!',
           data: current_user.hassles.group_by_week(:solved_on).sum(:total_points)
