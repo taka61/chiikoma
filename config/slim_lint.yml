@@ -1,6 +1,6 @@
 exclude:
   - 'app/views/style_guide/**/*.slim'
-  - 'app/views/chiikomas/achievement/index.html.slim'
+  - 'app/views/hassles/achievement/index.html.slim'
 
 linters:
   LineLength:

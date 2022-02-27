@@ -36,7 +36,6 @@ rails db:seed
 ```
 メールアドレス: otameshi@sample.com
 パスワード: password
-
 ```
 
 ## テスト

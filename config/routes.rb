@@ -6,21 +6,21 @@ Rails.application.routes.draw do
   get 'privacy_policy', to: 'welcome#privacy_policy', as: 'privacy_policy'
 
   authenticated :user do
-    root 'chiikomas#index', as: 'user_authenticated_root'
+    root 'hassles#index', as: 'user_authenticated_root'
   end
   root 'welcome#index'
 
   devise_for :users
 
-  resources :chiikomas do
+  resources :hassles do
     collection do
       get 'done'
-      resources :achievement, only: %i[index], controller: 'chiikomas/achievement'
+      resources :achievement, only: %i[index], controller: 'hassles/achievement'
     end
   end
 
   namespace :api, format: 'json' do
-    resources :chiikomas do
+    resources :hassles do
       collection do
         get :done
       end

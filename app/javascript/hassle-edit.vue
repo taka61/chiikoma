@@ -1,0 +1,139 @@
+<template>
+  <div class="page">
+    <div class="form-section">
+      <div class="field">
+        <div class="control">
+          <lable class="form-label">あなたのためだけの困りごとは？</lable>
+          <input class="input" type="text" placeholder="メガネが汚い" v-model="hassleTitle" id="title">
+          <p class="help is-danger">{{ hasslesTitleNullError }}</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <lable class="form-label">困り度</lable>
+        <p class="help is-danger">{{ hassleslProblemLevelNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="少し">
+            <input type="radio" v-bind:value="3" v-model="hassleLevel" id="少し">
+            少し
+          </label>
+          <label class="radio-label" for="まあまあ">
+            <input type="radio" v-bind:value="5" v-model="hassleLevel" id="まあまあ">
+             まあまあ
+          </label>
+          <label class="radio-label" for="かなり">
+            <input type="radio" v-bind:value="7" v-model="hassleLevel" id="かなり">
+            かなり
+          </label>
+          <label class="radio-label" for="もうムリ">
+            <input type="radio" v-bind:value="10" v-model="hassleLevel" id="もうムリ">
+            もうムリ
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <lable class="form-label">経験する頻度</lable>
+        <p class="help is-danger">{{ hasslesFrequencyNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="時々">
+            <input type="radio" v-bind:value="3" v-model="hassleFrequency" id="時々">
+            時々
+          </label>
+          <label class="radio-label" for="しばしば">
+            <input type="radio" v-bind:value="5" v-model="hassleFrequency" id="しばしば">
+            しばしば
+          </label>
+           <label class="radio-label" for="頻繁">
+            <input type="radio" v-bind:value="7" v-model="hassleFrequency" id="頻繁">
+            頻繁
+          </label>
+          <label class="radio-label" for="常に">
+            <input type="radio" v-bind:value="10" v-model="hassleFrequency" id="常に">
+            常に
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <lable class="form-label">対策コスト</lable>
+        <p class="help is-danger">{{ hasslesCostNullError }}</p>
+        <div class="control">
+          <label class="radio-label" for="すぐ">
+            <input type="radio" v-bind:value="3" v-model="hassleCost" id="すぐ">
+            すぐ
+          </label>
+          <label class="radio-label" for="少し時間がかかる">
+            <input type="radio" v-bind:value="5" v-model="hassleCost" id="少し時間がかかる">
+            少し時間がかかる
+          </label>
+          <label class="radio-label" for="時間がかかる">
+            <input type="radio" v-bind:value="8" v-model="hassleCost" id="時間がかかる">
+            時間がかかる
+          </label>
+        </div>
+      </div>
+
+      <div class="field-button">
+        <div class="control">
+          <button
+            class="'button is-fullwidth button is-danger is-outlined'"
+            type="button"
+            @click="updateHassle">
+            更新する
+          </button>
+       </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      hassle: [],
+      hassleTitle: '',
+      hassleLevel: '',
+      hassleFrequency: '',
+      hassleCost: '',
+      difficulty_levels: ''
+    }
+  },
+  computed: {},
+  mounted () {
+    this.getHassle()
+  },
+  methods: {
+    getHassle () {
+      const url = location.pathname.split('/')
+      const path = url[url.length - 2]
+      axios.get(`/api/hassles/${path}.json`)
+      .then((response) => {
+        this.hassleTitle = response.data.title
+        this.hassleLevel = response.data.difficulty_levels
+        this.hassleFrequency = response.data.frequency
+        this.hassleCost = response.data.cost
+      }), (error) => {
+          console.log(error, response)
+        }
+    },
+    updateHassle() {
+      const hassleUrl = location.pathname.split('/')
+      const hassleID = hassleUrl[hassleUrl.length - 2]
+      const requestPath = '/api/hassles/' + hassleID
+      axios.patch(requestPath, {
+        title: this.hassleTitle,
+        difficulty_levels: this.hassleLevel,
+        frequency: this.hassleFrequency,
+        cost: this.hassleCost,
+        total_points: this.hassleLevel + this.hassleFrequency + this.hassleCost
+      }).then(response => (
+        window.location.href ='/hassles'
+      ))
+    }
+  }
+}
+</script>

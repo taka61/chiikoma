@@ -4,7 +4,7 @@ require 'active_record/fixtures'
 
 tables = %i[
   users
-  chiikomas
+  hassles
 ]
 
 tables.each do |table|
