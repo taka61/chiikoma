@@ -10,7 +10,7 @@ class HasslesController < ApplicationController
   private
 
   def hassle_params
-    params.require(:hassle).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution,
-                                     :total_points, :done, :solved_on)
+    params.require(:hassle).permit(:title, :difficulty_levels, :frequency, :cost,
+                                     :total_points, :solved, :solved_on)
   end
 end

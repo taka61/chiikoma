@@ -135,9 +135,9 @@ export default {
       .then((response) => {
         this.hassle = response.data
         this.hassleTitle = response.data.title
-        this.hassleLevel = response.data.level_of_problem
-        this.hassleFrequency = response.data.frequency_of_experience
-        this.hassleCost = response.data.cost_of_solution
+        this.hassleLevel = response.data.difficulty_levels
+        this.hassleFrequency = response.data.frequency
+        this.hassleCost = response.data.cost
         this.hassleCreatedDate = response.data.created_at
         this.hassleTotalPoints = response.data.total_points
       }, (error) => {

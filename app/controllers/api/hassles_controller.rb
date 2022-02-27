@@ -10,12 +10,12 @@ module Api
     end
 
     def index
-      @hassles = current_user.hassles.where(done: false).order(total_points: :desc)
+      @hassles = current_user.hassles.where(solved: false).order(total_points: :desc)
       render json: @hassles
     end
 
     def done
-      @hassles = current_user.hassles.where(done: true).order(total_points: :desc)
+      @hassles = current_user.hassles.where(solved: true).order(total_points: :desc)
       render json: @hassles
     end
 
@@ -60,8 +60,8 @@ module Api
     private
 
     def hassle_params
-      params.require(:hassle).permit(:title, :level_of_problem, :frequency_of_experience, :cost_of_solution,
-                                       :total_points, :done, :solved_on, :is_made_by_admin, :registration_points)
+      params.require(:hassle).permit(:title, :difficulty_levels, :frequency, :cost,
+                                       :total_points, :solved, :solved_on, :is_made_by_admin, :registration_points)
     end
   end
 end

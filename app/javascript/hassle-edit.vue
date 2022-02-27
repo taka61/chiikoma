@@ -99,7 +99,7 @@ export default {
       hassleLevel: '',
       hassleFrequency: '',
       hassleCost: '',
-      level_of_problem: ''
+      difficulty_levels: ''
     }
   },
   computed: {},
@@ -113,9 +113,9 @@ export default {
       axios.get(`/api/hassles/${path}.json`)
       .then((response) => {
         this.hassleTitle = response.data.title
-        this.hassleLevel = response.data.level_of_problem
-        this.hassleFrequency = response.data.frequency_of_experience
-        this.hassleCost = response.data.cost_of_solution
+        this.hassleLevel = response.data.difficulty_levels
+        this.hassleFrequency = response.data.frequency
+        this.hassleCost = response.data.cost
       }), (error) => {
           console.log(error, response)
         }
@@ -126,9 +126,9 @@ export default {
       const requestPath = '/api/hassles/' + hassleID
       axios.patch(requestPath, {
         title: this.hassleTitle,
-        level_of_problem: this.hassleLevel,
-        frequency_of_experience: this.hassleFrequency,
-        hassleCost: this.hassleCost,
+        difficulty_levels: this.hassleLevel,
+        frequency: this.hassleFrequency,
+        cost: this.hassleCost,
         total_points: this.hassleLevel + this.hassleFrequency + this.hassleCost
       }).then(response => (
         window.location.href ='/hassles'

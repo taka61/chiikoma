@@ -77,9 +77,9 @@ export default {
   data() {
     return {
       hassles: [],
-      level_of_problem:'',
-      frequency_of_experience:'',
-      cost_of_solution:'',
+      difficulty_levels:'',
+      frequency:'',
+      cost:'',
       is_made_by_admin: '',
       title:''
     }
@@ -110,10 +110,11 @@ export default {
     addHassle() {
       axios.post('/api/hassles', {
           title: this.title,
-          level_of_problem: 5,
-          frequency_of_experience: 5,
-          cost_of_solution: 5,
+          difficulty_levels: 5,
+          frequency: 5,
+          cost: 5,
           total_points:15
+          is_made_by_admin: true
       }).then(response => (
         window.location.href ='/hassles'
       ))
