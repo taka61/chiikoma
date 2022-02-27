@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_27_065020) do
+ActiveRecord::Schema.define(version: 2022_02_27_032158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2022_02_27_065020) do
     t.integer "total_points"
     t.date "solved_on"
     t.integer "registration_points"
+    t.boolean "is_made_by_admin"
     t.index ["user_id"], name: "index_hassles_on_user_id"
   end
 
