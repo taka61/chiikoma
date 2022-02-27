@@ -1,12 +1,12 @@
 import Vue from 'vue'
-import Chiikomas from '../chiikomas.vue'
+import HassleIndex from '../hassle-index.vue'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const selector = '#js-chiikomas'
-  const chiikomas = document.querySelector(selector)
-  if (chiikomas) {
+  const selector = '#js-hassle-index'
+  const hassleIndex = document.querySelector(selector)
+  if (hassleIndex) {
     new Vue({
-      render: h => h(Chiikomas)
+      render: h => h(HassleIndex)
     }).$mount(selector)
   }
 })

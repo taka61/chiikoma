@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div v-if="chiikomas.length === 0" class="chiikomas-empty is-centered">
+    <div v-if="hassles.length === 0" class="hassles-empty is-centered">
       <i class="far fa-grin-wink fa-4x"></i>
       <div class="empty-sentence is-centered"> ちいこまを登録しよう！</div>
       <p>[＋]ボタンでちいこまを登録できます</p>
@@ -26,7 +26,7 @@
               <button
                 class="button"
                 type="button"
-                @click="addChiikoma">
+                @click="addHassle">
                 追加する
               </button>
               <button
@@ -41,28 +41,28 @@
     </div>
 
     <div class="card-section">
-      <div v-for="chiikoma in chiikomas" :key="chiikoma.id">
+      <div v-for="hassle in hassles" :key="hassle.id">
         <div class="card-body">
           <span class="icon">
             <i class="fa-solid fa-heart-crack"></i>
           </span>
           <div class="card-title">
-            <a :href='`/chiikomas/${chiikoma.id}`'> {{ chiikoma.title }}</a>
+            <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
           </div>
           <div class="card-point">
-             {{ chiikoma.total_points }}
+             {{ hassle.total_points }}
           </div>
         </div>
       </div>
     </div>
 
-    <div class="new-chiikoma-button-section">
+    <div class="new-hassle-button-section">
       <div class="field-button">
         <div class="control">
           <button
             class="button button-add"
             type="button"
-            @click="newChiikoma">
+            @click="newHassle">
             <i class="fa-solid fa-plus"></i>
           </button>
         </div>
@@ -76,7 +76,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      chiikomas: [],
+      hassles: [],
       level_of_problem:'',
       frequency_of_experience:'',
       cost_of_solution:'',
@@ -85,11 +85,11 @@ export default {
     }
   },
   mounted () {
-    this.getChiikoma();
-    this.randomChiikoma ();
+    this.gethassle();
+    this.randomhassle ();
   },
   methods: {
-    randomChiikoma () {
+    randomhassle () {
       const titles = ['衣替えを行いたい','キッチンの換気扇が汚れている','トイレの匂いが気になる','睡眠中に足がつりやすい',
                    'パソコンのディスプレイの汚れが気になる','洗濯機のフィルターごみが溜まっている','網戸の締まりが悪い',
                    '睡眠中に足がつりやすい', '自転車の鍵を探すのが毎回面倒（ナンバーロック式などの鍵に替える?）',
@@ -98,24 +98,24 @@ export default {
                     ]
       this.title = titles[Math.floor(Math.random() * titles.length)]
     },
-    getChiikoma () {
-      axios.get('/api/chiikomas')
+    gethassle () {
+      axios.get('/api/hassles')
       .then(response => (
-        this.chiikomas = response.data
+        this.hassles = response.data
       ))
     },
-    newChiikoma() {
-      window.location.href = '/chiikomas/new'
+    newHassle() {
+      window.location.href = '/hassles/new'
     },
-    addChiikoma() {
-      axios.post('/api/chiikomas', {
+    addHassle() {
+      axios.post('/api/hassles', {
           title: this.title,
           level_of_problem: 5,
           frequency_of_experience: 5,
           cost_of_solution: 5,
           total_points:15
       }).then(response => (
-        window.location.href ='/chiikomas'
+        window.location.href ='/hassles'
       ))
     }
   }

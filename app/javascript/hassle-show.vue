@@ -3,7 +3,7 @@
     <div class="primary-section">
         <div class="primary-item">
           <div class="primary-text">
-            {{ chiikomaTitle }}
+            {{ hassleTitle }}
           </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <button
               class="button"
               type="button"
-              @click="doneChiikoma">
+              @click="donehassle">
               次へ
             </button>
           </div>
@@ -37,7 +37,7 @@
         困り度
       </div>
       <div class="list-item">
-        {{ chiikomaLevel }}
+        {{ hassleLevel }}
       </div>
     </div>
 
@@ -46,7 +46,7 @@
         経験する頻度
       </div>
       <div class="list-item">
-        {{ chiikomaFrequency }}
+        {{ hassleFrequency }}
       </div>
     </div>
 
@@ -55,7 +55,7 @@
         対策コスト
       </div>
       <div class="list-item">
-        {{ chiikomaCost }}
+        {{ hassleCost }}
       </div>
     </div>
 
@@ -64,7 +64,7 @@
         トータルポイント
       </div>
       <div class="list-item">
-        {{ chiikomaTotalPoints }}
+        {{ hassleTotalPoints }}
       </div>
     </div>
 
@@ -73,11 +73,11 @@
         作成日
       </div>
       <div class="list-date-item">
-        {{ chiikomaCreatedDate | moment }}
+        {{ hassleCreatedDate | moment }}
       </div>
     </div>
 
-    <div v-if="!chiikoma.done" class="field-button">
+    <div v-if="!hassle.done" class="field-button">
       <div class="control">
         <button
           class="button"
@@ -88,13 +88,13 @@
         <button
           class="button-edit"
           type="button"
-          @click="editChiikoma">
+          @click="editHassle">
           編集
         </button>
         <button
           class="button-delete"
           type="button"
-          @click="deleteChiikoma">
+          @click="deleteHassle">
           削除
         </button>
       </div>
@@ -114,32 +114,32 @@ export default {
   },
   data() {
     return {
-      chiikoma: [],
-      chiikomaTitle: '',
-      chiikomaLevel:'',
-      chiikomaFrequency: '',
-      chiikomaCost: '',
-      chiikomaCreatedDate: '',
-      chiikomaTotalPoints: '',
+      hassle: [],
+      hassleTitle: '',
+      hassleLevel:'',
+      hassleFrequency: '',
+      hassleCost: '',
+      hassleCreatedDate: '',
+      hassleTotalPoints: '',
     }
   },
   computed: {},
   mounted () {
-    this.getChiikoma()
+    this.getHassle()
   },
   methods: {
-    getChiikoma () {
+    getHassle () {
       const url = location.pathname.split('/')
       const path = url[url.length - 1]
-      axios.get(`/api/chiikomas/${path}.json`)
+      axios.get(`/api/hassles/${path}.json`)
       .then((response) => {
-        this.chiikoma = response.data
-        this.chiikomaTitle = response.data.title
-        this.chiikomaLevel = response.data.level_of_problem
-        this.chiikomaFrequency = response.data.frequency_of_experience
-        this.chiikomaCost = response.data.cost_of_solution
-        this.chiikomaCreatedDate = response.data.created_at
-        this.chiikomaTotalPoints = response.data.total_points
+        this.hassle = response.data
+        this.hassleTitle = response.data.title
+        this.hassleLevel = response.data.level_of_problem
+        this.hassleFrequency = response.data.frequency_of_experience
+        this.hassleCost = response.data.cost_of_solution
+        this.hassleCreatedDate = response.data.created_at
+        this.hassleTotalPoints = response.data.total_points
       }, (error) => {
           console.log(error, response)
         })
@@ -147,30 +147,30 @@ export default {
     openModal() {
       this.$modal.show('modal-thanks');
     },
-    doneChiikoma() {
-      const chiikomaUrl = location.pathname.split('/')
-      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
-      const requestPath = '/api/chiikomas/' + chiikomaID
+    doneHassle() {
+      const hassleUrl = location.pathname.split('/')
+      const hassleID = hassleUrl[hassleUrl.length - 1]
+      const requestPath = '/api/hassles/' + hassleID
       const today = new Date();
       axios.patch(requestPath , {
         done: true,
         solved_on: today
       }).then(response => (
-        window.location.href ='/chiikomas/done'
+        window.location.href ='/hassles/done'
       ))
     },
-    editChiikoma() {
-      const chiikomaUrl = location.pathname.split('/')
-      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
-      window.location.href =`/chiikomas/${chiikomaID}/edit`
+    editHassle() {
+      const hassleUrl = location.pathname.split('/')
+      const hassleID = hassleUrl[hassleUrl.length - 1]
+      window.location.href =`/hassles/${hassleID}/edit`
     },
-    deleteChiikoma() {
-      const chiikomaUrl = location.pathname.split('/')
-      const chiikomaID = chiikomaUrl[chiikomaUrl.length - 1]
-      const requestPath = '/api/chiikomas/' + chiikomaID
+    deleteHassle() {
+      const hassleUrl = location.pathname.split('/')
+      const hassleID = hassleUrl[hassleUrl.length - 1]
+      const requestPath = '/api/hassles/' + hassleID
       axios.delete(requestPath, {
     }).then(response => (
-        window.location.href ='/chiikomas'
+        window.location.href ='/hassles'
       ))
     }
   }

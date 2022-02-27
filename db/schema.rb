@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,36 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_208_020_101) do
+ActiveRecord::Schema.define(version: 2022_02_27_023256) do
+
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'chiikomas', force: :cascade do |t|
-    t.string 'title', null: false
-    t.integer 'level_of_problem', null: false
-    t.integer 'frequency_of_experience', null: false
-    t.integer 'cost_of_solution', null: false
-    t.boolean 'done', default: false, null: false
-    t.boolean 'is_made_by_admin', default: false, null: false
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.bigint 'user_id', null: false
-    t.integer 'total_points'
-    t.date 'solved_on'
-    t.integer 'registration_points'
-    t.index ['user_id'], name: 'index_chiikomas_on_user_id'
+  create_table "hassles", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "level_of_problem", null: false
+    t.integer "frequency_of_experience", null: false
+    t.integer "cost_of_solution", null: false
+    t.boolean "done", default: false, null: false
+    t.boolean "is_made_by_admin", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.integer "total_points"
+    t.date "solved_on"
+    t.integer "registration_points"
+    t.index ["user_id"], name: "index_hassles_on_user_id"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', default: '', null: false
-    t.string 'encrypted_password', default: '', null: false
-    t.string 'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.string 'name'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.index ['email'], name: 'index_users_on_email', unique: true
-    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end

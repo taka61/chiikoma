@@ -5,13 +5,13 @@
         <div class="control">
           <lable class="form-label">あなたのためだけの困りごとは？</lable>
           <input class="input" type="text"  placeholder="メガネの汚れが気になる" v-model="title" id="title">
-          <p class="help is-danger">{{ chiikomasTitleNullError }}</p>
+          <p class="help is-danger">{{ hasslesTitleNullError }}</p>
         </div>
       </div>
 
       <div class="field">
         <lable class="form-label">困り度</lable>
-        <p class="help is-danger">{{ chiikomaslProblemLevelNullError }}</p>
+        <p class="help is-danger">{{ hassleslProblemLevelNullError }}</p>
         <div class="control">
           <label class="radio-label" for="少し">
             <input type="radio" v-bind:value="3" v-model="level_of_problem" id="少し">
@@ -34,7 +34,7 @@
 
       <div class="field">
         <lable class="form-label">経験する頻度</lable>
-        <p class="help is-danger">{{ chiikomasFrequencyNullError }}</p>
+        <p class="help is-danger">{{ hasslesFrequencyNullError }}</p>
         <div class="control">
           <label class="radio-label" for="時々">
             <input type="radio" v-bind:value="3" v-model="frequency_of_experience" id="時々">
@@ -57,7 +57,7 @@
 
       <div class="field">
         <lable class="form-label">対策コスト</lable>
-        <p class="help is-danger">{{ chiikomasCostNullError }}</p>
+        <p class="help is-danger">{{ hasslesCostNullError }}</p>
         <div class="control">
           <label class="radio-label" for="すぐ">
             <input type="radio" v-bind:value="3" v-model="cost_of_solution" id="すぐ">
@@ -79,7 +79,7 @@
           <button
             class="'button is-fullwidth button is-danger is-outlined'"
             type="button"
-            @click="createChiikoma">
+            @click="createHassle">
             登録する
           </button>
        </div>
@@ -100,48 +100,48 @@ export default {
       cost_of_solution:'',
       total_points:'',
       registration_points:'',
-      chiikomasTitleNullError: '',
-      chiikomaslProblemLevelNullError: '',
-      chiikomasFrequencyNullError :'',
-      chiikomasCostNullError:''
+      hasslesTitleNullError: '',
+      hassleslProblemLevelNullError: '',
+      hasslesFrequencyNullError :'',
+      hasslesCostNullError:''
     }
   },
   methods: {
     checkForm() {
       if(this.title === '') {
-        this.chiikomasTitleNullError = '※困りごとを入力してください'
+        this.hasslesTitleNullError = '※困りごとを入力してください'
         return true
       } else {
-        this.chiikomasTitleNullError = ''
+        this.hasslesTitleNullError = ''
       }
       if(this.level_of_problem === '') {
-        this.chiikomaslProblemLevelNullError = '※困り度を入力してください'
+        this.hassleslProblemLevelNullError = '※困り度を入力してください'
         return true
       } else {
-        this.chiikomaslProblemLevelNullError = ''
+        this.hassleslProblemLevelNullError = ''
       }
       if(this.frequency_of_experience === '') {
-        this.chiikomasFrequencyNullError = '※経験する頻度を入力してください'
+        this.hasslesFrequencyNullError = '※経験する頻度を入力してください'
         return true
       } else {
-        this.chiikomasFrequencyNullError = ''
+        this.hasslesFrequencyNullError = ''
       }
       if(this.cost_of_solution === '') {
-        this.chiikomasCostNullError = '※経験する頻度を入力してください'
+        this.hasslesCostNullError = '※経験する頻度を入力してください'
         return true
       } else {
-        this.chiikomasCostNullError = ''
+        this.hasslesCostNullError = ''
       }
     },
     cal_total_points() {
       this.total_points = this.level_of_problem + this.frequency_of_experience + this.cost_of_solution
     },
-    createChiikoma() {
+    createHassle() {
       if(this.checkForm()) {
         return
       }
       this.cal_total_points()
-      axios.post('/api/chiikomas', {
+      axios.post('/api/hassles', {
           title: this.title,
           level_of_problem: this.level_of_problem,
           frequency_of_experience: this.frequency_of_experience,
@@ -149,7 +149,7 @@ export default {
           total_points: this.total_points,
           registration_points: 5
       }).then(response => (
-        window.location.href ='/chiikomas'
+        window.location.href ='/hassles'
       ))
     }
   }
