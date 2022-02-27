@@ -1,11 +1,11 @@
 chiikoma1:
   user: otameshi
   title: 'chiikoma1'
-  level_of_problem: '5'
-  frequency_of_experience: '5'
-  cost_of_solution: '3'
+  difficulty_levels: '5'
+  frequency: '5'
+  frequency: '3'
   total_points: 13
-  done: false
+  solved: false
   is_made_by_admin: true
   created_at: "2022-01-11 00:00:10"
   updated_at: "2022-01-11 00:00:01"
@@ -14,12 +14,12 @@ chiikoma1:
 chiikoma2:
   user: otameshi
   title: 'chiikoma2'
-  level_of_problem: '5'
-  frequency_of_experience: '5'
+  difficulty_levels: '5'
+  frequency: '5'
   cost_of_solution: '3'
   total_points: 13
   registration_points: 5
-  done: true
+  solved: true
   is_made_by_admin: false
   created_at: "2022-01-11 00:00:10"
   updated_at: "2022-01-11 00:00:01"
@@ -28,12 +28,12 @@ chiikoma2:
 chiikoma3:
   user: otameshi
   title: 'chiikoma3'
-  level_of_problem: '5'
-  frequency_of_experience: '5'
+  difficulty_levels: '5'
+  frequency: '5'
   cost_of_solution: '3'
   total_points: 13
   registration_points: 5
-  done: false
+  solved: false
   is_made_by_admin: false
   created_at: "2022-01-15 00:00:10"
   updated_at: "2022-01-15 00:00:01"
@@ -41,12 +41,12 @@ chiikoma3:
 chiikoma4:
   user: otameshi
   title: 'chiikoma4'
-  level_of_problem: '3'
-  frequency_of_experience: '3'
+  difficulty_levels: '3'
+  frequency: '3'
   cost_of_solution: '3'
   total_points: 9
   registration_points: 5
-  done: false
+  solved: false
   is_made_by_admin: false
   created_at: "2022-01-19 00:00:10"
   updated_at: "2022-01-19 00:00:01"
@@ -54,12 +54,12 @@ chiikoma4:
 chiikoma5:
   user: otameshi
   title: 'chiikoma5'
-  level_of_problem: '7'
-  frequency_of_experience: '7'
+  difficulty_levels: '7'
+  frequency: '7'
   cost_of_solution: '8'
   total_points: 22
   registration_points: 5
-  done: false
+  solved: false
   is_made_by_admin: false
   created_at: "2022-01-26 00:00:10"
   updated_at: "2022-01-26 00:00:01"
@@ -67,12 +67,12 @@ chiikoma5:
 chiikoma6:
   user: otameshi
   title: 'chiikoma6'
-  level_of_problem: '7'
-  frequency_of_experience: '7'
+  difficulty_levels: '7'
+  frequency: '7'
   cost_of_solution: '8'
   total_points: 22
   registration_points: 5
-  done: false
+  solved: false
   is_made_by_admin: false
   created_at: "2022-02-07 00:00:10"
   updated_at: "2022-02-07 00:00:01"
@@ -80,12 +80,12 @@ chiikoma6:
 chiikoma7:
   user: otameshi
   title: 'chiikoma7'
-  level_of_problem: '10'
-  frequency_of_experience: '10'
+  difficulty_levels: '10'
+  frequency: '10'
   cost_of_solution: '8'
   total_points: 28
   registration_points: 5
-  done: true
+  solved: true
   is_made_by_admin: false
   created_at: "2022-02-07 00:00:10"
   updated_at: "2022-02-07 00:00:01"
@@ -94,11 +94,11 @@ chiikoma7:
 chiikoma8:
   user: otameshi
   title: 'chiikoma8'
-  level_of_problem: '10'
-  frequency_of_experience: '10'
+  difficulty_levels: '10'
+  frequency: '10'
   cost_of_solution: '8'
   total_points: 28
-  done: true
+  solved: true
   is_made_by_admin: true
   created_at: "2022-02-08 00:00:10"
   updated_at: "2022-02-08 00:00:01"
@@ -107,11 +107,11 @@ chiikoma8:
 chiikoma9:
   user: otameshi
   title: 'chiikoma9'
-  level_of_problem: '10'
-  frequency_of_experience: '10'
+  difficulty_levels: '10'
+  frequency: '10'
   cost_of_solution: '8'
   total_points: 28
-  done: true
+  solved: true
   is_made_by_admin: true
   created_at: <%= Date.current %>
   updated_at: <%= Date.current %>
@@ -120,12 +120,12 @@ chiikoma9:
 chiikoma10:
   user: otameshi
   title: 'chiikoma10'
-  level_of_problem: '3'
-  frequency_of_experience: '5'
+  difficulty_levels: '3'
+  frequency: '5'
   cost_of_solution: '8'
   registration_points: 5
   total_points: 16
-  done: true
+  solved: true
   is_made_by_admin: false
   created_at: <%= Date.current %>
   updated_at: <%= Date.current %>
