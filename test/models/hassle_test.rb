@@ -6,35 +6,35 @@ class HassleTest < ActiveSupport::TestCase
   test 'the truth' do
     user = users(:otameshi)
     new_hassle = Hassle.new(title: '困りごと', difficulty_levels: '少し', frequency: '時々',
-                                cost: 'すぐ', user: user)
+                            cost: 'すぐ', user: user)
     assert new_hassle.valid?
   end
 
   test 'title is left blank' do
     user = users(:otameshi)
     no_title_hassle = Hassle.new(title: '', difficulty_levels: '少し', frequency: '時々',
-                                     cost: 'すぐ', user: user)
+                                 cost: 'すぐ', user: user)
     assert_not no_title_hassle.valid?
   end
 
   test 'difficulty_levels is left blank' do
     user = users(:otameshi)
     no_difficulty_levels_hassle = Hassle.new(title: '困りごと', difficulty_levels: '', frequency: '時々',
-                                                cost: 'すぐ', user: user)
+                                             cost: 'すぐ', user: user)
     assert_not no_difficulty_levels_hassle.valid?
   end
 
   test 'frequency is left blank' do
     user = users(:otameshi)
     no_frequency_hassle = Hassle.new(title: '困りごと', difficulty_levels: '少し', frequency: '',
-                                                       cost: 'すぐ', user: user)
+                                     cost: 'すぐ', user: user)
     assert_not no_frequency_hassle.valid?
   end
 
   test 'cost is left blank' do
     user = users(:otameshi)
     no_cost_hassle = Hassle.new(title: '困りごと', difficulty_levels: '少し', frequency: '時々',
-                                                cost: '', user: user)
+                                cost: '', user: user)
     assert_not no_cost_hassle.valid?
   end
 
