@@ -3,5 +3,5 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :chiikomas, dependent: :destroy
+  has_many :hassles, dependent: :destroy
 end
