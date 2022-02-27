@@ -2,17 +2,17 @@
 
 require 'application_system_test_case'
 
-class ChiikomaNewTest < ApplicationSystemTestCase
+class HassleNewTest < ApplicationSystemTestCase
   include Warden::Test::Helpers
 
   setup do
     @user = users(:otameshi)
-    @chiikoma = chiikomas(:chiikoma1)
+    @hassle = hassles(:chiikoma1)
   end
 
-  test 'create chiikoma' do
+  test 'create hassle' do
     login_as(@user, scope: :user)
-    visit '/chiikomas/new'
+    visit '/hassles/new'
     assert_text 'ちいこまの作成'
     fill_in 'title', with: 'メガネが汚れて見えづらい'
     choose '少し'
@@ -22,9 +22,9 @@ class ChiikomaNewTest < ApplicationSystemTestCase
     assert_text '登録した!'
   end
 
-  test 'update chiikoma' do
+  test 'update hassle' do
     login_as(@user, scope: :user)
-    visit edit_chiikoma_path(id: @chiikoma.id)
+    visit edit_hassle_path(id: @hassle.id)
     assert_text 'ちいこまの編集'
     fill_in 'title', with: '空気清浄機の汚れが気になる'
     choose 'まあまあ'
@@ -34,17 +34,17 @@ class ChiikomaNewTest < ApplicationSystemTestCase
     assert_text '登録した!'
   end
 
-  test 'delete chiikoma' do
+  test 'delete hassle' do
     login_as(@user, scope: :user)
-    visit chiikoma_path(id: @chiikoma.id)
+    visit hassle_path(id: @hassle.id)
     assert_text 'ちいこま詳細'
     click_button '削除'
     assert_text '登録した!'
   end
 
-  test 'done chiikoma' do
+  test 'done hassle' do
     login_as(@user, scope: :user)
-    visit chiikoma_path(id: @chiikoma.id)
+    visit hassle_path(id: @hassle.id)
     assert_text 'ちいこま詳細'
     assert_text '作成日'
     click_button 'ケアした'
@@ -52,19 +52,19 @@ class ChiikomaNewTest < ApplicationSystemTestCase
     assert_text '解決した!'
   end
 
-  test 'visit chiikoma page' do
+  test 'visit hassle page' do
     login_as(@user, scope: :user)
-    visit chiikoma_path(id: @chiikoma.id)
-    assert_text 'chiikoma1'
+    visit hassle_path(id: @hassle.id)
+    assert_text 'hassle1'
     assert_text '5'
     assert_text '5'
     assert_text '3'
     assert_text '13'
   end
 
-  test 'achievement chiikoma' do
+  test 'achievement hassle' do
     login_as(@user, scope: :user)
-    visit '/chiikomas/achievement'
+    visit '/hassles/achievement'
     assert_text '1週間のがんばり'
     assert_text '合計ちいこま'
     assert_text '3'
