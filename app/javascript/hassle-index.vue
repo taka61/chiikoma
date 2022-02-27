@@ -113,7 +113,7 @@ export default {
           difficulty_levels: 5,
           frequency: 5,
           cost: 5,
-          total_points:15
+          total_points:15,
           is_made_by_admin: true
       }).then(response => (
         window.location.href ='/hassles'

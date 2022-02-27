@@ -3,7 +3,7 @@ chiikoma1:
   title: 'chiikoma1'
   difficulty_levels: '5'
   frequency: '5'
-  frequency: '3'
+  cost: '3'
   total_points: 13
   solved: false
   is_made_by_admin: true
@@ -16,7 +16,7 @@ chiikoma2:
   title: 'chiikoma2'
   difficulty_levels: '5'
   frequency: '5'
-  cost_of_solution: '3'
+  cost: '3'
   total_points: 13
   registration_points: 5
   solved: true
@@ -30,7 +30,7 @@ chiikoma3:
   title: 'chiikoma3'
   difficulty_levels: '5'
   frequency: '5'
-  cost_of_solution: '3'
+  cost: '3'
   total_points: 13
   registration_points: 5
   solved: false
@@ -43,7 +43,7 @@ chiikoma4:
   title: 'chiikoma4'
   difficulty_levels: '3'
   frequency: '3'
-  cost_of_solution: '3'
+  cost: '3'
   total_points: 9
   registration_points: 5
   solved: false
@@ -56,7 +56,7 @@ chiikoma5:
   title: 'chiikoma5'
   difficulty_levels: '7'
   frequency: '7'
-  cost_of_solution: '8'
+  cost: '8'
   total_points: 22
   registration_points: 5
   solved: false
@@ -69,7 +69,7 @@ chiikoma6:
   title: 'chiikoma6'
   difficulty_levels: '7'
   frequency: '7'
-  cost_of_solution: '8'
+  cost: '8'
   total_points: 22
   registration_points: 5
   solved: false
@@ -82,7 +82,7 @@ chiikoma7:
   title: 'chiikoma7'
   difficulty_levels: '10'
   frequency: '10'
-  cost_of_solution: '8'
+  cost: '8'
   total_points: 28
   registration_points: 5
   solved: true
@@ -96,7 +96,7 @@ chiikoma8:
   title: 'chiikoma8'
   difficulty_levels: '10'
   frequency: '10'
-  cost_of_solution: '8'
+  cost: '8'
   total_points: 28
   solved: true
   is_made_by_admin: true
@@ -109,7 +109,7 @@ chiikoma9:
   title: 'chiikoma9'
   difficulty_levels: '10'
   frequency: '10'
-  cost_of_solution: '8'
+  cost: '8'
   total_points: 28
   solved: true
   is_made_by_admin: true
@@ -122,7 +122,7 @@ chiikoma10:
   title: 'chiikoma10'
   difficulty_levels: '3'
   frequency: '5'
-  cost_of_solution: '8'
+  cost: '8'
   registration_points: 5
   total_points: 16
   solved: true
