@@ -61,7 +61,7 @@ module Api
 
     def hassle_params
       params.require(:hassle).permit(:title, :difficulty_levels, :frequency, :cost,
-                                       :total_points, :solved, :solved_on, :is_made_by_admin, :registration_points)
+                                     :total_points, :solved, :solved_on, :is_made_by_admin, :registration_points)
     end
   end
 end

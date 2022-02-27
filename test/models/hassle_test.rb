@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class hassleTest < ActiveSupport::TestCase
+class HassleTest < ActiveSupport::TestCase
   test 'the truth' do
     user = users(:otameshi)
     new_hassle = Hassle.new(title: '困りごと', difficulty_levels: '少し', frequency: '時々',

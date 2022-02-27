@@ -55,7 +55,7 @@ class HassleNewTest < ApplicationSystemTestCase
   test 'visit hassle page' do
     login_as(@user, scope: :user)
     visit hassle_path(id: @hassle.id)
-    assert_text 'hassle1'
+    assert_text 'chiikoma1'
     assert_text '5'
     assert_text '5'
     assert_text '3'
