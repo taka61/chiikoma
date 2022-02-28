@@ -100,6 +100,7 @@ export default {
       cost:'',
       total_points:'',
       registration_points:'',
+      is_made_by_admin:'',
       hasslesTitleNullError: '',
       hassleslProblemLevelNullError: '',
       hasslesFrequencyNullError :'',
@@ -147,6 +148,7 @@ export default {
           frequency: this.frequency,
           cost: this.cost,
           total_points: this.total_points,
+          is_made_by_admin: false,
           registration_points: 5
       }).then(response => (
         window.location.href ='/hassles'

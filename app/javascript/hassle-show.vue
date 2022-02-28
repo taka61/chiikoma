@@ -24,7 +24,7 @@
             <button
               class="button"
               type="button"
-              @click="donehassle">
+              @click="doneHassle">
               次へ
             </button>
           </div>
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <div v-if="!hassle.done" class="field-button">
+    <div v-if="!hassle.solved" class="field-button">
       <div class="control">
         <button
           class="button"
@@ -153,7 +153,7 @@ export default {
       const requestPath = '/api/hassles/' + hassleID
       const today = new Date();
       axios.patch(requestPath , {
-        done: true,
+        solved: true,
         solved_on: today
       }).then(response => (
         window.location.href ='/hassles/done'
