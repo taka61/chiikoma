@@ -11,7 +11,6 @@
 
       <div class="field">
         <lable class="form-label">困り度</lable>
-        <p class="help is-danger">{{ hassleslProblemLevelNullError }}</p>
         <div class="control">
           <label class="radio-label" for="少し">
             <input type="radio" v-bind:value="3" v-model="hassleLevel" id="少し">
@@ -34,7 +33,6 @@
 
       <div class="field">
         <lable class="form-label">経験する頻度</lable>
-        <p class="help is-danger">{{ hasslesFrequencyNullError }}</p>
         <div class="control">
           <label class="radio-label" for="時々">
             <input type="radio" v-bind:value="3" v-model="hassleFrequency" id="時々">
@@ -57,7 +55,6 @@
 
       <div class="field">
         <lable class="form-label">対策コスト</lable>
-        <p class="help is-danger">{{ hasslesCostNullError }}</p>
         <div class="control">
           <label class="radio-label" for="すぐ">
             <input type="radio" v-bind:value="3" v-model="hassleCost" id="すぐ">
@@ -99,19 +96,29 @@ export default {
       hassleLevel: '',
       hassleFrequency: '',
       hassleCost: '',
-      difficulty_levels: ''
+      hassleTotalPoints: '',
+      hasslesTitleNullError: '', 
+      id:'' 
     }
   },
-  computed: {},
   mounted () {
     this.getHassle()
   },
   methods: {
+    checkForm() {
+      if(this.hassleTitle === '') {
+        this.hasslesTitleNullError = '※困りごとを入力してください'
+        return true
+      } else {
+        this.hasslesTitleNullError = ''
+      }
+    },
     getHassle () {
       const url = location.pathname.split('/')
       const path = url[url.length - 2]
       axios.get(`/api/hassles/${path}.json`)
       .then((response) => {
+        this.id = response.data.id
         this.hassleTitle = response.data.title
         this.hassleLevel = response.data.difficulty_levels
         this.hassleFrequency = response.data.frequency
@@ -120,16 +127,20 @@ export default {
           console.log(error, response)
         }
     },
+    cal_total_points() {
+      this.hassleTotalPoints = this.hassleLevel + this.hassleFrequency + this.hassleCost
+    },
     updateHassle() {
-      const hassleUrl = location.pathname.split('/')
-      const hassleID = hassleUrl[hassleUrl.length - 2]
-      const requestPath = '/api/hassles/' + hassleID
-      axios.patch(requestPath, {
+      if(this.checkForm()) {
+        return
+      }
+      this.cal_total_points()
+      axios.patch(`/api/hassles/${this.id}`, {
         title: this.hassleTitle,
         difficulty_levels: this.hassleLevel,
         frequency: this.hassleFrequency,
         cost: this.hassleCost,
-        total_points: this.hassleLevel + this.hassleFrequency + this.hassleCost
+        total_points: this.hassleTotalPoints
       }).then(response => (
         window.location.href ='/hassles'
       ))

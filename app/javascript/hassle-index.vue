@@ -85,11 +85,11 @@ export default {
     }
   },
   mounted () {
-    this.gethassle();
-    this.randomhassle ();
+    this.getHassle();
+    this.randomHassle ();
   },
   methods: {
-    randomhassle () {
+    randomHassle () {
       const titles = ['衣替えを行いたい','キッチンの換気扇が汚れている','トイレの匂いが気になる','睡眠中に足がつりやすい',
                    'パソコンのディスプレイの汚れが気になる','洗濯機のフィルターごみが溜まっている','網戸の締まりが悪い',
                    '睡眠中に足がつりやすい', '自転車の鍵を探すのが毎回面倒（ナンバーロック式などの鍵に替える?）',
@@ -98,7 +98,7 @@ export default {
                     ]
       this.title = titles[Math.floor(Math.random() * titles.length)]
     },
-    gethassle () {
+    getHassle () {
       axios.get('/api/hassles')
       .then(response => (
         this.hassles = response.data
@@ -109,12 +109,12 @@ export default {
     },
     addHassle() {
       axios.post('/api/hassles', {
-          title: this.title,
-          difficulty_levels: 5,
-          frequency: 5,
-          cost: 5,
-          total_points:15,
-          is_made_by_admin: true
+        title: this.title,
+        difficulty_levels: 5,
+        frequency: 5,
+        cost: 5,
+        total_points:15,
+        is_made_by_admin: true
       }).then(response => (
         window.location.href ='/hassles'
       ))

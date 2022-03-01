@@ -121,6 +121,7 @@ export default {
       hassleCost: '',
       hassleCreatedDate: '',
       hassleTotalPoints: '',
+      id: ''
     }
   },
   computed: {},
@@ -134,6 +135,7 @@ export default {
       axios.get(`/api/hassles/${path}.json`)
       .then((response) => {
         this.hassle = response.data
+        this.id = response.data.id
         this.hassleTitle = response.data.title
         this.hassleLevel = response.data.difficulty_levels
         this.hassleFrequency = response.data.frequency
@@ -148,11 +150,8 @@ export default {
       this.$modal.show('modal-thanks');
     },
     doneHassle() {
-      const hassleUrl = location.pathname.split('/')
-      const hassleID = hassleUrl[hassleUrl.length - 1]
-      const requestPath = '/api/hassles/' + hassleID
       const today = new Date();
-      axios.patch(requestPath , {
+      axios.patch(`/api/hassles/${this.id}` , {
         solved: true,
         solved_on: today
       }).then(response => (
@@ -160,15 +159,10 @@ export default {
       ))
     },
     editHassle() {
-      const hassleUrl = location.pathname.split('/')
-      const hassleID = hassleUrl[hassleUrl.length - 1]
-      window.location.href =`/hassles/${hassleID}/edit`
+      window.location.href =`/hassles/${this.id}/edit`
     },
     deleteHassle() {
-      const hassleUrl = location.pathname.split('/')
-      const hassleID = hassleUrl[hassleUrl.length - 1]
-      const requestPath = '/api/hassles/' + hassleID
-      axios.delete(requestPath, {
+      axios.delete(`/api/hassles/${this.id}`, {
     }).then(response => (
         window.location.href ='/hassles'
       ))
