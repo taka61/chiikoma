@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div v-if="hassles.length === 0" class="hassles-empty is-centered">
+    <div v-if="hassles.length === 0" class="chiikomas-empty is-centered">
       <i class="far fa-tired fa-4x"></i>
       <div class="empty-sentence is-centered"> ちいこまを解決してあげよう！</div>
     </div>
