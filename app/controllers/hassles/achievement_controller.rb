@@ -37,11 +37,11 @@ module Hassles
       @registration_chiikoma_and_solution_chiikoma = [
         {
           name: '解決した!',
-          data: current_user.hassles.group_by_week(:solved_on).sum(:total_points)
+          data: current_user.hassles.within_3_months.group_by_week(:solved_on).sum(:total_points)
         },
         {
           name: '登録した!',
-          data: current_user.hassles.group_by_week(:created_at).sum(:registration_points)
+          data: current_user.hassles.within_3_months.group_by_week(:created_at).sum(:registration_points)
         }
       ]
     end
