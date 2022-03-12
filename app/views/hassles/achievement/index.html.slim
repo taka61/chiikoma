@@ -7,10 +7,10 @@
     .container.is-sm
       .date-container
         h1.date-list
-          = l @this_sunday
+          = l Time.current.beginning_of_week
           |   ~  
-          = l @this_monday
-          
+          = l Time.current.end_of_week
+
       .achievement-container
         .all-achievement-content
           .all-achievement-header 合計ちいこま
