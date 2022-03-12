@@ -9,7 +9,6 @@ import 'channels'
 import 'chartkick/chart.js'
 
 require('../src/header')
-require('date-fns')
 
 Rails.start()
 
