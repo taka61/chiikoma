@@ -6,10 +6,6 @@
   }
 }
 
-.form-container {
-  
-}
-
 .form-label {
   display: block;
   margin-bottom: 10px;
@@ -33,6 +29,12 @@
 }
 .link-item {
   text-decoration: underline;
+}
+
+.form-item {
+  text-decoration: underline;
+  padding-bottom: 8px;
+  font-size: 12px;
 }
 
 .login_link {
@@ -59,11 +61,11 @@
 }
 
 .form-btn {
-  width: 360px;
+  width: 340px;
   height: 44px;
   background: 	#B22222;
   @media (max-width: 767.98px) {
-    width: 280px;
+    width: 260px;
   }
 }
 
@@ -83,4 +85,8 @@
   &:hover {
     color: #fff;
   }
+}
+
+input[type="checkbox" i] {
+  cursor: pointer; 
 }
