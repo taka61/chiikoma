@@ -50,11 +50,10 @@
 
 .button {
   display: inline-block;
-  padding: 10px 30px;
   text-align: center;
-  border: 1px solid;
+  
   cursor: pointer;
-  border-radius: 10px;
+
 
   @media (max-width: 767.98px) {
     margin: 5px;
@@ -115,19 +114,10 @@ h1 {
  
 }
 
-.message-body {
-  background-color: #DCF0F9;
-  margin-top: 20px;
-  width: 70%;
-
-  @media (max-width: 767.98px) {
-    width: 90%;
-  }
-}
 .caution-message {
   margin-top: 10px;
-  font-size: small;
-  color: red;
+  font-size: 10px;
+  color: grey;
   @media (max-width: 767.98px) {
     font-size: 3px;
   }
@@ -140,4 +130,5 @@ h1 {
 .field-button {
   display: flex;
   justify-content: center;
+
 }

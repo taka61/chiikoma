@@ -26,7 +26,7 @@ window.onload = function () {
 
   if (!modalBrowse) {
     modal.classList.add('is_active')
-    document.cookie = 'modalBrowse=allready; max-age=86400'
+    document.cookie = 'modalBrowse=allready; max-age=1'
   }
 
   const modalClose = document.getElementsByClassName('js_modal_close')

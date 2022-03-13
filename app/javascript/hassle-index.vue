@@ -9,7 +9,7 @@
     <div id="js_modal" class="modal">
       <div class="modal_wrap">
         <div class="modal_inner">
-          <h1 class="is-centered has-text-weight-bold">
+          <h1 class="is-centered">
             今日のちいこま
           </h1>
           <div class="message-section">
@@ -17,20 +17,19 @@
                 {{ title }}
             </div>
           </div>
-          <div class="caution-message is-centered">
-            <p>  ※『追加する』を選択すると、「困り度」・「経験する」・「対策コスト」は中度で登録されます。</p> 
-            <p>  変更したい場合は追加後、一覧ページよりちいこまを編集して下さい。</p> 
+          <div class="caution-message">
+            <p>  ※ 「追加する」を選択すると、「困り度」・「経験する」・「対策コスト」は中度で登録されます。変更したい場合は追加後、一覧ページよりちいこまを編集して下さい。</p> 
           </div>
           <div class="field-button">
             <div class="control">
               <button
-                class="button"
+                class="button add-btn"
                 type="button"
                 @click="addHassle">
                 追加する
               </button>
               <button
-                class="button-delete js_modal_close modal_close"
+                class="button close-btn js_modal_close modal_close"
                 type="button">
                 閉じる
               </button>
