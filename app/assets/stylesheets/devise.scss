@@ -1,6 +1,13 @@
 .account-form {
   margin: 30px auto;
-  width: 480px
+  width:  480px;
+  @media (max-width: 767.98px) {
+    width: 360px;
+  }
+}
+
+.form-container {
+  
 }
 
 .form-label {
@@ -55,6 +62,9 @@
   width: 360px;
   height: 44px;
   background: 	#B22222;
+  @media (max-width: 767.98px) {
+    width: 280px;
+  }
 }
 
 .form-action {
