@@ -1,7 +1,7 @@
 nav.navbar[role="navigation" aria-label="main navigation"]
   .navbar-brand
     a.navbar-logo[href="/hassles"]
-      = image_tag 'logo.png', size: '112x28', :alt => 'ヘッダーのロゴ'
+      = image_tag 'logo.png', size: '112x28', alt: 'ヘッダーのロゴ'
   - if user_signed_in?
     a.navbar-burger[role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"]
       span[aria-hidden="true"]

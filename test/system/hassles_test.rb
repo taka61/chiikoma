@@ -19,7 +19,7 @@ class HassleNewTest < ApplicationSystemTestCase
     choose '時々'
     choose 'すぐ'
     click_button '登録する'
-    assert_text '登録した!'
+    assert_text 'ちいこま一覧'
   end
 
   test 'update hassle' do
@@ -31,7 +31,7 @@ class HassleNewTest < ApplicationSystemTestCase
     choose 'しばしば'
     choose '時間がかかる'
     click_button '更新する'
-    assert_text '登録した!'
+    assert_text 'ちいこま一覧'
   end
 
   test 'delete hassle' do
@@ -39,7 +39,7 @@ class HassleNewTest < ApplicationSystemTestCase
     visit hassle_path(id: @hassle.id)
     assert_text 'ちいこま詳細'
     click_button '削除'
-    assert_text '登録した!'
+    assert_text 'ちいこま一覧'
   end
 
   test 'done hassle' do
@@ -69,10 +69,10 @@ class HassleNewTest < ApplicationSystemTestCase
     assert_text '合計ちいこま'
     assert_text '3'
     assert_text '49'
-    assert_text '登録した!'
+    assert_text '登録したちいこま'
     assert_text '1'
     assert_text '5'
-    assert_text '解決した!'
+    assert_text '解決したちいこま'
     assert_text '2'
     assert_text '44'
   end

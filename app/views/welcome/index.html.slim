@@ -3,7 +3,7 @@
         .top-container
           .top-title
             .main-image.is-centered
-              = image_tag 'top.png', size: '350x250', :alt => 'ちいこまのロゴ'
+              = image_tag 'top.png', size: '350x250', alt: 'ちいこまのロゴ'
             h1.main-header.is-centered
               | 「あなたのためだけの問題」
               p
@@ -11,7 +11,7 @@
             .button-section
               .main-button
                 = link_to '始める', new_user_registration_path, class: 'button is-danger is-outlined is-large is-fullwidth'
-              .link-container.is-centered  
+              .link-container.is-centered
                 = link_to 'ログインはこちら', new_user_session_path, class: 'link-item'
 
           .main-items
