@@ -19,10 +19,10 @@
             今日も1日おつかれさま🌈
           </div>
         </div>
-        <div class="field-button">
+        <div class="button_wrapper">
           <div class="control">
             <button
-              class="button"
+              class="button done-btn"
               type="button"
               @click="doneHassle">
               次へ
@@ -77,28 +77,28 @@
       </div>
     </div>
 
-    <div v-if="!hassle.solved" class="field-button">
-      <div class="control">
+    <div class="control">
+      <div v-if="!hassle.solved" class="button_wrapper">
         <button
-          class="button"
+          class="button care-btn"
           type="button"
           @click="openModal">
           ケアした
         </button>
         <button
-          class="button-edit"
+          class="button edit-btn"
           type="button"
           @click="editHassle">
           編集
         </button>
         <button
-          class="button-delete"
+          class="button delete-btn"
           type="button"
           @click="deleteHassle">
           削除
         </button>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
