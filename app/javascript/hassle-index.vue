@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div id="hassle-index" class="page">
     <div v-if="hassles.length === 0" class="chiikomas-empty is-centered">
       <i class="far fa-grin-wink fa-4x"></i>
       <div class="empty-sentence is-centered"> ちいこまを登録しよう！</div>
@@ -38,8 +38,31 @@
         </div>
       </div>
     </div>
+    
+    <div class="page-tools">
+      <ul class="tabs">
+        <li>
+          <button
+            :class="{'active': isActive === '1'}"
+            class="button tab-btn"
+            type="button"
+            @click="getNotSolved">
+            ケアしたい
+          </button>
+        </li>
+        <li>
+          <button
+            :class="{'active': isActive === '2'}"
+            class="button tab-btn"
+            type="button"
+             @click="getSolved">
+             解決済
+          </button>
+        </li>
+      </ul>
+    </div>
 
-    <div class="card-section">
+    <div class="card-section v-if=is-active">
       <div v-for="hassle in hassles" :key="hassle.id">
         <div class="card-body">
           <span class="icon">
@@ -59,10 +82,11 @@
       <div class="field-button">
         <div class="control">
           <button
-            class="button button-add"
+            class="button new-chiikoma-btn"
             type="button"
             @click="newHassle">
             <i class="fa-solid fa-plus"></i>
+            ちいこまを追加
           </button>
         </div>
       </div>
@@ -75,12 +99,13 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      isActive: '1',
       hassles: [],
       difficulty_levels:'',
       frequency:'',
       cost:'',
       is_made_by_admin: '',
-      title:''
+      title:'',
     }
   },
   mounted () {
@@ -117,7 +142,25 @@ export default {
       }).then(response => (
         window.location.href ='/hassles'
       ))
+    },
+    getNotSolved() {
+     this.isActive = 1
+     axios.get('/api/hassles')
+      .then(response => (
+        this.hassles = response.data
+      ))
+    },
+    getSolved(){
+      this.isActive = 2
+      axios.get('/api/hassles/done')
+      .then(response => (
+        this.hassles = response.data
+      ))
     }
   }
 }
 </script>
+
+<style scoped>
+
+</style>

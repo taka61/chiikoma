@@ -46,12 +46,12 @@ a {
   }
 }
 
-.button.button-add {
+.button.new-chiikoma-btn {
   @media (max-width: 767.98px) {
     font-size: 28px;
+    color: #fff;
     width: 80px;
     height: 80px;
-    background-color: #f54667;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -62,6 +62,7 @@ a {
   width: 90%;
   margin-bottom: 30px;
   margin-left: 22px;
+  color: #fff;
   background-color: #f54667;
 }
 
@@ -137,4 +138,35 @@ h1 {
   &:hover {
     color: #fff;
   }
+}
+
+
+.page-tools {
+  margin-top: 20px;
+}
+
+.tabs .active {
+  background-color: #F54767;
+  cursor: auto;
+  color: #fff;
+  font-weight: 700;
+  border: solid 1px #F54767;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #FFF2EB;
+  border-color: #F58276;
+  color: #F58276;
+  text-align: center;
+  white-space: nowrap;
+  width: 7rem;
+  transition: all 0.2s ease-out;
 }
