@@ -13,14 +13,14 @@
             今日のちいこま
           </h1>
           <div class="message-section">
-            <div class="message-body is-centered">
+            <div class="message-title is-centered">
                 {{ title }}
             </div>
           </div>
           <div class="caution-message">
             <p>  ※ 「追加する」を選択すると、「困り度」・「経験する」・「対策コスト」は中度で登録されます。変更したい場合は追加後、一覧ページよりちいこまを編集して下さい。</p> 
           </div>
-          <div class="field-button">
+          <div class="button_wrapper">
             <div class="control">
               <button
                 class="button add-btn"

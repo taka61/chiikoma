@@ -8,14 +8,14 @@
         </div>
     </div>
 
-    <modal name="modal-thanks" width="80%" height="80%">
+    <modal name="modal-thanks" height="60%">
       <div class="modal-body is-centered">
         <i class="far fa-kiss-wink-heart fa-6x"></i>
         <h1 class="is-centered">
           ケアしてくれてありがとう!!
         </h1>
         <div class="message-section">
-          <div class="message-body is-centered">
+          <div class="message-title is-centered">
             今日も1日おつかれさま🌈
           </div>
         </div>
