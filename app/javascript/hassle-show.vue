@@ -37,7 +37,9 @@
         困り度
       </div>
       <div class="list-item">
-        {{ hassleLevel }}
+          <div class="list-point">
+            {{ hassleLevel }}
+          </div>
       </div>
     </div>
 
@@ -46,7 +48,9 @@
         経験する頻度
       </div>
       <div class="list-item">
-        {{ hassleFrequency }}
+        <div class="list-point">
+          {{ hassleFrequency }}
+        </div>
       </div>
     </div>
 
@@ -55,7 +59,9 @@
         対策コスト
       </div>
       <div class="list-item">
-        {{ hassleCost }}
+        <div class="list-point">
+          {{ hassleCost }}
+        </div>
       </div>
     </div>
 
@@ -64,7 +70,9 @@
         トータルポイント
       </div>
       <div class="list-item">
-        {{ hassleTotalPoints }}
+        <div class="list-point">
+          {{ hassleTotalPoints }}
+        </div>
       </div>
     </div>
 
