@@ -86,7 +86,7 @@
     </div>
 
     <div class="control">
-      <div v-if="!hassle.solved" class="button_wrapper">
+      <div v-if="!hassle.solved" class="button-container">
         <button
           class="button care-btn"
           type="button"

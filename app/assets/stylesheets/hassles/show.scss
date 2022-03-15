@@ -119,33 +119,40 @@ h1 {
 }
 
 .care-btn {
+  flex: 1;
   color: #fff;
   background-color: #1939A9;
   font-weight: 600;
+  margin: 0 5px;
   &:hover {
       color: rgb(250, 241, 241);
     }
 }
 
 .edit-btn {
+  flex: 1;
   color: #fff;
   background-color: #f54667;
   font-weight: 600;
+  margin: 0 5px;
   &:hover {
       color: rgb(250, 241, 241);
     }
 }
 
 .delete-btn {
-  color: black;
-  background-color:  #fabd17;
+  flex: 1;
+  color: rgb(109, 104, 104);
+  background-color:  #f5cf65;
   font-weight: 600;
+  margin: 0 5px;
   &:hover {
       color: rgb(56, 55, 55);
     }
 }
 
 .done-btn {
+  flex: 1;
   color: #fff;
   background-color: #f54667;
   font-weight: 600;
@@ -153,4 +160,10 @@ h1 {
   &:hover {
       color: rgb(250, 241, 241);
     }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 80px 0 50px 0;
 }
