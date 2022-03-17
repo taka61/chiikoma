@@ -6,7 +6,6 @@
     "lint-fix": "eslint --fix --ext .js,.vue app/javascript"
   },
   "dependencies": {
-    "@rails/actioncable": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
     "axios": "^0.25.0",

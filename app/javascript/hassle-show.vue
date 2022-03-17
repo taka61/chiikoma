@@ -8,27 +8,27 @@
         </div>
     </div>
 
-    <modal name="modal-thanks" height="60%">
+    <modal name="modal-thanks" width="70%"height="400px" :max-width="630">
       <div class="modal-body is-centered">
-        <i class="far fa-kiss-wink-heart fa-6x"></i>
-        <h1 class="is-centered">
-          ケアしてくれてありがとう!!
-        </h1>
-        <div class="message-section">
-          <div class="message-title is-centered">
-            今日も1日おつかれさま🌈
-          </div>
+      <i class="far fa-kiss-wink-heart fa-6x"></i>
+      <h1 class="is-centered">
+        ケアしてくれてありがとう!!
+      </h1>
+      <div class="message-section">
+      <div class="message-title is-centered">
+        今日も1日おつかれさま🌈
+      </div>
+      </div>
+      <div class="button_wrapper">
+        <div class="control">
+          <button
+            class="button done-btn"
+            type="button"
+            @click="doneHassle">
+            次へ
+          </button>
         </div>
-        <div class="button_wrapper">
-          <div class="control">
-            <button
-              class="button done-btn"
-              type="button"
-              @click="doneHassle">
-              次へ
-            </button>
-          </div>
-        </div>
+      </div>
       </div>
     </modal>
 
@@ -163,7 +163,7 @@ export default {
         solved: true,
         solved_on: today
       }).then(response => (
-        window.location.href ='/hassles/done'
+        window.location.href ='/hassles'
       ))
     },
     editHassle() {

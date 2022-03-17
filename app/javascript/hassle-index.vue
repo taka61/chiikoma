@@ -62,17 +62,32 @@
       </ul>
     </div>
 
-    <div class="card-section v-if=is-active">
-      <div v-for="hassle in hassles" :key="hassle.id">
-        <div class="card-body">
-          <span class="icon">
-            <i class="fa-solid fa-heart-crack"></i>
-          </span>
-          <div class="card-title">
-            <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
+    <div class="card-section">
+      <div class="v-if=is-active === '1'">
+        <div v-for="hassle in hassles" :key="hassle.id">
+          <div class="card-body">
+            <div class="card-title">
+              <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
+            </div>
+            <div class="card-point">
+               {{ hassle.total_points }}
+            </div>
           </div>
-          <div class="card-point">
-             {{ hassle.total_points }}
+        </div>
+      </div>
+
+      <div class="v-else-if=is-active === '2'">
+        <div v-for="hassle in hassles" :key="hassle.id">
+          <div class="card-body2">
+            <span class="icon">
+              <i class="fas fa-duotone fa-heart"></i>
+            </span>
+            <div class="card-title2">
+              <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
+            </div>
+            <div class="card-point2">
+               {{ hassle.total_points }}
+            </div>
           </div>
         </div>
       </div>
