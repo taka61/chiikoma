@@ -163,7 +163,7 @@ export default {
         solved: true,
         solved_on: today
       }).then(response => (
-        window.location.href ='/hassles/done'
+        window.location.href ='/hassles'
       ))
     },
     editHassle() {
