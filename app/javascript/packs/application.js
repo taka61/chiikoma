@@ -4,12 +4,9 @@
 // that code so it'll be compiled.
 
 import Rails from '@rails/ujs'
-import * as ActiveStorage from '@rails/activestorage'
 import 'channels'
 import 'chartkick/chart.js'
 
 require('../src/header')
 
 Rails.start()
-
-ActiveStorage.start()
