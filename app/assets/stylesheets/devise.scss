@@ -1,5 +1,9 @@
 .account-form {
-  margin-top: 30px;
+  margin: 30px auto;
+  width:  480px;
+  @media (max-width: 767.98px) {
+    width: 360px;
+  }
 }
 
 .form-label {
@@ -20,8 +24,17 @@
   font-weight: 600;
 }
 
+.link-items__item {
+  text-align: center;
+}
 .link-item {
-  text-decoration: underline
+  text-decoration: underline;
+}
+
+.form-item {
+  text-decoration: underline;
+  padding-bottom: 8px;
+  font-size: 12px;
 }
 
 .login_link {
@@ -31,10 +44,6 @@
 
 .check_box-label {
   margin-left: 5px;
-}
-
-.form-action{
-  margin-top: 60px;
 }
 
 .danger-items {
@@ -49,4 +58,36 @@
 .danger-items__description{
   font-size: small;
   margin-top: 10px;
+}
+
+.form-btn {
+  width: 340px;
+  height: 44px;
+  background: 	#B22222;
+  @media (max-width: 767.98px) {
+    width: 260px;
+  }
+}
+
+.form-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.login-btn,
+.password-reset-btn,
+.create-btn {
+  color: #fff;
+  background: 	#438DC3;
+  border: 1px solid 	#438DC3;
+  font-weight: 500;
+  &:hover {
+    color: #fff;
+  }
+}
+
+input[type="checkbox" i] {
+  cursor: pointer; 
 }

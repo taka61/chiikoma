@@ -8,27 +8,27 @@
         </div>
     </div>
 
-    <modal name="modal-thanks" width="80%" height="80%">
+    <modal name="modal-thanks" width="70%"height="400px" :max-width="630">
       <div class="modal-body is-centered">
-        <i class="far fa-kiss-wink-heart fa-6x"></i>
-        <h1 class="is-centered">
-          ケアしてくれてありがとう!!
-        </h1>
-        <div class="message-section">
-          <div class="message-body is-centered">
-            今日も1日おつかれさま🌈
-          </div>
+      <i class="far fa-kiss-wink-heart fa-6x"></i>
+      <h1 class="is-centered">
+        ケアしてくれてありがとう!!
+      </h1>
+      <div class="message-section">
+      <div class="message-title is-centered">
+        今日も1日おつかれさま🌈
+      </div>
+      </div>
+      <div class="button_wrapper">
+        <div class="control">
+          <button
+            class="button done-btn"
+            type="button"
+            @click="doneHassle">
+            次へ
+          </button>
         </div>
-        <div class="field-button">
-          <div class="control">
-            <button
-              class="button"
-              type="button"
-              @click="doneHassle">
-              次へ
-            </button>
-          </div>
-        </div>
+      </div>
       </div>
     </modal>
 
@@ -37,7 +37,9 @@
         困り度
       </div>
       <div class="list-item">
-        {{ hassleLevel }}
+          <div class="list-point">
+            {{ hassleLevel }}
+          </div>
       </div>
     </div>
 
@@ -46,7 +48,9 @@
         経験する頻度
       </div>
       <div class="list-item">
-        {{ hassleFrequency }}
+        <div class="list-point">
+          {{ hassleFrequency }}
+        </div>
       </div>
     </div>
 
@@ -55,7 +59,9 @@
         対策コスト
       </div>
       <div class="list-item">
-        {{ hassleCost }}
+        <div class="list-point">
+          {{ hassleCost }}
+        </div>
       </div>
     </div>
 
@@ -64,7 +70,9 @@
         トータルポイント
       </div>
       <div class="list-item">
-        {{ hassleTotalPoints }}
+        <div class="list-point">
+          {{ hassleTotalPoints }}
+        </div>
       </div>
     </div>
 
@@ -77,28 +85,28 @@
       </div>
     </div>
 
-    <div v-if="!hassle.solved" class="field-button">
-      <div class="control">
+    <div class="control">
+      <div v-if="!hassle.solved" class="button-container">
         <button
-          class="button"
+          class="button care-btn"
           type="button"
           @click="openModal">
           ケアした
         </button>
         <button
-          class="button-edit"
+          class="button edit-btn"
           type="button"
           @click="editHassle">
           編集
         </button>
         <button
-          class="button-delete"
+          class="button delete-btn"
           type="button"
           @click="deleteHassle">
           削除
         </button>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -155,7 +163,7 @@ export default {
         solved: true,
         solved_on: today
       }).then(response => (
-        window.location.href ='/hassles/done'
+        window.location.href ='/hassles'
       ))
     },
     editHassle() {

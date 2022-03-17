@@ -1,5 +1,5 @@
 page
-  .usage-container
+  .page-header
     .title.is-centered
       | パスワード再発行
   .main-body
@@ -13,5 +13,5 @@ page
               = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'input'
           .field
             .form-action
-              = f.submit 'パスワードをリセットする', class: 'button is-fullwidth is-info is-light'
+              = f.submit 'パスワードをリセットする', class: 'button form-btn password-reset-btn'
           = render 'devise/shared/links'

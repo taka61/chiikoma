@@ -10,76 +10,87 @@
       </div>
 
       <div class="field">
-        <lable class="form-label">困り度</lable>
+        <lable class="form-label">どれくらい困ってる？</lable>
         <div class="control">
-          <label class="radio-label" for="少し">
-            <input type="radio" v-bind:value="3" v-model="hassleLevel" id="少し">
-            少し
-          </label>
-          <label class="radio-label" for="まあまあ">
-            <input type="radio" v-bind:value="5" v-model="hassleLevel" id="まあまあ">
-             まあまあ
-          </label>
-          <label class="radio-label" for="かなり">
-            <input type="radio" v-bind:value="7" v-model="hassleLevel" id="かなり">
-            かなり
-          </label>
-          <label class="radio-label" for="もうムリ">
-            <input type="radio" v-bind:value="10" v-model="hassleLevel" id="もうムリ">
-            もうムリ
-          </label>
+          <ul>
+            <li><label class="radio-label" for="少し">
+              <input type="radio" v-bind:value="3" v-model="hassleLevel" id="少し">
+              少し
+            </label></li>
+            <li><label class="radio-label" for="まあまあ">
+              <input type="radio" v-bind:value="5" v-model="hassleLevel" id="まあまあ">
+               まあまあ
+            </label>
+            <li><label class="radio-label" for="かなり">
+              <input type="radio" v-bind:value="7" v-model="hassleLevel" id="かなり">
+              かなり
+            </label></li>
+            <li><label class="radio-label" for="もうムリ">
+              <input type="radio" v-bind:value="10" v-model="hassleLevel" id="もうムリ">
+              もうムリ
+            </label></li>
+          </ul>
         </div>
       </div>
 
       <div class="field">
-        <lable class="form-label">経験する頻度</lable>
+        <lable class="form-label">どれくらいの頻度？</lable>
         <div class="control">
-          <label class="radio-label" for="時々">
-            <input type="radio" v-bind:value="3" v-model="hassleFrequency" id="時々">
-            時々
-          </label>
-          <label class="radio-label" for="しばしば">
-            <input type="radio" v-bind:value="5" v-model="hassleFrequency" id="しばしば">
-            しばしば
-          </label>
-           <label class="radio-label" for="頻繁">
-            <input type="radio" v-bind:value="7" v-model="hassleFrequency" id="頻繁">
-            頻繁
-          </label>
-          <label class="radio-label" for="常に">
-            <input type="radio" v-bind:value="10" v-model="hassleFrequency" id="常に">
-            常に
-          </label>
+          <ul>
+            <li><label class="radio-label" for="時々">
+              <input type="radio" v-bind:value="3" v-model="hassleFrequency" id="時々">
+              時々
+            </label></li>
+            <li><label class="radio-label" for="しばしば">
+              <input type="radio" v-bind:value="5" v-model="hassleFrequency" id="しばしば">
+              しばしば
+            </label></li>
+             <li><label class="radio-label" for="頻繁">
+              <input type="radio" v-bind:value="7" v-model="hassleFrequency" id="頻繁">
+              頻繁
+            </label></li>
+            <li><label class="radio-label" for="常に">
+              <input type="radio" v-bind:value="10" v-model="hassleFrequency" id="常に">
+              常に
+            </label></li>
+          </ul>
         </div>
       </div>
 
       <div class="field">
-        <lable class="form-label">対策コスト</lable>
+        <lable class="form-label">解決にかかる手間は？</lable>
         <div class="control">
-          <label class="radio-label" for="すぐ">
-            <input type="radio" v-bind:value="3" v-model="hassleCost" id="すぐ">
-            すぐ
-          </label>
-          <label class="radio-label" for="少し時間がかかる">
-            <input type="radio" v-bind:value="5" v-model="hassleCost" id="少し時間がかかる">
-            少し時間がかかる
-          </label>
-          <label class="radio-label" for="時間がかかる">
-            <input type="radio" v-bind:value="8" v-model="hassleCost" id="時間がかかる">
-            時間がかかる
-          </label>
+          <ul>
+            <li><label class="radio-label" for="すぐ">
+              <input type="radio" v-bind:value="3" v-model="hassleCost" id="すぐ">
+              すぐ
+            </label></li>
+            <li><label class="radio-label" for="少し時間がかかる">
+              <input type="radio" v-bind:value="5" v-model="hassleCost" id="少し時間がかかる">
+              少し時間がかかる
+            </label></li>
+            <li><label class="radio-label" for="時間がかかる">
+              <input type="radio" v-bind:value="8" v-model="hassleCost" id="時間がかかる">
+              時間がかかる
+            </label></li>
+          </ul>
         </div>
       </div>
-
-      <div class="field-button">
-        <div class="control">
+      
+      <div class="control">
+        <div class="button_wrapper">
           <button
-            class="'button is-fullwidth button is-danger is-outlined'"
+            class="button update-btn"
             type="button"
             @click="updateHassle">
             更新する
           </button>
-       </div>
+        </div>
+      </div>
+      <div class="link-items__item">
+        <div class="link-item">
+          <a href="/hassles">キャンセル</a>
+        </div>
       </div>
     </div>
   </div>

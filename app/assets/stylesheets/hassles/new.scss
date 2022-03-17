@@ -4,6 +4,7 @@
 
 .control {
     margin-bottom: 20px;
+   
 }
 
 p {
@@ -17,30 +18,50 @@ p {
     font-weight: 600;
 }
 
+
+ul{
+    display: flex;
+    padding: 0;
+    width: 100%;
+  }
+  li{
+    display: flex;
+    flex: 1;;
+    min-width: 0;
+    margin-right: 10px;
+  }
+  
 .radio-label {
-    margin: 5px;
-    border: 1px solid #DCF0F9;
+    flex: 1;
+    border: 1px solid #dfb69f;
     color: #d0493b;
-    padding: 5px;
+    padding: 10px 0;
     background: #FFF2EB;
     text-align: center;
     border-radius: 5px;
-
-    width: 100px;
     font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'メイリオ', 'MS PGothic'
 }
 
 .radio-label:hover {
-    color: #000;
-    background-color: #c9c9c9;
+    color: #d0493b;
+    background-color: #f7e0d4;
     text-decoration: none;
+    cursor: pointer 
 }
 
-.radio-label:checked {
-    background: linear-gradient(45deg, #bdb9ff, #67b8ff);
-    color: #000;
+.button_wrapper {
+    text-align:center;
+    margin-top: 50px;
+    
 }
 
-.field-button {
-    margin-top: 60px;
+.update-btn,
+.registration-btn {
+    width: 70%;
+    color: #fff;
+    background-color: #f54667;
+    font-weight: 600;
+    &:hover {
+        color: rgb(250, 241, 241);
+      }
 }

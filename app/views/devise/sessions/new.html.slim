@@ -1,5 +1,5 @@
 page
-  .usage-container
+  .page-header
     .title.is-centered
       | ログイン
   .main-body
@@ -14,12 +14,15 @@ page
             = f.label :password, class: 'form-label'
             .control
               = f.password_field :password, autocomplete: 'current-password', class: 'input'
-
+          .form-item.has-text-right
+              = link_to 'パスワードをお忘れですか？', new_password_path(resource_name)
           - if devise_mapping.rememberable?
             .field
               = f.check_box :remember_me
               = f.label :remember_me, class: 'check_box-label'
           .field
             .form-action
-              = f.submit 'ログインする', class: 'button is-fullwidth is-info is-light'
-          = render 'devise/shared/links'
+              = f.submit 'ログインする', class: 'button form-btn login-btn'
+          .link-items__item
+            .link-item
+              = link_to 'アカウント登録はこちら', new_registration_path(resource_name)

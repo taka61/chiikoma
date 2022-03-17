@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hassleIndex = document.querySelector(selector)
   if (hassleIndex) {
     new Vue({
-      render: h => h(HassleIndex)
+      render: h => h(HassleIndex, { props: document.getElementById('hassle-index').dataset })
     }).$mount(selector)
   }
 })
@@ -26,7 +26,7 @@ window.onload = function () {
 
   if (!modalBrowse) {
     modal.classList.add('is_active')
-    document.cookie = 'modalBrowse=allready; max-age=86400'
+    document.cookie = 'modalBrowse=allready; max-age=40'
   }
 
   const modalClose = document.getElementsByClassName('js_modal_close')

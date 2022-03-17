@@ -1,5 +1,5 @@
 .page
-  .usage-container
+  .page-header
     .title.is-centered
       | アカウント登録
   .main-body
@@ -26,5 +26,5 @@
               = f.password_field :password_confirmation, autocomplete: 'new-password', class: 'input'
           .field
             .form-action
-              = f.submit '登録する', class: 'button is-fullwidth is-info is-light'
+              = f.submit '登録する', class: 'button form-btn create-btn'
           = render 'devise/shared/links'

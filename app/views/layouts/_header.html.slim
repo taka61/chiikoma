@@ -1,7 +1,7 @@
 nav.navbar[role="navigation" aria-label="main navigation"]
   .navbar-brand
     a.navbar-logo[href="/hassles"]
-      = image_tag 'logo.png', size: '112x28'
+      = image_tag 'logo.png', size: '112x28', alt: 'ヘッダーのロゴ'
   - if user_signed_in?
     a.navbar-burger[role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"]
       span[aria-hidden="true"]
@@ -10,9 +10,7 @@ nav.navbar[role="navigation" aria-label="main navigation"]
     #navbarBasicExample.navbar-menu
       .navbar-start
         a.navbar-item[href="/hassles"]
-          |  登録した!
-        a.navbar-item[href="/hassles/done"]
-          |  解決した!
+          |  ちいこま一覧
         a.navbar-item[href="/hassles/achievement"]
           |  1週間のがんばり
         .navbar-item.has-dropdown.is-hoverable

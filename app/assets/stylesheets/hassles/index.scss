@@ -16,12 +16,22 @@
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 5px;
-  background: #FFF2EB;
-  border-color: #F58276;
+  background:  #FFF2EB;
+  border-color:  #F58276;
+}
+
+.card-body2 {
+  display: flex;
+  border-style: solid;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #E9F5EB;
+  border-color: #699F5F;
 }
 
 .icon {
- color: red;
+  color: #699F5F;
 }
 
 .card-title {
@@ -33,9 +43,18 @@ a {
   color: #d0493b;
 }
 
+.card-detil {
+  color: #699F5F;
+}
+
 .card-point {
   margin: 0 20px 0 auto;
   color: #d0493b;
+}
+
+.card-point2 {
+  margin: 0 20px 0 auto;
+  color: #699F5F;
 }
 
 .new-chiikoma-button-section {
@@ -46,12 +65,12 @@ a {
   }
 }
 
-.button.button-add {
+.button.new-chiikoma-btn {
   @media (max-width: 767.98px) {
     font-size: 28px;
+    color: #fff;
     width: 80px;
     height: 80px;
-    background-color: #f54667;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -62,6 +81,7 @@ a {
   width: 90%;
   margin-bottom: 30px;
   margin-left: 22px;
+  color: #fff;
   background-color: #f54667;
 }
 
@@ -82,38 +102,106 @@ a {
 
 .modal_wrap {
   text-align: right;
-  width: 90%;
   height: 70%;
   margin: 0 auto;
   padding: 20px;
   z-index: 10000;
   position: relative;
+  max-width: 480px;
+  width: calc(100% - 32px);
 }
 
 .modal_inner {
   background-color: #FFF;
   text-align: left;
-  padding: 30px 30px 40px;
-  border: solid;
+  padding: 24px;
+  border: 10px solid rgba(158, 156, 156, 0.7);
+  ;
+  background-clip: padding-box;
 }
 
 h1 {
   font-size: 20px;
   margin-top: 10px;
+
   @media (max-width: 767.98px) {
     font-size: 15px;
   }
 }
 
-.message-body {
-  background-color: #DCF0F9;
+.message-title {
+  background-color: #FFF2EB;
   margin-top: 20px;
-  width: 80%;
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 15px;
+  width: 380px;
+  color: #d0493b;
+  border-color: #d0493b;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 5px;
 
   @media (max-width: 767.98px) {
-    width: 80%;
+
     font-size: 20px;
   }
+}
+
+.add-btn {
+  color: #fff;
+  background: #F54866;
+  font-weight: 500;
+  margin-right: 10px;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.close-btn {
+  color: #646564;
+  background: #DCDADB;
+  font-weight: 500;
+
+  &:hover {
+    color: #646564;
+  }
+}
+
+
+.page-tools {
+  margin-top: 20px;
+}
+
+.tabs .active {
+  background-color: #F54767;
+  cursor: auto;
+  color: #fff;
+  font-weight: 700;
+  border: solid 1px #F54767;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-btn {
+  display: block;
+  text-decoration: none;
+  background-color: #FFF2EB;
+  border-color: #F58276;
+  color: #F58276;
+  text-align: center;
+  white-space: nowrap;
+  width: 7rem;
+  transition: all 0.2s ease-out;
+}
+
+.tab-btn .active {
+  background-color: #F54767;
+  cursor: auto;
+  color: #fff;
+  font-weight: 700;
+  border: solid 1px #F54767;
 }

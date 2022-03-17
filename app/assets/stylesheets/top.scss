@@ -11,6 +11,11 @@
     color: #1939A9;
 }
 
+.top-title {
+    padding-top: 50px;
+
+}
+
 .main-image {
     @media (max-width: 767.98px) {
         width: 80%;
@@ -20,16 +25,12 @@
 
 }
 
-.main-article {
-    padding-top: 50px;
-
-}
-
 .main-header {
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 45px;
     padding-top: 80px;
+    color: #2f358b;
 
     @media (max-width: 767.98px) {
         font-size: 25px;
@@ -38,36 +39,49 @@
 
 }
 
+.button-section {
+    margin: 64px 0;
+}
+
+.main-button {
+    width: 320px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .main-items {
     padding-bottom: 60px;
     padding-top: 60px;
-    width: 80%;
+    margin: 0 auto;
+    width: 640px;
+    max-width: 100%;
 
     @media (max-width: 767.98px) {
         width: 100%;
     }
 }
 
-
+.main-item {
+    margin-bottom: 80px;
+}
 .main-title {
-    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.6;
 }
 
-.button-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px 0 40px 0;
-}
 
 .main-description {
     margin-top: 20px;
-    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.link-container {
+    padding-top: 30px;
 }
 
 .service-article {
     margin-top: 40px;
-    border-top: medium solid #F58376;
+    border-top: 2px solid #f1dacf;
 
     @media (max-width: 767.98px) {
         margin-top: 20px;
@@ -78,7 +92,6 @@
 .service-header {
     font-weight: bold;
     font-size: x-large;
-    text-decoration: underline;
     margin-top: 30px;
 
     @media (max-width: 767.98px) {
@@ -88,7 +101,7 @@
 
 .service-description {
     margin-top: 10px;
-    width: 90%;
+    
 }
 
 .service-image {
@@ -104,4 +117,8 @@
 .top-action {
     margin-top: 60px;
     padding-bottom: 30px;
+}
+
+.button-container {
+    margin: 64px 0;
 }
