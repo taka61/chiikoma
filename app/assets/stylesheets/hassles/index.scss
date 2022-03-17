@@ -16,12 +16,22 @@
   margin-bottom: 30px;
   padding: 15px;
   border-radius: 5px;
-  background: #FFF2EB;
-  border-color: #F58276;
+  background:  #FFF2EB;
+  border-color:  #F58276;
+}
+
+.card-body2 {
+  display: flex;
+  border-style: solid;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #E9F5EB;
+  border-color: #699F5F;
 }
 
 .icon {
-  color: red;
+  color: #699F5F;
 }
 
 .card-title {
@@ -33,9 +43,18 @@ a {
   color: #d0493b;
 }
 
+.card-detil {
+  color: #699F5F;
+}
+
 .card-point {
   margin: 0 20px 0 auto;
   color: #d0493b;
+}
+
+.card-point2 {
+  margin: 0 20px 0 auto;
+  color: #699F5F;
 }
 
 .new-chiikoma-button-section {
@@ -177,4 +196,12 @@ h1 {
   white-space: nowrap;
   width: 7rem;
   transition: all 0.2s ease-out;
+}
+
+.tab-btn .active {
+  background-color: #F54767;
+  cursor: auto;
+  color: #fff;
+  font-weight: 700;
+  border: solid 1px #F54767;
 }
