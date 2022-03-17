@@ -967,13 +967,6 @@
   "resolved" "https://registry.npmjs.org/@rails/actioncable/-/actioncable-6.1.4.tgz"
   "version" "6.1.4"
 
-"@rails/activestorage@^6.0.0":
-  "integrity" "sha512-1Tm8uaVBhLTDEG4YaFPvqguhjbUGSPVItm0CfkRpIFZIkybWzFAxatIrk4YVOOxB8ZdXS7GdeYa1qVwjdiDkgQ=="
-  "resolved" "https://registry.npmjs.org/@rails/activestorage/-/activestorage-6.1.4.tgz"
-  "version" "6.1.4"
-  dependencies:
-    "spark-md5" "^3.0.0"
-
 "@rails/ujs@^6.0.0":
   "integrity" "sha512-O3lEzL5DYbxppMdsFSw36e4BHIlfz/xusynwXGv3l2lhSlvah41qviRpsoAlKXxl37nZAqK+UUF5cnGGK45Mfw=="
   "resolved" "https://registry.npmjs.org/@rails/ujs/-/ujs-6.1.4.tgz"
@@ -6998,11 +6991,6 @@
   "integrity" "sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ=="
   "resolved" "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz"
   "version" "0.7.3"
-
-"spark-md5@^3.0.0":
-  "integrity" "sha512-wcFzz9cDfbuqe0FZzfi2or1sgyIrsDwmPwfZC4hiNidPdPINjeUwNfv5kldczoEAcjl9Y1L3SM7Uz2PUEQzxQw=="
-  "resolved" "https://registry.npmjs.org/spark-md5/-/spark-md5-3.0.2.tgz"
-  "version" "3.0.2"
 
 "spdy-transport@^3.0.0":
   "integrity" "sha512-hsLVFE5SjA6TCisWeJXFKniGGOpBgMLmerfO2aCyCU5s7nJ/rpAepqmFifv/GCbSbueEeAJJnmSQ2rKC/g8Fcw=="
