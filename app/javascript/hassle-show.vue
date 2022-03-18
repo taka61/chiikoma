@@ -15,9 +15,9 @@
         ケアしてくれてありがとう!!
       </h1>
       <div class="message-section">
-      <div class="message-title is-centered">
+      <h1 class="message-title is-centered">
         今日も1日おつかれさま🌈
-      </div>
+      </h1>
       </div>
       <div class="button_wrapper">
         <div class="control">
@@ -132,7 +132,6 @@ export default {
       id: ''
     }
   },
-  computed: {},
   mounted () {
     this.getHassle()
   },
