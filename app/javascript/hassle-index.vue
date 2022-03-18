@@ -41,7 +41,7 @@
     
     <div class="page-tools">
       <ul class="tabs">
-        <li>
+        <li class="tab">
           <button
             :class="{'active': isActive === '1'}"
             class="button tab-btn"
@@ -50,7 +50,7 @@
             ケアしたい
           </button>
         </li>
-        <li>
+        <li class="tab">
           <button
             :class="{'active': isActive === '2'}"
             class="button tab-btn"
@@ -63,8 +63,8 @@
     </div>
 
     <div class="card-section">
-      <div class="v-if=is-active === '1'">
-        <div v-for="hassle in hassles" :key="hassle.id">
+      <div v-if="isActive === '1'">
+        <div v-for="hassle in solvedHassles" :key="hassle.id">
           <div class="card-body">
             <div class="card-title">
               <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
@@ -76,14 +76,14 @@
         </div>
       </div>
 
-      <div class="v-else-if=is-active === '2'">
-        <div v-for="hassle in hassles" :key="hassle.id">
+      <div v-else-if="isActive === '2'">
+        <div v-for="hassle in notSolvedHassles" :key="hassle.id">
           <div class="card-body2">
             <span class="icon">
               <i class="fas fa-duotone fa-heart"></i>
             </span>
             <div class="card-title2">
-              <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
+              <a :href='`/hassles/${hassle.id}`' class="card-detail"> {{ hassle.title }}</a>
             </div>
             <div class="card-point2">
                {{ hassle.total_points }}
@@ -127,6 +127,14 @@ export default {
     this.getHassle();
     this.randomHassle ();
   },
+  computed: {
+    solvedHassles() {
+      return this.hassles.filter((hassle) => hassle.solved)
+    },
+    notSolvedHassles() {
+      return this.hassles.filter((hassle) => !hassle.solved)
+    }
+  },
   methods: {
     randomHassle () {
       const titles = ['衣替えを行いたい','キッチンの換気扇が汚れている','トイレの匂いが気になる','睡眠中に足がつりやすい',
@@ -159,23 +167,11 @@ export default {
       ))
     },
     getNotSolved() {
-     this.isActive = 1
-     axios.get('/api/hassles')
-      .then(response => (
-        this.hassles = response.data
-      ))
+     this.isActive = '1'
     },
     getSolved(){
-      this.isActive = 2
-      axios.get('/api/hassles/done')
-      .then(response => (
-        this.hassles = response.data
-      ))
+      this.isActive = '2'
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

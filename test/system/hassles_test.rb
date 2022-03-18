@@ -49,7 +49,7 @@ class HassleNewTest < ApplicationSystemTestCase
     assert_text '作成日'
     click_button 'ケアした'
     click_button '次へ'
-    assert_text '解決した!'
+    assert_text 'ちいこま一覧'
   end
 
   test 'visit hassle page' do

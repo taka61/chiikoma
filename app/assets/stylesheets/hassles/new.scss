@@ -4,7 +4,7 @@
 
 .control {
     margin-bottom: 20px;
-   
+
 }
 
 p {
@@ -19,18 +19,19 @@ p {
 }
 
 
-ul{
+ul {
     display: flex;
     padding: 0;
     width: 100%;
-  }
-  li{
+}
+
+.radio-button {
     display: flex;
-    flex: 1;;
+    flex: 1;
     min-width: 0;
     margin-right: 10px;
-  }
-  
+}
+
 .radio-label {
     flex: 1;
     border: 1px solid #dfb69f;
@@ -46,13 +47,13 @@ ul{
     color: #d0493b;
     background-color: #f7e0d4;
     text-decoration: none;
-    cursor: pointer 
+    cursor: pointer
 }
 
 .button_wrapper {
-    text-align:center;
+    text-align: center;
     margin-top: 50px;
-    
+
 }
 
 .update-btn,
@@ -61,7 +62,8 @@ ul{
     color: #fff;
     background-color: #f54667;
     font-weight: 600;
+
     &:hover {
         color: rgb(250, 241, 241);
-      }
+    }
 }

@@ -10,7 +10,7 @@ module Api
     end
 
     def index
-      @hassles = current_user.hassles.where(solved: false).order(total_points: :desc)
+      @hassles = current_user.hassles.order(total_points: :desc)
       render json: @hassles
     end
 
