@@ -5,8 +5,8 @@
       <div class="empty-sentence is-centered"> ちいこまを登録しよう！</div>
       <p>[＋]ボタンでちいこまを登録できます</p>
     </div>
-
-    <div id="js_modal" class="modal">
+    
+    <modal name="daily-chiikoma" width="70%"height="400px" :max-width="630">
       <div class="modal_wrap">
         <div class="modal_inner">
           <h1 class="is-centered">
@@ -30,14 +30,15 @@
               </button>
               <button
                 class="button close-btn js_modal_close modal_close"
-                type="button">
+                type="button"
+                @click="closeHassle">
                 閉じる
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </modal>
     
     <div class="page-tools">
       <ul class="tabs">
@@ -120,10 +121,11 @@ export default {
       frequency:'',
       cost:'',
       is_made_by_admin: '',
-      title:'',
+      title:''
     }
   },
   mounted () {
+    this.getCookie (); 
     this.getHassle();
     this.randomHassle ();
   },
@@ -155,6 +157,7 @@ export default {
       window.location.href = '/hassles/new'
     },
     addHassle() {
+      this.setCookie()
       axios.post('/api/hassles', {
         title: this.title,
         difficulty_levels: 5,
@@ -166,11 +169,26 @@ export default {
         window.location.href ='/hassles'
       ))
     },
+    closeHassle() {
+      this.setCookie ()
+      this.$modal.close('modal-thanks');
+    },
     getNotSolved() {
-     this.isActive = '1'
+      this.isActive = '1'
     },
     getSolved(){
       this.isActive = '2'
+    },
+    getCookie () {
+      if(this.$cookies.get("CookieRecieve") == "on") {
+        this.$modal.hide('daily-chiikoma')
+      } else {
+        this.$modal.show('daily-chiikoma')
+      }
+    },
+    setCookie (){
+      this.$cookies.set("CookieRecieve", "on", "60s")
+      location.reload();
     }
   }
 }

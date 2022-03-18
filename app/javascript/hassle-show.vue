@@ -132,7 +132,6 @@ export default {
       id: ''
     }
   },
-  computed: {},
   mounted () {
     this.getHassle()
   },
