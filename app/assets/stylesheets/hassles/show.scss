@@ -90,7 +90,6 @@
 }
 
 .message-section {
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 25px;
@@ -108,10 +107,6 @@ h1 {
   @media (max-width: 767.98px) {
     font-size: 3px;
   }
-}
-
-.modal-button {
-  margin-top: 40px;
 }
 
 .care-btn {

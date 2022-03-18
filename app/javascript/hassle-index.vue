@@ -6,36 +6,34 @@
       <p>[＋]ボタンでちいこまを登録できます</p>
     </div>
     
-    <modal name="daily-chiikoma" width="70%"height="400px" :max-width="630">
-      <div class="modal_wrap">
-        <div class="modal_inner">
-          <h1 class="is-centered">
-            今日のちいこま
+    <modal name="daily-chiikoma" width="70%" height="340px" :max-width="630" :adaptive="true">
+      <div class="daily-modal-body">
+        <h1 class="is-centered">
+          今日のちいこま
+        </h1>
+        <div class="modal-message-section">
+          <h1 class="message-title is-centered">
+              {{ title }}
           </h1>
-          <div class="message-section">
-            <div class="message-title is-centered">
-                {{ title }}
-            </div>
-          </div>
           <div class="caution-message">
-            <p>  ※ 「追加する」を選択すると、「困り度」・「経験する」・「対策コスト」は中度で登録されます。変更したい場合は追加後、一覧ページよりちいこまを編集して下さい。</p> 
+            <p>「追加する」を選択すると、「困り度」・「経験する」・「対策コスト」は中度で登録されます。変更したい場合は追加後、一覧ページよりちいこまを編集して下さい。</p> 
           </div>
-          <div class="button_wrapper">
-            <div class="control">
-              <button
-                class="button add-btn"
-                type="button"
-                @click="addHassle">
-                追加する
-              </button>
-              <button
-                class="button close-btn js_modal_close modal_close"
-                type="button"
-                @click="closeHassle">
-                閉じる
-              </button>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div class="modal_button_wrapper">
+        <div class="control">
+          <button
+            class="button add-btn"
+            type="button"
+            @click="addHassle">
+            追加する
+          </button>
+          <button
+            class="button close-btn"
+            type="button"
+            @click="closeHassle">
+            閉じる
+          </button>
         </div>
       </div>
     </modal>
@@ -141,7 +139,7 @@ export default {
     randomHassle () {
       const titles = ['衣替えを行いたい','キッチンの換気扇が汚れている','トイレの匂いが気になる','睡眠中に足がつりやすい',
                    'パソコンのディスプレイの汚れが気になる','洗濯機のフィルターごみが溜まっている','網戸の締まりが悪い',
-                   '睡眠中に足がつりやすい', '自転車の鍵を探すのが毎回面倒（ナンバーロック式などの鍵に替える?）',
+                   '睡眠中に足がつりやすい', '自転車の鍵を探すのが毎回手間（ナンバーロック式などに替える?）',
                    '網戸の締まりが悪い','洗面台の鏡のウロコを取りたい','エアコンのクリーニング','スマホの電池の減りが気になる',
                    '眼精疲労','肩がずっと凝っている','自転車のタイヤの空気が抜けてきた','電球の交換', '不用品を処分したい'
                     ]
