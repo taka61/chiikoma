@@ -64,7 +64,7 @@
 
     <div class="card-section">
       <div v-if="isActive === '1'">
-        <div v-for="hassle in solvedHassles" :key="hassle.id">
+        <div v-for="hassle in notSolvedHassles" :key="hassle.id">
           <div class="card-body">
             <div class="card-title">
               <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
@@ -77,7 +77,7 @@
       </div>
 
       <div v-else-if="isActive === '2'">
-        <div v-for="hassle in notSolvedHassles" :key="hassle.id">
+        <div v-for="hassle in solvedHassles" :key="hassle.id">
           <div class="card-body2">
             <span class="icon">
               <i class="fas fa-duotone fa-heart"></i>
