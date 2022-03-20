@@ -6,7 +6,6 @@ module Hassles
 
     def index
       display_one_week
-      @registration_hassles_and_solution_hassles = current_user.show_chart
     end
 
     private
