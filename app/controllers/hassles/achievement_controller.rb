@@ -6,12 +6,6 @@ module Hassles
 
     def index
       display_one_week
-      @registration_numbers = current_user.fetch_registration_numbers
-      @registration_points = current_user.fetch_registration_points
-      @solution_numbers = current_user.fetch_solution_numbers
-      @solution_points = current_user.fetch_solution_points
-      @all_hassles_numbers = current_user.fetch_all_hassles_numbers
-      @all_hassles_points = current_user.fetch_all_hassles_points
       @registration_hassles_and_solution_hassles = current_user.show_chart
     end
 
