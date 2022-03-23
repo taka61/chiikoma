@@ -1,20 +1,48 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  test 'the truth' do
-    user = User.new(name: 'sample', email: 'sample@example.com', password: 'password')
+  setup do
+    @user = users(:otameshi)
+  end
+
+  test "the truth" do
+    user = User.new(name: "sample", email: "sample@example.com", password: "password")
     assert user.valid?
   end
 
-  test 'email address is left blank' do
-    no_email_user = User.new(name: 'sample', email: '', password: 'password')
+  test "email address is left blank" do
+    no_email_user = User.new(name: "sample", email: "", password: "password")
     assert_not no_email_user.valid?
   end
 
-  test 'password is left blank' do
-    no_password_user = User.new(name: 'sample', email: 'sample@example.com', password: '')
+  test "password is left blank" do
+    no_password_user = User.new(name: "sample", email: "sample@example.com", password: "")
     assert_not no_password_user.valid?
+  end
+
+  test "calculate number of registrations" do
+    assert_equal 1, @user.fetch_registration_numbers
+  end
+
+  test "calculate point of registrations" do
+    assert_equal 5, @user.fetch_registration_points
+  end
+
+  test "calculate number of solutions" do
+    assert_equal 2, @user.fetch_solution_numbers
+  end
+
+  test "calculate point of solutions" do
+    assert_equal 44, @user.fetch_solution_points
+  end
+
+  test "calculate numbers of all hassles" do
+    assert_equal 3, @user.fetch_all_hassles_numbers
+  end
+
+  test "calculate point of all hassles" do
+    assert_equal 49, @user.fetch_all_hassles_points
   end
 end
