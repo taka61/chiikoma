@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
     @user = users(:otameshi)
   end
 
-  test 'the truth' do
+  test 'email address and password are filled in' do
     user = User.new(name: 'sample', email: 'sample@example.com', password: 'password')
     assert user.valid?
   end
