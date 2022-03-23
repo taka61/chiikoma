@@ -8,7 +8,7 @@
     
     <modal name="daily-chiikoma" width="70%" height="340px" :max-width="630" :adaptive="true">
       <div class="daily-modal-body">
-        <h1 class="is-centered">
+        <h1 class="today-chiikoma is-centered">
           今日のちいこま
         </h1>
         <div class="modal-message-section">
@@ -20,16 +20,16 @@
           </div>
         </div>
       </div>
-      <div class="modal_button_wrapper">
+      <div class="modal-button-wrapper">
         <div class="control">
           <button
-            class="button add-btn"
+            class="button add-button"
             type="button"
             @click="addHassle">
             追加する
           </button>
           <button
-            class="button close-btn"
+            class="button close-button"
             type="button"
             @click="closeHassle">
             閉じる
@@ -66,7 +66,7 @@
         <div v-for="hassle in notSolvedHassles" :key="hassle.id">
           <div class="card-body">
             <div class="card-title">
-              <a :href='`/hassles/${hassle.id}`'> {{ hassle.title }}</a>
+              <a :href='`/hassles/${hassle.id}`' class="card-detail"> {{ hassle.title }}</a>
             </div>
             <div class="card-point">
                {{ hassle.total_points }}
@@ -82,7 +82,7 @@
               <i class="fas fa-duotone fa-heart"></i>
             </span>
             <div class="card-title2">
-              <a :href='`/hassles/${hassle.id}`' class="card-detail"> {{ hassle.title }}</a>
+              <a :href='`/hassles/${hassle.id}`' class="card-detail2"> {{ hassle.title }}</a>
             </div>
             <div class="card-point2">
                {{ hassle.total_points }}
@@ -96,7 +96,7 @@
       <div class="field-button">
         <div class="control">
           <button
-            class="button new-chiikoma-btn"
+            class="button new-chiikoma-button"
             type="button"
             @click="newHassle">
             <i class="fa-solid fa-plus"></i>

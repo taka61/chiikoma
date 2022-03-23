@@ -12,58 +12,6 @@
   margin-top: 30px;
 }
 
-.care-button {
-  display: block;
-  text-decoration: none;
-  background-color: #fff;
-  border-color: #cac9c9;
-  color: #aaa;
-  text-align: center;
-  white-space: nowrap;
-  width: 5rem;
-  transition: all 0.2s ease-out;
-  font-size: 12px;
-
-  &:hover {
-    color: #F54767;
-    background-color: #FFF2EB;
-  }
-}
-
-.care-button.active {
-  background-color: #F54767;
-  cursor: auto;
-  color: #fff;
-  font-weight: 700;
-  border: solid 1px #F54767;
-}
-
-.solved-button {
-  display: block;
-  text-decoration: none;
-  background-color: #fff;
-  border-color: #cac9c9;
-  color: #aaa;
-  text-align: center;
-  white-space: nowrap;
-  width: 5rem;
-  transition: all 0.2s ease-out;
-  font-size: 12px;
-
-  &:hover {
-    color: #699F5F;
-    background-color: #E9F5EB;
-  }
-}
-
-.solved-button.active {
-  background-color: #699F5F;
-  cursor: auto;
-  color: #fff;
-  font-weight: 700;
-  border: solid 1px #699F5F;
-}
-
 .card-section {
   margin-top: 30px;
 }
@@ -88,20 +36,11 @@
   border-color: #699F5F;
 }
 
-.icon {
-  color: #699F5F;
-}
-
-.card-title {
-  width: 80%;
-  margin-left: 8px;
-}
-
-a {
+.card-detail {
   color: #d0493b;
 }
 
-.card-detail {
+.card-detail2 {
   color: #699F5F;
 }
 
@@ -115,34 +54,13 @@ a {
   color: #699F5F;
 }
 
-.new-chiikoma-button-section {
-  @media (max-width: 767.98px) {
-    position: fixed;
-    bottom: 6rem;
-    right: 2rem;
-  }
+.icon {
+  color: #699F5F;
 }
 
-.button.new-chiikoma-btn {
-  color: #fff;
-  background-color: #f54667;
-  @media (max-width: 767.98px) {
-    font-size: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  @include tablet {
-    width: 320px;
-    margin: 0 auto 30px;
-    display: block;
-  }
- 
+.card-title {
+  width: 80%;
+  margin-left: 8px;
 }
 
 .vm--modal {
@@ -155,7 +73,7 @@ a {
   margin-top: 30px;
   padding: 5px 25px;
 
-  @media (max-width: 767.98px) {
+  @include mobile {
     margin-top: 10px;
   }
 }
@@ -164,16 +82,16 @@ a {
   justify-content: center;
   padding: 5px 25px;
 
-  @media (max-width: 767.98px) {
+  @include mobile {
     padding: 0;
   }
 }
 
-h1 {
+.today-chiikoma {
   font-size: 20px;
   margin-top: 10px;
 
-  @media (max-width: 767.98px) {
+  @include mobile {
     font-size: 15px;
   }
 }
@@ -188,44 +106,7 @@ h1 {
   padding: 15px;
   border-radius: 5px;
 
-  @media (max-width: 767.98px) {
-
-    font-size: 15px;
-  }
-}
-
-.modal_button_wrapper {
-  text-align: center;
-  margin-top: 20px;
-
-  @media (max-width: 767.98px) {
-    margin-top: 10px;
-  }
-}
-
-.add-btn {
-  color: #fff;
-  background: #F54866;
-  font-weight: 500;
-  margin-right: 10px;
-
-  &:hover {
-    color: #fff;
-  }
-}
-
-.close-btn {
-  color: #646564;
-  background: #DCDADB;
-  font-weight: 500;
-
-  &:hover {
-    color: #646564;
-  }
-}
-
-.button-text {
   @include mobile {
-    display: none;
+    font-size: 15px;
   }
 }
