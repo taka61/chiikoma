@@ -1,17 +1,17 @@
 <template>
   <div class="page">
     <div class="primary-section">
-        <div class="primary-item">
-          <div class="primary-text">
-            {{ hassleTitle }}
-          </div>
+      <div class="primary-item">
+        <div class="primary-text">
+          {{ hassleTitle }}
         </div>
+      </div>
     </div>
 
     <modal name="modal-thanks" width="70%"height="400px" :max-width="630">
       <div class="modal-body is-centered">
       <i class="far fa-kiss-wink-heart fa-6x"></i>
-      <h1 class="is-centered">
+      <h1 class="modal-title is-centered">
         ケアしてくれてありがとう!!
       </h1>
       <div class="message-section">
@@ -19,10 +19,10 @@
         今日も1日おつかれさま🌈
       </h1>
       </div>
-      <div class="button_wrapper">
+      <div class="button-wrapper">
         <div class="control">
           <button
-            class="button done-btn"
+            class="button done-button"
             type="button"
             @click="doneHassle">
             次へ
@@ -37,9 +37,9 @@
         困り度
       </div>
       <div class="list-item">
-          <div class="list-point">
-            {{ hassleLevel }}
-          </div>
+        <div class="list-point">
+          {{ hassleLevel }}
+        </div>
       </div>
     </div>
 
@@ -88,25 +88,25 @@
     <div class="control">
       <div v-if="!hassle.solved" class="button-container">
         <button
-          class="button care-btn"
+          class="button finished-button"
           type="button"
           @click="openModal">
           ケアした
         </button>
         <button
-          class="button edit-btn"
+          class="button edit-button"
           type="button"
           @click="editHassle">
           編集
         </button>
         <button
-          class="button delete-btn"
+          class="button delete-button"
           type="button"
           @click="deleteHassle">
           削除
         </button>
-        </div>
       </div>
+    </div>
   </div>
 </template>
 

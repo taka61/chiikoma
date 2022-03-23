@@ -1,109 +1,16 @@
-.solved-button,
-.care-button {
-  display: block;
-  text-decoration: none;
-  background-color: #fff;
-  border-color: #cac9c9;
-  color: #aaa;
+.button-wrapper {
   text-align: center;
-  white-space: nowrap;
-  width: 5rem;
-  transition: all 0.2s ease-out;
-  font-size: 12px;
+  margin-top: 50px;
 }
 
-.care-button {
-  &:hover {
-    color: #F54767;
-    background-color: #FFF2EB;
-  }
-}
-
-.care-button.active {
-  background-color: #F54767;
-  cursor: auto;
-  color: #fff;
-  font-weight: 700;
-  border: solid 1px #F54767;
-}
-
-.solved-button {
-  &:hover {
-    color: #699F5F;
-    background-color: #E9F5EB;
-  }
-}
-
-.solved-button.active {
-  background-color: #699F5F;
-  cursor: auto;
-  color: #fff;
-  font-weight: 700;
-  border: solid 1px #699F5F;
-}
-
-.new-chiikoma-button-section {
-  @include mobile {
-    position: fixed;
-    bottom: 6rem;
-    right: 2rem;
-  }
-}
-
-.button.new-chiikoma-button {
+.update-button,
+.registration-button {
+  width: 70%;
   color: #fff;
   background-color: #f54667;
-
-  @include mobile {
-    font-size: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  @include tablet {
-    width: 320px;
-    margin: 0 auto 30px;
-    display: block;
-  }
-}
-
-.modal-button-wrapper {
-  text-align: center;
-  margin-top: 20px;
-
-  @include mobile {
-    margin-top: 10px;
-  }
-}
-
-.add-button {
-  color: #fff;
-  background: #F54866;
-  font-weight: 500;
-  margin-right: 10px;
+  font-weight: 600;
 
   &:hover {
-    color: #fff;
-  }
-}
-
-.close-button {
-  color: #646564;
-  background: #DCDADB;
-  font-weight: 500;
-
-  &:hover {
-    color: #646564;
-  }
-}
-
-.button-text {
-  @include mobile {
-    display: none;
+    color: rgb(250, 241, 241);
   }
 }

@@ -1,88 +1,68 @@
 .form-section {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .control.form-items {
-    margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 
-p {
-    margin-bottom: 5px;
+.help {
+  margin-bottom: 5px;
 }
 
 .form-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-
 .radio-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -0.25rem -0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.25rem -0.5rem;
 }
 
 .radio-button {
-    display: flex;
-    flex: 1;
-    min-width: 0;
-    padding: 0 0.25rem 0.5rem;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  padding: 0 0.25rem 0.5rem;
 
-    .radio-buttons.has-4items & {
-        @include tablet {
-            flex: 0 0 25%;
-        }
-
-        @include mobile {
-            flex: 0 0 50%;
-        }
+  .radio-buttons.has-4items & {
+    @include tablet {
+      flex: 0 0 25%;
+    }  
+    @include mobile {
+      flex: 0 0 50%;
     }
-    .radio-buttons.has-3items & {
-        @include tablet {
-            flex: 0 0 33.33%;
-        }
+}
 
-        @include mobile {
-            flex: 0 0 50%;
-        }
+  .radio-buttons.has-3items & {
+    @include tablet {
+      flex: 0 0 33.33%;
+    }  
+
+    @include mobile {
+      flex: 0 0 50%;
     }
+  }
 }
 
 .radio-label {
-    flex: 1;
-    border: 1px solid #dfb69f;
-    color: #d0493b;
-    padding: 10px 0;
-    background: #FFF2EB;
-    text-align: center;
-    border-radius: 5px;
-    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'メイリオ', 'MS PGothic'
+  flex: 1;
+  border: 1px solid #dfb69f;
+  color: #d0493b;
+  padding: 10px 0;
+  background: #FFF2EB;
+  text-align: center;
+  border-radius: 5px;
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'メイリオ', 'MS PGothic'
 }
 
 .radio-label:hover {
-    color: #d0493b;
-    background-color: #f7e0d4;
-    text-decoration: none;
-    cursor: pointer
-}
-
-.button_wrapper {
-    text-align: center;
-    margin-top: 50px;
-
-}
-
-.update-btn,
-.registration-btn {
-    width: 70%;
-    color: #fff;
-    background-color: #f54667;
-    font-weight: 600;
-
-    &:hover {
-        color: rgb(250, 241, 241);
-    }
+  color: #d0493b;
+  background-color: #f7e0d4;
+  text-decoration: none;
+  cursor: pointer
 }

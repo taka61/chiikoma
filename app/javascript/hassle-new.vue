@@ -81,9 +81,9 @@
       </div>
 
       <div class="control form-items">
-        <div class="button_wrapper">
+        <div class="button-wrapper">
           <button
-            class="button registration-btn"
+            class="button registration-button"
             type="button"
             @click="createHassle">
             登録する
