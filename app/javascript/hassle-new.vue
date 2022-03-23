@@ -2,7 +2,7 @@
   <div class="page">
     <div class="form-section">
       <div class="field">
-        <div class="control">
+        <div class="control form-items">
           <lable class="form-label">あなたのためだけの困りごとは？</lable>
           <input class="input" type="text"  placeholder="メガネの汚れが気になる" v-model="title" id="title">
           <p class="help is-danger">{{ hasslesTitleNullError }}</p>
@@ -12,7 +12,7 @@
       <div class="field">
         <lable class="form-label">どれくらい困ってる？</lable>
         <p class="help is-danger">{{ hassleslProblemLevelNullError }}</p>
-        <div class="control">
+        <div class="control form-items">
           <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="少し">
               <input type="radio" v-bind:value="3" v-model="difficulty_levels" id="少し">
@@ -37,7 +37,7 @@
       <div class="field">
         <lable class="form-label">どれくらいの頻度？</lable>
         <p class="help is-danger">{{ hasslesFrequencyNullError }}</p>
-        <div class="control">
+        <div class="control form-items">
           <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="時々">
               <input type="radio" v-bind:value="3" v-model="frequency" id="時々">
@@ -62,7 +62,7 @@
       <div class="field">
         <lable class="form-label">解決にかかる手間は？</lable>
         <p class="help is-danger">{{ hasslesCostNullError }}</p>
-        <div class="control">
+        <div class="control form-items">
           <ul class="radio-buttons has-3items">
             <li class="radio-button"><label class="radio-label" for="すぐ">
               <input type="radio" v-bind:value="3" v-model="cost" id="すぐ">
@@ -80,7 +80,7 @@
         </div>
       </div>
 
-      <div class="control">
+      <div class="control form-items">
         <div class="button_wrapper">
           <button
             class="button registration-btn"

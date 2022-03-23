@@ -38,27 +38,27 @@
       </div>
     </modal>
     
-    <div class="page-tools">
-      <ul class="tabs">
-        <li class="tab">
+    <div class="tab-items">
+      <div class="field has-addons">
+        <p class="control">
           <button
             :class="{'active': isActive === '1'}"
-            class="button tab-btn"
+            class="button care-button"
             type="button"
             @click="getNotSolved">
             ケアしたい
           </button>
-        </li>
-        <li class="tab">
+        </p>
+        <p class="control">
           <button
             :class="{'active': isActive === '2'}"
-            class="button tab-btn"
+            class="button solved-button"
             type="button"
              @click="getSolved">
              解決済
           </button>
-        </li>
-      </ul>
+        </p>
+      </div>
     </div>
 
     <div class="card-section">
