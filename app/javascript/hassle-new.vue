@@ -13,7 +13,7 @@
         <lable class="form-label">どれくらい困ってる？</lable>
         <p class="help is-danger">{{ hassleslProblemLevelNullError }}</p>
         <div class="control">
-          <ul>
+          <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="少し">
               <input type="radio" v-bind:value="3" v-model="difficulty_levels" id="少し">
               少し
@@ -38,7 +38,7 @@
         <lable class="form-label">どれくらいの頻度？</lable>
         <p class="help is-danger">{{ hasslesFrequencyNullError }}</p>
         <div class="control">
-          <ul>
+          <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="時々">
               <input type="radio" v-bind:value="3" v-model="frequency" id="時々">
               時々
@@ -63,7 +63,7 @@
         <lable class="form-label">解決にかかる手間は？</lable>
         <p class="help is-danger">{{ hasslesCostNullError }}</p>
         <div class="control">
-          <ul>
+          <ul class="radio-buttons has-3items">
             <li class="radio-button"><label class="radio-label" for="すぐ">
               <input type="radio" v-bind:value="3" v-model="cost" id="すぐ">
               すぐ

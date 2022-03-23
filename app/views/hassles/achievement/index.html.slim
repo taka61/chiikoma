@@ -11,31 +11,34 @@
           |   ~  
           = l @this_monday
       .achievement-container
-        .all-achievement-header 合計ちいこま
-        .flex_achievement-box
-          .all-achievement-inner
-            .all-achievement-title ちいこま数
-            .all-achievement-detail = @all_chiikoma_numbers
-          .all-achievement-inner
-            .all-achievement-title ポイント
-            .all-achievement-detail = @all_chiikoma_points
+        .all-achievement
+          .all-achievement-header 合計ちいこま
+          .all-achievement-inners
+            .all-achievement-inner
+              .all-achievement-title ちいこま数
+              .all-achievement-detail = @all_chiikoma_numbers
+            .all-achievement-inner
+              .all-achievement-title ポイント
+              .all-achievement-detail = @all_chiikoma_points
 
         .flex_achievement-box
-          .flex_chiikoma-item-1
+          .flex-chiikoma-item.is-all
             .achievement-header.is-centered 登録したちいこま
-            .chiikoma-box
-              .achievement-subtitle ちいこま数
-              .achievement-detail = @registration_numbers
-            .chiikoma-box
-              .achievement-subtitle ポイント
-              .achievement-detail = @registration_points
-          .flex_chiikoma-item-2
+            .chiikoma-boxies
+              .chiikoma-box
+                .achievement-subtitle ちいこま数
+                .achievement-detail = @registration_numbers
+              .chiikoma-box
+                .achievement-subtitle ポイント
+                .achievement-detail = @registration_points
+          .flex-chiikoma-item.is-solved
             .achievement-header2.is-centered 解決したちいこま
-            .chiikoma-box
-              .achievement-subtitle ちいこま数
-              .achievement-detail = @solution_numbers
-            .chiikoma-box
-              .achievement-subtitle ポイント
-              .achievement-detail = @solution_points
+            .chiikoma-boxies
+              .chiikoma-box
+                .achievement-subtitle ちいこま数
+                .achievement-detail = @solution_numbers
+              .chiikoma-box
+                .achievement-subtitle ポイント
+                .achievement-detail = @solution_points
         .barhart
           = column_chart @all_chiikomas_data, stacked: true

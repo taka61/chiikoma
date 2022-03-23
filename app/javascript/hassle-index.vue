@@ -100,7 +100,7 @@
             type="button"
             @click="newHassle">
             <i class="fa-solid fa-plus"></i>
-            ちいこまを追加
+            <span class="button-text">ちいこまを追加</span>
           </button>
         </div>
       </div>
