@@ -10,35 +10,36 @@
           = l @this_sunday
           |   ~  
           = l @this_monday
+          
       .achievement-container
-        .all-achievement
+        .all-achievement-content
           .all-achievement-header 合計ちいこま
           .all-achievement-inners
             .all-achievement-inner
               .all-achievement-title ちいこま数
-              .all-achievement-detail = @all_chiikoma_numbers
+              .all-achievement-score = @all_chiikoma_numbers
             .all-achievement-inner
               .all-achievement-title ポイント
-              .all-achievement-detail = @all_chiikoma_points
+              .all-achievement-score = @all_chiikoma_points
 
-        .flex_achievement-box
-          .flex-chiikoma-item.is-all
+        .each-achievement-container
+          .registration-content
             .achievement-header.is-centered 登録したちいこま
-            .chiikoma-boxies
-              .chiikoma-box
+            .chiikoma-inners
+              .chiikoma-inner
                 .achievement-subtitle ちいこま数
-                .achievement-detail = @registration_numbers
-              .chiikoma-box
+                .achievement-score = @registration_numbers
+              .chiikoma-inner
                 .achievement-subtitle ポイント
-                .achievement-detail = @registration_points
-          .flex-chiikoma-item.is-solved
+                .achievement-score = @registration_points
+          .solved-content
             .achievement-header2.is-centered 解決したちいこま
-            .chiikoma-boxies
-              .chiikoma-box
+            .chiikoma-inners
+              .chiikoma-inner
                 .achievement-subtitle ちいこま数
-                .achievement-detail = @solution_numbers
-              .chiikoma-box
+                .achievement-score = @solution_numbers
+              .chiikoma-inner
                 .achievement-subtitle ポイント
-                .achievement-detail = @solution_points
+                .achievement-score = @solution_points
         .barhart
           = column_chart @all_chiikomas_data, stacked: true

@@ -1,132 +1,115 @@
 .date-container {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .date-list {
-    font-weight: bold;
-}
-
-.all-achievement-box {
-    background-color: #A2C5C6;
-    margin-bottom: 20px;
-    font-weight: normal;
-    border-radius: 5px;
-    height: 200px;
-    padding: 20px 0 20px 0;
+  font-weight: bold;
 }
 
 .achievement-container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
-.all-achievement-header {
-    background-color: #D0CFCF;
-    color: #696969;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
+.all-achievement-content {
+  margin-bottom: 20px;
 }
 
-.all-achievement-inner {
-    width: 50%;
-    padding: 15px 0;
-    background-color: #E7E5E6;
-    text-align: center;
-    color: #696969;
-    font-size: 18px;
-
-}
-
-.all-achievement-title {
-    margin-left: 10px;
-    font-size: 15px;
-
-}
-
-.all-achievement-detail {
-    padding-left: 15px;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.flex-box {
-    display: flex;
-    justify-content: center;
-}
-
-.flex_achievement-box {
-    display: flex;
-    justify-content: center;
-}
-
-.all-achievement {
-    margin-bottom: 20px;
-}
 .all-achievement-inners {
   display: flex;
 }
 
-.flex-chiikoma-item {
-    flex: 1;
-    &.is-all {
-        background-color: #FFF2EC;
-        color: #d0493b;
-    }
-    &.is-solved {
-        background-color: #DBF1F9;
-        color: #1B39A8;
-    }
-    .flex-chiikoma-item + & {
-        margin-left: 12px;
-    }
+.all-achievement-header {
+  background-color: #D0CFCF;
+  color: #696969;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.all-achievement-inner {
+  width: 50%;
+  padding: 15px 0;
+  background-color: #E7E5E6;
+  text-align: center;
+  color: #696969;
+  font-size: 18px;
+}
+
+.all-achievement-title {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.all-achievement-score {
+  padding-left: 15px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.each-achievement-container {
+  display: flex;
+  justify-content: center;
+}
+
+.registration-content {
+  flex: 1;
+  background-color: #FFF2EC;
+  color: #d0493b;
+}
+
+.solved-content {
+  flex: 1;
+  background-color: #DBF1F9;
+  color: #1B39A8;
+  margin-left: 12px;
 }
 
 .achievement-header {
-    font-size: 18px;
-    background-color: #FDD8C9;
-    padding: 10px 0;
+  font-size: 18px;
+  background-color: #FDD8C9;
+  padding: 10px 0;
 }
 
 .achievement-header2 {
-    font-size: 18px;
-    background-color: #C0DCEC;
-    padding: 10px 0;
+  font-size: 18px;
+  background-color: #C0DCEC;
+  padding: 10px 0;
 }
 
-.chiikoma-boxies {
-    padding: 8px 12px;
+.chiikoma-inners {
+  padding: 8px 12px;
 }
 
-.chiikoma-box {
-    display: flex;
-    align-items: center;
+.chiikoma-inner {
+  display: flex;
+  align-items: center;
 }
 
 .achievement-subtitle {
-    font-size: 15px;
-    flex: 0 0 100px;
-    text-align: right;
-    padding-right: 12px;
+  font-size: 15px;
+  flex: 0 0 100px;
+  text-align: right;
+  padding-right: 12px;
 }
 
-.achievement-detail {
-    font-size: 28px;
-    font-weight: 800;
-    flex: 1;
-    text-align: center;
+.achievement-score {
+  font-size: 28px;
+  font-weight: 800;
+  flex: 1;
+  text-align: center;
 }
 
 .barhart {
-    border-radius: 5px;
-    margin: 40px 0;
-    border: 1px solid #01414B;
-    padding: 20px 0 20px 0;
+  border-radius: 5px;
+  margin: 40px 0;
+  border: 1px solid #01414B;
+  padding: 20px 0 20px 0;
 
-    @media (max-width: 767.98px) {
-        margin: 40px 0 40px 0;
-    }
+  @include mobile {
+    margin: 40px 0 40px 0;
+  }
 }
