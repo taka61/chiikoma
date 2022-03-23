@@ -1,7 +1,8 @@
 .account-form {
   margin: 30px auto;
-  width:  480px;
-  @media (max-width: 767.98px) {
+  width: 480px;
+
+  @include mobile {
     width: 360px;
   }
 }
@@ -27,6 +28,7 @@
 .link-items__item {
   text-align: center;
 }
+
 .link-item {
   text-decoration: underline;
 }
@@ -51,11 +53,12 @@
   margin-bottom: 40px;
   text-decoration: underline;
 }
+
 .danger-items__link {
   color: #B22222;
 }
 
-.danger-items__description{
+.danger-items__description {
   font-size: small;
   margin-top: 10px;
 }
@@ -63,8 +66,9 @@
 .form-btn {
   width: 340px;
   height: 44px;
-  background: 	#B22222;
-  @media (max-width: 767.98px) {
+  background: #B22222;
+
+  @include mobile {
     width: 260px;
   }
 }
@@ -80,14 +84,15 @@
 .password-reset-btn,
 .create-btn {
   color: #fff;
-  background: 	#438DC3;
-  border: 1px solid 	#438DC3;
+  background: #438DC3;
+  border: 1px solid #438DC3;
   font-weight: 500;
+
   &:hover {
     color: #fff;
   }
 }
 
-input[type="checkbox" i] {
-  cursor: pointer; 
+input[type="checkbox"i] {
+  cursor: pointer;
 }

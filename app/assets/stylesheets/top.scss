@@ -1,124 +1,119 @@
 .top-page {
-    background-color: #FEF2EC;
+  background-color: #fef2ec;
 }
 
 .top-container {
-    width: 900px;
-    max-width: 100%;
-    padding: 0 16px;
-    margin: 0 auto;
-    background-color: #FEF2EC;
-    color: #1939A9;
+  width: 900px;
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  background-color: #fef2ec;
+  color: #1939a9;
 }
 
 .top-title {
-    padding-top: 50px;
-
+  padding-top: 50px;
 }
 
 .main-image {
-    @media (max-width: 767.98px) {
-        width: 80%;
-        height: 80%;
-        margin-left: 40px;
-    }
-
+  @include mobile {
+    width: 80%;
+    height: 80%;
+    margin-left: 40px;
+  }
 }
 
 .main-header {
-    margin-bottom: 20px;
-    font-weight: normal;
-    font-size: 45px;
-    padding-top: 80px;
-    color: #2f358b;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 45px;
+  padding-top: 80px;
+  color: #2f358b;
 
-    @media (max-width: 767.98px) {
-        font-size: 25px;
-        padding-top: 40px;
-    }
-
+  @include mobile {
+    font-size: 25px;
+    padding-top: 40px;
+  }
 }
 
 .button-section {
-    margin: 64px 0;
+  margin: 64px 0;
 }
 
 .main-button {
-    width: 320px;
-    max-width: 100%;
-    margin: 0 auto;
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .main-items {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    margin: 0 auto;
-    width: 640px;
-    max-width: 100%;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  margin: 0 auto;
+  width: 640px;
+  max-width: 100%;
 
-    @media (max-width: 767.98px) {
-        width: 100%;
-    }
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .main-item {
-    margin-bottom: 80px;
-}
-.main-title {
-    font-size: 25px;
-    line-height: 1.6;
+  margin-bottom: 80px;
 }
 
+.main-title {
+  font-size: 25px;
+  line-height: 1.6;
+}
 
 .main-description {
-    margin-top: 20px;
-    line-height: 1.8;
+  margin-top: 20px;
+  line-height: 1.8;
 }
 
 .link-container {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 .service-article {
-    margin-top: 40px;
-    border-top: 2px solid #f1dacf;
+  margin-top: 40px;
+  border-top: 2px solid #f1dacf;
 
-    @media (max-width: 767.98px) {
-        margin-top: 20px;
-
-    }
+  @include mobile {
+    margin-top: 20px;
+  }
 }
 
 .service-header {
-    font-weight: bold;
-    font-size: x-large;
-    margin-top: 30px;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 30px;
 
-    @media (max-width: 767.98px) {
-        font-size: 22px;
-    }
+  @include mobile {
+    font-size: 22px;
+  }
 }
 
 .service-description {
-    margin-top: 10px;
-    
+  margin-top: 10px;
 }
 
 .service-image {
-    padding-top: 30px;
+  padding-top: 30px;
 
-    @media (max-width: 767.98px) {
-        width: 90%;
-        height: 90%;
-        margin-left: 20px;
-    }
+  @include mobile {
+    width: 90%;
+    height: 90%;
+    margin-left: 20px;
+  }
 }
 
 .top-action {
-    margin-top: 60px;
-    padding-bottom: 30px;
+  margin-top: 60px;
+  padding-bottom: 30px;
 }
 
 .button-container {
-    margin: 64px 0;
+  margin: 64px 0;
 }
