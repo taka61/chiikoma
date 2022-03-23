@@ -10,7 +10,7 @@
           = l Time.current.beginning_of_week
           |   ~  
           = l Time.current.end_of_week
-          
+
       .achievement-container
         .all-achievement-content
           .all-achievement-header 合計ちいこま
@@ -21,7 +21,6 @@
             .all-achievement-inner
               .all-achievement-title ポイント
               .all-achievement-score = current_user.fetch_all_hassles_points
-
         .each-achievement-container
           .registration-content
             .achievement-header.is-centered 登録したちいこま
