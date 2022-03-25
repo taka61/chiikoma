@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class HassleTest < ActiveSupport::TestCase
-  test 'the truth' do
+  test 'everything is filled in' do
     user = users(:otameshi)
     new_hassle = Hassle.new(title: '困りごと', difficulty_levels: '少し', frequency: '時々',
                             cost: 'すぐ', user: user)
@@ -38,13 +38,13 @@ class HassleTest < ActiveSupport::TestCase
     assert_not no_cost_hassle.valid?
   end
 
-  test 'calculate_total_points' do
+  test 'calculate total points' do
     hassle = hassles(:chiikoma1)
     assert_equal hassle.total_points,
                  hassle.difficulty_levels + hassle.frequency + hassle.cost
   end
 
-  test 'registration_points' do
+  test 'calculate registration points' do
     hassle_made_by_admin = hassles(:chiikoma1)
     assert_nil nil, hassle_made_by_admin.registration_points
 
