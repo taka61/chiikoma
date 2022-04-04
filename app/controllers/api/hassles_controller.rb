@@ -3,6 +3,7 @@
 module Api
   class HasslesController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_hassle, only: %i[show edit update destroy]
     skip_before_action :verify_authenticity_token
 
     rescue_from ActiveRecord::RecordNotFound do |_exception|
@@ -15,12 +16,11 @@ module Api
     end
 
     def done
-      @hassles = current_user.hassles.where(solved: true).order(total_points: :desc)
+      @hassles = current_user.hassles.order_for_solved
       render json: @hassles
     end
 
     def show
-      @hassle = current_user.hassles.find(params[:id])
       render json: @hassle
     end
 
@@ -39,12 +39,10 @@ module Api
     end
 
     def edit
-      @hassle = current_user.hassles.find(params[:id])
+      @hassle
     end
 
     def update
-      @hassle = current_user.hassles.find(params[:id])
-
       if @hassle.update(hassle_params)
         render json: { status: 'SUCCESS', data: @hassle }
       else
@@ -53,7 +51,6 @@ module Api
     end
 
     def destroy
-      @hassle = current_user.hassles.find(params[:id])
       @hassle.destroy
     end
 
@@ -62,6 +59,10 @@ module Api
     def hassle_params
       params.require(:hassle).permit(:title, :difficulty_levels, :frequency, :cost,
                                      :total_points, :solved, :solved_on, :is_made_by_admin, :registration_points)
+    end
+
+    def set_hassle
+      @hassle = current_user.hassles.find(params[:id])
     end
   end
 end

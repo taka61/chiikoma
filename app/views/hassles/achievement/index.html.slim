@@ -7,39 +7,38 @@
     .container.is-sm
       .date-container
         h1.date-list
-          = l @this_sunday
+          = l Time.current.beginning_of_week
           |   ~  
-          = l @this_monday
-          
+          = l Time.current.end_of_week
+
       .achievement-container
         .all-achievement-content
           .all-achievement-header 合計ちいこま
           .all-achievement-inners
             .all-achievement-inner
               .all-achievement-title ちいこま数
-              .all-achievement-score = @all_chiikoma_numbers
+              .all-achievement-score = current_user.fetch_all_hassles_numbers
             .all-achievement-inner
               .all-achievement-title ポイント
-              .all-achievement-score = @all_chiikoma_points
-
+              .all-achievement-score = current_user.fetch_all_hassles_points
         .each-achievement-container
           .registration-content
             .achievement-header.is-centered 登録したちいこま
             .chiikoma-inners
               .chiikoma-inner
                 .achievement-subtitle ちいこま数
-                .achievement-score = @registration_numbers
+                .achievement-score = current_user.fetch_registration_numbers
               .chiikoma-inner
                 .achievement-subtitle ポイント
-                .achievement-score = @registration_points
+                .achievement-score = current_user.fetch_registration_points
           .solved-content
             .achievement-header2.is-centered 解決したちいこま
             .chiikoma-inners
               .chiikoma-inner
                 .achievement-subtitle ちいこま数
-                .achievement-score = @solution_numbers
+                .achievement-score = current_user.fetch_solution_numbers
               .chiikoma-inner
                 .achievement-subtitle ポイント
-                .achievement-score = @solution_points
+                .achievement-score = current_user.fetch_solution_points
         .barhart
-          = column_chart @all_chiikomas_data, stacked: true
+          = column_chart current_user.show_chart, stacked: true
