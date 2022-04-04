@@ -12,6 +12,7 @@
           = l Time.current.end_of_week
 
       .achievement-container
+<<<<<<< HEAD
         .all-achievement-content
           .all-achievement-header 合計ちいこま
           .all-achievement-inners
@@ -21,6 +22,16 @@
             .all-achievement-inner
               .all-achievement-title ポイント
               .all-achievement-score = @all_chiikoma_points
+=======
+        .all-achievement-header 合計ちいこま
+        .flex_achievement-box
+          .all-achievement-inner
+            .all-achievement-title ちいこま数
+            .achievement-detail = @all_hassles_numbers
+          .all-achievement-inner
+            .all-achievement-title ポイント
+            .achievement-detail = @all_hassles_points
+>>>>>>> f4500f3 (PR#84のレビュー内容を修正)
 
         .each-achievement-container
           .registration-content
@@ -42,4 +53,4 @@
                 .achievement-subtitle ポイント
                 .achievement-score = @solution_points
         .barhart
-          = column_chart @registration_chiikoma_and_solution_chiikoma, stacked: true
+          = column_chart @registration_hassles_and_solution_hassles, stacked: true

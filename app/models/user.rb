@@ -21,6 +21,14 @@ class User < ApplicationRecord
     hassles.solved_on_this_week.sum(:total_points)
   end
 
+  def fetch_all_hassles_numbers
+    fetch_registration_numbers + fetch_solution_numbers
+  end
+
+  def fetch_all_hassles_points
+    fetch_registration_points + fetch_solution_points
+  end
+
   def show_chart
     [
       {

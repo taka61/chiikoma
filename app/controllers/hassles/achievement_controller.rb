@@ -10,18 +10,16 @@ module Hassles
       @registration_points = current_user.fetch_registration_points
       @solution_numbers = current_user.fetch_solution_numbers
       @solution_points = current_user.fetch_solution_points
-      fetch_all_chiikoma
-      @registration_chiikoma_and_solution_chiikoma = current_user.show_chart
+      @all_hassles_numbers = current_user.fetch_all_hassles_numbers
+      @all_hassles_points = current_user.fetch_all_hassles_points
+      @registration_hassles_and_solution_hassles = current_user.show_chart
     end
+
+    private
 
     def display_one_week
       @this_monday = Time.current.beginning_of_week
       @this_sunday = Time.current.end_of_week
-    end
-
-    def fetch_all_chiikoma
-      @all_chiikoma_numbers = @registration_numbers + @solution_numbers
-      @all_chiikoma_points = @registration_points + @solution_points
     end
   end
 end
