@@ -11,11 +11,7 @@ module Api
     end
 
     def index
-<<<<<<< HEAD
       @hassles = current_user.hassles.order(total_points: :desc)
-=======
-      @hassles = current_user.hassles.order_for_not_solved
->>>>>>> f4500f3 (PR#84のレビュー内容を修正)
       render json: @hassles
     end
 
