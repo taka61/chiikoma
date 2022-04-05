@@ -14,16 +14,12 @@ Rails.application.routes.draw do
 
   resources :hassles do
     collection do
-      get 'done'
       resources :achievement, only: %i[index], controller: 'hassles/achievement'
     end
   end
 
   namespace :api, format: 'json' do
     resources :hassles do
-      collection do
-        get :done
-      end
     end
   end
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
