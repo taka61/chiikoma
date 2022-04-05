@@ -10,7 +10,7 @@
               | 管理しませんか？
             .button-section
               .main-button
-                = link_to '始める', new_user_registration_path, class: 'button is-danger is-outlined is-large is-fullwidth'
+                = link_to '始める', new_user_registration_path, class: 'button is-medium is-fullwidth button is-danger'
               .link-container.is-centered
                 = link_to 'ログインはこちら', new_user_session_path, class: 'link-item'
 
@@ -38,14 +38,14 @@
                 | ちいこまを使って自分の中の不快・違和感・欲求等を見える化し、
                 | 自分のことをもっと気にかけてあげる第一歩を始めましょう！
 
-          .main-items
+          .sub-items
             section.service-article
               h1.service-header.is-centered
                 | ちいこまにポイントをつけよう
               .service-description.is-centered
                   |「 困り度」・「経験する頻度」・「対策コスト」の3つの観点で数値化
               .service-image.is-centered
-                = image_tag 'chiikoma-new.png', size: '700x600'
+                = image_tag 'chiikoma-new.png', size: '400x250'
             section.service-article
               h1.service-header.is-centered
                 | 1週間のがんばりをグラフで可視化
