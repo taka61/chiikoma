@@ -185,7 +185,7 @@ export default {
       }
     },
     setCookie (){
-      this.$cookies.set("CookieRecieve", "on", "60s")
+      this.$cookies.set("CookieRecieve", "on", "86400s")
       location.reload();
     }
   }
