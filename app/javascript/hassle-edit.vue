@@ -11,8 +11,8 @@
 
       <div class="field">
         <lable class="form-label">どれくらい困ってる？</lable>
-        <div class="control">
-          <ul>
+        <div class="control form-items">
+          <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="少し">
               <input type="radio" v-bind:value="3" v-model="hassleLevel" id="少し">
               少し
@@ -35,8 +35,8 @@
 
       <div class="field">
         <lable class="form-label">どれくらいの頻度？</lable>
-        <div class="control">
-          <ul>
+        <div class="control form-items">
+          <ul class="radio-buttons has-4items">
             <li class="radio-button"><label class="radio-label" for="時々">
               <input type="radio" v-bind:value="3" v-model="hassleFrequency" id="時々">
               時々
@@ -59,8 +59,8 @@
 
       <div class="field">
         <lable class="form-label">解決にかかる手間は？</lable>
-        <div class="control">
-          <ul>
+        <div class="control form-items">
+          <ul class="radio-buttons has-3items">
             <li class="radio-button"><label class="radio-label" for="すぐ">
               <input type="radio" v-bind:value="3" v-model="hassleCost" id="すぐ">
               すぐ
@@ -77,10 +77,10 @@
         </div>
       </div>
       
-      <div class="control">
-        <div class="button_wrapper">
+      <div class="control form-items">
+        <div class="button-wrapper">
           <button
-            class="button update-btn"
+            class="button update-button"
             type="button"
             @click="updateHassle">
             更新する
