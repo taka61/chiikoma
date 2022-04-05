@@ -15,11 +15,6 @@ module Api
       render json: @hassles
     end
 
-    def done
-      @hassles = current_user.hassles.order_for_solved
-      render json: @hassles
-    end
-
     def show
       render json: @hassle
     end
