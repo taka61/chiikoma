@@ -30,7 +30,7 @@
     </div>
     
     <modal name="daily-chiikoma" width="70%" height="340px" :max-width="630" :adaptive="true">
-      <div class="daily-body">
+      <div class="daily-modal-body">
         <h1 class="today-chiikoma is-centered">
           今日のちいこま
         </h1>
