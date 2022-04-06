@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <modal name="modal-thanks" width="70%"height="400px" :max-width="630">
+    <modal name="modal-thanks" width="70%" height="400px" :max-width="630" :adaptive="true">
       <div class="modal-body is-centered">
       <i class="far fa-kiss-wink-heart fa-6x"></i>
       <h1 class="modal-title is-centered">
@@ -32,7 +32,7 @@
       </div>
     </modal>
 
-    <div class="list-section">
+    <div class="top-list-section">
       <div class="list-text">
         困り度
       </div>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="control">
-      <div v-if="!hassle.solved" class="button-container">
+      <div v-if="!hassle.solved" class="three-buttons-container">
         <button
           class="button finished-button"
           type="button"
