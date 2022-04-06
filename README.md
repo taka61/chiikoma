@@ -52,13 +52,17 @@ $ bin/yarn lint
 ## スクリーンショット
 
 #### TOP画面
-<img width="1422" alt="スクリーンショット 2022-02-26 17 05 06" src="https://user-images.githubusercontent.com/80372144/155835634-1761cfdb-b6db-48c6-ad5e-a719916b16ea.png">
+<img width="1397" alt="スクリーンショット 2022-04-06 13 16 26" src="https://user-images.githubusercontent.com/80372144/161894708-235a6621-9003-4cc9-adee-3cb32fc14948.png">
+
 
 #### ちいこま登録
-<img width="1340" alt="スクリーンショット 2022-02-26 17 06 25" src="https://user-images.githubusercontent.com/80372144/155835638-20d2e7e1-35ab-4935-9056-8132b021227b.png">
+<img width="693" alt="スクリーンショット 2022-04-06 13 22 11" src="https://user-images.githubusercontent.com/80372144/161895214-2d200dcc-396b-46b6-92b0-5a3cbdf9543e.png">
+
 
 #### ちいこま詳細
-<img width="319" alt="スクリーンショット 2022-02-26 17 08 33" src="https://user-images.githubusercontent.com/80372144/155835639-9e9dba76-463f-4236-84bc-4f6937d73c79.png">
+<img width="315" alt="スクリーンショット 2022-04-06 13 19 03" src="https://user-images.githubusercontent.com/80372144/161894958-fccac0e9-4d1a-484e-8195-e887a1e33ae9.png">
+
 
 #### 1週間のがんばり
-<img width="303" alt="スクリーンショット 2022-02-26 17 09 35" src="https://user-images.githubusercontent.com/80372144/155835640-8ddba964-e046-4f0d-97ee-46db4e027f85.png">
+<img width="600" alt="スクリーンショット 2022-04-06 13 20 50" src="https://user-images.githubusercontent.com/80372144/161895088-e805767b-b104-45ed-94a0-481cbecd4067.png">
+
