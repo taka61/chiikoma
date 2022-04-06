@@ -1,6 +1,29 @@
 <template>
   <div id="hassle-index" class="page">
-    <div v-if="hassles.length === 0" class="chiikomas-empty is-centered">
+    <div class="tab-items">
+      <div class="field has-addons">
+        <p class="control">
+          <button
+            :class="{'active': isActive === '1'}"
+            class="button care-button"
+            type="button"
+            @click="getNotSolved">
+            ケアしたい
+          </button>
+        </p>
+        <p class="control">
+          <button
+            :class="{'active': isActive === '2'}"
+            class="button solved-button"
+            type="button"
+             @click="getSolved">
+             解決済
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div v-if="notSolvedHassles.length === 0 && isActive === '1'" class="chiikomas-empty is-centered">
       <i class="far fa-grin-wink fa-4x"></i>
       <div class="empty-sentence is-centered"> ちいこまを登録しよう！</div>
       <p>[＋]ボタンでちいこまを登録できます</p>
@@ -38,29 +61,6 @@
       </div>
     </modal>
     
-    <div class="tab-items">
-      <div class="field has-addons">
-        <p class="control">
-          <button
-            :class="{'active': isActive === '1'}"
-            class="button care-button"
-            type="button"
-            @click="getNotSolved">
-            ケアしたい
-          </button>
-        </p>
-        <p class="control">
-          <button
-            :class="{'active': isActive === '2'}"
-            class="button solved-button"
-            type="button"
-             @click="getSolved">
-             解決済
-          </button>
-        </p>
-      </div>
-    </div>
-
     <div class="card-section">
       <div v-if="isActive === '1'">
         <div v-for="hassle in notSolvedHassles" :key="hassle.id">
