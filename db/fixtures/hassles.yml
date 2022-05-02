@@ -1,46 +1,46 @@
 chiikoma1:
   user: otameshi
-  title: 'chiikoma1'
+  title: 'セーターの縮んでしまった…伸ばしたい'
   difficulty_levels: '5'
-  frequency: '5'
-  cost: '3'
+  frequency: '3'
+  cost: '5'
   total_points: 13
   solved: false
   is_made_by_admin: true
-  created_at: "2022-01-11 00:00:10"
-  updated_at: "2022-01-11 00:00:01"
-  solved_on: "2022-01-14"
+  created_at: <%= Time.now - 2.months - 20.day %>
+  updated_at: <%= Time.now - 2.months - 20.day %>
+  solved_on: <%= Time.now - 2.months - 20.day %>
 
 chiikoma2:
   user: otameshi
-  title: 'chiikoma2'
+  title: 'スニーカーの汚れ、近々洗う'
   difficulty_levels: '5'
-  frequency: '5'
+  frequency: '7'
   cost: '3'
-  total_points: 13
+  total_points: 15
   registration_points: 5
   solved: true
   is_made_by_admin: false
-  created_at: "2022-01-11 00:00:10"
-  updated_at: "2022-01-11 00:00:01"
-  solved_on: "2022-01-25"
+  created_at: <%= Time.now - 2.months - 10.day %>
+  updated_at: <%= Time.now - 2.months - 10.day %>
+  solved_on: <%= Time.now - 1.month - 10.day %>
 
 chiikoma3:
   user: otameshi
-  title: 'chiikoma3'
+  title: '冷蔵庫の中を全体的に掃除したい'
   difficulty_levels: '5'
   frequency: '5'
-  cost: '3'
-  total_points: 13
+  cost: '5'
+  total_points: 15
   registration_points: 5
   solved: false
   is_made_by_admin: false
-  created_at: "2022-01-15 00:00:10"
-  updated_at: "2022-01-15 00:00:01"
+  created_at: <%= Time.now - 2.months - 10.day %>
+  updated_at: <%= Time.now - 2.months - 10.day %>
 
 chiikoma4:
   user: otameshi
-  title: 'chiikoma4'
+  title: 'ビタミンサプリなくなりそう'
   difficulty_levels: '3'
   frequency: '3'
   cost: '3'
@@ -48,25 +48,26 @@ chiikoma4:
   registration_points: 5
   solved: false
   is_made_by_admin: false
-  created_at: "2022-01-19 00:00:10"
-  updated_at: "2022-01-19 00:00:01"
+  created_at: <%= Time.now - 2.months %>
+  updated_at: <%= Time.now - 2.months %>
 
 chiikoma5:
   user: otameshi
-  title: 'chiikoma5'
-  difficulty_levels: '7'
+  title: '冬用の毛布をコインランドリーへ持っていく'
+  difficulty_levels: '5'
   frequency: '7'
-  cost: '8'
-  total_points: 22
+  cost: '5'
+  total_points: 17
   registration_points: 5
-  solved: false
+  solved: true
   is_made_by_admin: false
-  created_at: "2022-01-26 00:00:10"
-  updated_at: "2022-01-26 00:00:01"
+  created_at: <%= Time.now - 1.month - 20.day %>
+  updated_at: <%= Time.now - 1.month - 20.day %>
+  solved_on: <%= Time.now - 1.month - 20.day %>
 
 chiikoma6:
   user: otameshi
-  title: 'chiikoma6'
+  title: '自転車の調子が悪い'
   difficulty_levels: '7'
   frequency: '7'
   cost: '8'
@@ -74,59 +75,58 @@ chiikoma6:
   registration_points: 5
   solved: false
   is_made_by_admin: false
-  created_at: "2022-02-07 00:00:10"
-  updated_at: "2022-02-07 00:00:01"
+  created_at: <%= Time.now - 1.month - 10.day %>
+  updated_at: <%= Time.now - 1.month - 10.day %>
 
 chiikoma7:
   user: otameshi
-  title: 'chiikoma7'
-  difficulty_levels: '10'
-  frequency: '10'
+  title: 'イヤホンのサイズが耳に合ってない'
+  difficulty_levels: '7'
+  frequency: '7'
   cost: '8'
-  total_points: 28
+  total_points: 22
   registration_points: 5
-  solved: true
+  solved: false
   is_made_by_admin: false
-  created_at: "2022-02-07 00:00:10"
-  updated_at: "2022-02-07 00:00:01"
-  solved_on: "2022-02-07"
+  created_at: <%= Time.now - 1.month %>
+  updated_at: <%= Time.now - 1.month %>
 
 chiikoma8:
   user: otameshi
-  title: 'chiikoma8'
+  title: '腱鞘炎が治らない！！！'
   difficulty_levels: '10'
   frequency: '10'
   cost: '8'
   total_points: 28
   solved: true
   is_made_by_admin: true
-  created_at: "2022-02-08 00:00:10"
-  updated_at: "2022-02-08 00:00:01"
-  solved_on: "2022-02-08"
+  created_at: <%= Time.now - 10.day %>
+  updated_at: <%= Time.now - 10.day %>
+  solved_on: <%= Time.now - 10.day %>
 
 chiikoma9:
   user: otameshi
-  title: 'chiikoma9'
+  title: '顎関節症気味がほんとうに治らない！！！病院行く！！！'
   difficulty_levels: '10'
   frequency: '10'
   cost: '8'
   total_points: 28
   solved: true
   is_made_by_admin: true
-  created_at: <%= Date.current %>
-  updated_at: <%= Date.current %>
-  solved_on: <%= Date.current %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  solved_on: <%= Time.now %>
 
 chiikoma10:
   user: otameshi
-  title: 'chiikoma10'
-  difficulty_levels: '3'
+  title: '春用のパジャマが足りない'
+  difficulty_levels: '7'
   frequency: '5'
-  cost: '8'
+  cost: '5'
   registration_points: 5
-  total_points: 16
+  total_points: 17
   solved: true
   is_made_by_admin: false
-  created_at: <%= Date.current %>
-  updated_at: <%= Date.current %>
-  solved_on: <%= Date.current %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  solved_on: <%= Time.now %>

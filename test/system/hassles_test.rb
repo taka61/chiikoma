@@ -55,10 +55,10 @@ class HassleNewTest < ApplicationSystemTestCase
   test 'visit hassle page' do
     login_as(@user, scope: :user)
     visit hassle_path(id: @hassle.id)
-    assert_text 'chiikoma1'
-    assert_text '5'
+    assert_text 'セーターの縮んでしまった…伸ばしたい'
     assert_text '5'
     assert_text '3'
+    assert_text '5'
     assert_text '13'
   end
 
@@ -68,12 +68,12 @@ class HassleNewTest < ApplicationSystemTestCase
     assert_text '1週間のがんばり'
     assert_text '合計ちいこま'
     assert_text '3'
-    assert_text '49'
+    assert_text '50'
     assert_text '登録したちいこま'
     assert_text '1'
     assert_text '5'
     assert_text '解決したちいこま'
     assert_text '2'
-    assert_text '44'
+    assert_text '45'
   end
 end

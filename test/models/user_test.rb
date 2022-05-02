@@ -35,7 +35,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'calculate point of solutions' do
-    assert_equal 44, @user.fetch_solution_points
+    assert_equal 45, @user.fetch_solution_points
   end
 
   test 'calculate numbers of all hassles' do
@@ -43,6 +43,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'calculate point of all hassles' do
-    assert_equal 49, @user.fetch_all_hassles_points
+    assert_equal 50, @user.fetch_all_hassles_points
   end
 end
