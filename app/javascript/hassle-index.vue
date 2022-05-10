@@ -169,7 +169,7 @@ export default {
     },
     closeHassle() {
       this.setCookie ()
-      this.$modal.close('modal-thanks');
+      this.$modal.close('daily-chiikoma');
     },
     getNotSolved() {
       this.isActive = '1'
